@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. El model funcional DHCP | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-49"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servei DHCP</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_evoluci_del_protocol_dhcp.html" class="no-ch">1.1. Evolució del protocol DHCP</a></li>
+      <li><a href="12_un_servei_clientservidor.html" class="no-ch">1.2. Un servei client/servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="no-ch">2. Configuració dels equips de la xarxa</a></li>
+   <li id="active"><a href="3_el_model_funcional_dhcp.html" class="active no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervals_exclusions_concessions_i_reserves.html" class="no-ch">4. Intervals, exclusions, concessions i reserves</a></li>
+   <li><a href="5__opcions_addicionals_del_protocol.html" class="daddy">5.  Opcions addicionals del protocol.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servei DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemes_del_servei.html" class="no-ch">6. Problemes del servei</a></li>
+   <li><a href="installaci_dun_servidor__dhcp.html" class="no-ch">Instal·lació d'un servidor  DHCP</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_configuraci_dels_equips_de_la_xarxa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_intervals_exclusions_concessions_i_reserves.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. El model funcional DHCP</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id82">
+<div class="iDevice emphasis0">
+<div id="ta82_154" class="block iDevice_content">
+<p>El protocol DHCP utilitza UDP en la capa de transport. Utilitza dos ports:</p>
+<ul>
+<li>Port 67, on escolta el servidor.</li>
+<li>Port 68, on escolta el client.</li>
+</ul>
+<p>El protocol DHCP descriu el diàleg que es produeix entre client i servidor per a la concessió de configuracions IP. En una xarxa amb configuració d’equips dinàmica, un o més servidors DHCP escoltaran les peticions dels clients en el port 67. Els clients DHCP sol·licitaran al servidor DHCP una configuració IP, i començarà un procés de negociació que ha d’acabar (si tot va bé) amb la concessió d’una adreça IP al client. Els servidors parlen al port 68 dels clients.</p>
+<p>La negociació que s’estableix es pot definir a grans trets de la manera següent:</p>
+<ol>
+<li>El client sol·licita una adreça IP (de fet, una configuració de xarxa).</li>
+<li>El servidor mira les adreces IP disponibles dins de l’interval d’adreces dinàmiques de què disposa per concedir i n’ofereix una al client.</li>
+<li>Si el client l’accepta, envia una sol·licitud al servidor per fer-la seva.</li>
+<li>Si al servidor li sembla bé, accepta la petició del client i li confirma que pot utilitzar aquesta IP, que la hi concedeix per un període de temps limitat.</li>
+</ol>
+<h3>UDP en les transmissions DHCP</h3>
+<p>L’intercanvi d’informació entre client i servidor no és gaire gran (poc volum de dades) i no requereix un flux permanent (una conversa continuada). És per això que el protocol que s’utilitza en les transmissions DHCP és l’UDP.</p>
+<p>La concessió de l’adreça IP és per un període de temps establert pel servidor. Això significa que, transcorregut aquest període, el client haurà de renegociar la concessió en un procés similar al descrit anteriorment. En la figura.1 es pot veure el diàleg de quatre fases client-servidor.</p>
+<p>El procés real, però, és més detallat. El podem repassar: consta principalment de quatre parts: la petició del client o <em>discovery</em>, l’oferta del servidor o offer, l’acceptació de l’adreça IP pel client o request, i la confirmació del servidor o <em>acknowledgement</em>. A part d’aquest tipus de missatges, el protocol DHCP en defineix d’altres com el de petició d’informació o information i el d’alliberament de l’adreça IP o <em>releasing</em>.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 355px;">
+<div class="figcaption header"><strong>Model funcional del protocol DHCP</strong></div>
+<img src="smxm7uf1ud1_im1.png" alt="Model funcional del protocol DHCP" width="355" height="439" />
+<div class="figcaption"><a href="http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M07/web/html/WebContent/u1/a1/continguts.html" target="_blank" class="author" rel="noopener noreferrer">IOC</a>. <a href="Model funcional del protocol DHCP" target="_blank" class="title" rel="noopener noreferrer"><em>Model funcional del protocol DHCP</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Els següents són els tipus de paquets DHCP:</p>
+<ul>
+<li>DHCP <em>discover</em>.</li>
+<li>DHCP <em>offer</em>.</li>
+<li>DHCP <em>request</em>.</li>
+<li>DHCP <em>ack</em> / DHCP <em>nack</em>.</li>
+<li>DHCP <em>decline</em>.</li>
+<li>DHCP <em>release</em>.</li>
+<li>DHCP <em>information</em>.</li>
+</ul>
+<h4>DHCP <em>discover</em></h4>
+<p>En un procés de configuració IP d’un client de DHCP el paquet DHCP <em>discover</em> és el primer que s’envia. L’envia el client per tal de demanar una configuració IP a algun servidor. Generalment, el client s’acaba d’inicialitzar i vol obtenir una configuració dinàmica de xarxa. El client no sap a quina xarxa pertany (no té adreça IP ni màscara de xarxa) i tampoc sap quins servidors DHCP hi ha en la xarxa (si n’hi ha cap).</p>
+<div class="destacado">
+<p>Una difusió o broadcast s’adreça a la IP 255.255.255.255 o a l’adreça MAC <code>FF:FF:FF:FF:FF:FF</code>, que és acceptada per tots els equips.</p>
+</div>
+<p>Per tant, el client genera un paquet de difusió (<em>broadcast</em>) destinat a tots els equips de la xarxa on sol·licita una configuració IP. En la xarxa pot haver-hi cap, un o més d’un servidor DHCP per atendre aquesta petició. És responsabilitat de l’administrador de xarxes configurar correctament l’estructura i els serveis de xarxa de forma que si defineix clients de DHCP hi hagi servidors DHCP que atenguin les seves peticions.</p>
+<h4>DHCP <em>offer</em></h4>
+<p>En rebre una sol·licitud de configuració d’un client (DHCP discovery), un servidor DHCP mira d’atendre-la proporcionant una IP de l’interval d’adreces dinàmiques que gestiona (hi pot haver més d’un servidor DHCP en la mateixa xarxa).</p>
+<h4>DHCP <em>request</em></h4>
+<p>Quan el client rep una oferta de configuració IP per part d’un servidor, la pot acceptar o rebutjar. Si el client no accepta l’oferta, simplement realitzarà un DHCP <em>discovery</em> de nou. Això és suficient perquè el servidor s’adoni que l’oferta ha estat rebutjada.</p>
+<p>Si el client accepta l’oferta, ho ha de comunicar al servidor. El mecanisme per fer-ho és mitjançant un paquet DHCP <em>request</em> enviat un altre cop per difusió. A hores d’ara, el client encara no disposa de l’adreça IP per utilitzar-la. El servidor l’ha reservat, però encara no ha donat el sí definitiu perquè sigui concedida al client.</p>
+<p>El motiu pel qual el client demana quedar-se la concessió (DHCP <em>request</em>) que ha rebut utilitzant difusió és fer públic a tothom de la xarxa que ha acceptat una oferta d’un servidor DHCP concret. Recordeu que la petició del client es fa per difusió i, per tant, pot rebre ofertes de diferents servidors DHCP. Quan accepta una de les ofertes, no ha de dir res als altres servidors que ha refusat. Simplement fent pública quina oferta accepta, la resta de servidors DHCP entenen que la seva oferta s’ha rebutjat.</p>
+<h4>DHCP <em>ack</em>/DHCP <em>nack</em></h4>
+<div class="destacado">
+<p><strong>ACK i NACK</strong></p>
+<p>ACK i NACK són dos acrònims usuals en el món de la informàtica que signifiquen confirmació (acceptació) i no-conformitat (refús) respectivament.</p>
+</div>
+<p>L’últim pas en una negociació DHCP bàsica el realitza el servidor quan finalment autoritza la concessió enviant el paquet DHCPACK (DHCP <em>akcnowledgement</em>). A partir d’aquest moment, el client sí pot fer ús de l’adreça IP i de la configuració de xarxa rebuda. DHCPACK inclou tota la informació referent a la durada de la concessió i les dades necessàries per gestionar quan expira.</p>
+<p>El servidor anotarà en el registre de concessions la que acaba de realitzar i detallarà tots els aspectes d’aquesta, en especial el temps de concessió. El paquet d’acceptació de la concessió DHCPACK és un paquet unidestinació adreçat a la MAC del client.</p>
+<h4>DHCP <em>decline</em></h4>
+<p>Per la seva part, el client també pot examinar l’adreça IP oferta pel servidor per comprovar si està en ús o no. Pot fer altres proves per veure si li sembla correcta o no l’oferta rebuda del servidor. Per exemple, en el cas de renovació d’una IP el client pot rebre una IP diferent a la que utilitza i no li interessa. En aquests casos, el client pot enviar un paquet DHCP decline al servidor per indicar que la seva oferta ha estat rebutjada.</p>
+<h4>DHCP <em>release</em></h4>
+<p>Quan un client ja no necessita més l’ús de la configuració IP que ha rebut, la pot alliberar enviant al servidor un paquet DHCP <em>release</em>. En fer-ho, el servidor afegeix l’adreça IP al conjunt d’adreces dinàmiques que té disponibles. També fa l’anotació pertinent en el registre de concessions (<em>leases</em>) per indicar que ha finalitzat l’ús de l’adreça. De totes maneres, molt sovint el client no pot arribar a emetre aquest paquet perquè és apagat per l’usuari sense deixar temps al sistema per alliberar la IP.</p>
+<h4>DHCP <em>information</em></h4>
+<p>En tot moment el client pot sol·licitar més informació sobre la configuració de xarxa al servidor utilitzant un paquet DHCP <em>information</em>. En el paquet DHCP <em>offer</em> que el servidor envia al client, consten les informacions generals de configuració de xarxa que es trameten en l’oferta: adreça IP, màscara de xarxa, porta d’enllaç predeterminada, servidor DNS, fitxer a baixar i molts altres paràmetres que poden estar configurats per enviar-se en l’oferta. El client pot tornar a demanar al servidor la informació d’aquests paràmetres o pot sol·licitar informació per a la configuració d’altres paràmetres (WINS, NetBIOS, hostname, etc.). El client només pot realitzar una petició d’informació DHCP <em>information</em> al servidor un cop ja està configurat.</p>
+<h5>Diversos servidors DHCP</h5>
+<p>Es pot configurar més d’un servidor DHCP, tant per a còpia de seguretat o <em>backup</em> com per incrementar el rendiment en compartir la càrrega de les peticions.</p>
+<p>El servidor tracta d’assignar una IP del conjunt o interval (també anomenat <em>pool</em>) d’adreces dinàmiques que gestiona. Per fer-ho, ha de mirar quines de les adreces li queden lliures i disponibles per concedir al client. Cada vegada que el servidor concedeix una IP a un client, ho anota en un fitxer de registre de les concessions efectuades. Cada vegada que finalitza una concessió, el servidor pot tornar a utilitzar la IP per a un altre client.</p>
+<div class="destacado">
+<p>Tota concessió (o <em>lease</em>) DHCP és per un període determinat de temps i un cop transcorregut cal renovar-la.</p>
+</div>
+<p>El mecanisme que utilitza el servidor per escollir la IP dins del conjunt d’adreces IP disponibles varia en funció del programa de servidor que s’utilitzi. A més a més es poden configurar innumerables opcions del servidor per establir com s’han de fer les concessions. Un cas típic és el de les adreces fixes. A un determinat client sempre se li assigna la mateixa IP. Per això cal disposar de la llista d’adreces MAC dels clients als quals es vol assignar una IP fixa.</p>
+<p>El servidor selecciona una IP disponible i la reserva per al client (encara no està assignada). Tot seguit envia un paquet DHCP <em>offer</em> (unidestinació o <em>unicast</em>) al client amb tota la informació de configuració requerida. L’adreça IP i MAC origen identifiquen el servidor que fa l’oferta. El destinatari s’indica per la seva adreça MAC (que és coneguda). El camp IP del destinatari és l’adreça IP que el servidor ofereix (penseu que el client encara no té IP). Un altre concepte important és per quant de temps es realitza la concessió. El paquet inclou més camps per completar la resta de configuració de xarxa, per exemple, la porta d’enllaç per defecte, els servidors DNS, etc.</p>
+<h5>Exemple de mala configuració d'un equip</h5>
+<p>Un exemple de mala configuració és la d’un equip que s’ha engegat amb una adreça IP estàtica errònia que se solapa amb les adreces IP que reparteix el servidor. El mecanisme usat per comprovar si l’adreça IP ja està essent utilitzada és fer un <em>ping</em>. Si ningú no respon és que està lliure (segurament).</p>
+<p>Quan un servidor DHCP detecta que la IP que havia reservat per a un client i que li anava a concedir ja està en ús, el servidor envia al client un paquet DHCPNACK i indica la no-autorització de la concessió. El client que rep un DHCPNACK ha de tornar a iniciar tot el procés de negociació començant un altre cop pel DHCP <em>discovery</em>.</p>
+<p>Com és possible que algun equip de la xarxa utilitze una adreça IP que forma part del conjunt d’adreces IP dinàmiques que reparteix el servidor DHCP? La resposta és senzilla: perquè hi ha algun equip mal configurat.</p>
+<h3>Petició de renovació/concessió d'una IP concreta</h3>
+<p>El procés de quatre fases usuals de DHCP consistent en <em>discovery</em>/<em>offer</em>/<em>request</em>/<em>ack</em> es produeix quan el client sol·licita una IP de nou. Sabem que les concessions són per a un interval de temps passat, la renovació de la qual cal que el client la demani. Existeix, doncs, un procés de renovació simplificat. El client demana continuar usant la mateixa IP amb un paquet DHCP request, i el servidor li concedeix o no amb els paquets DHCP ACK/NACK.</p>
+<p>Un altre cas és un client que demana usar (renovar) una adreça IP que el servidor no li pot concedir (està en ús, no és de l’interval que gestiona, etc.). En aquesta situació, el servidor envia un DHCP NACK.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id83">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Cal que conegues</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta83_129" class="block iDevice_content">
+<p><strong>Tipus d'adreçament</strong></p>
+<p>Hi ha diversos tipus d’adreçament:</p>
+<ul>
+<li>Unidestinació o unicast: a un equip.</li>
+<li>Multidestinació multicast: a un conjunt d’equips.</li>
+<li>De difusió o broadcast: a tothom.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id13">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Activitat 1: Diagrama UDP</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_90_2" class="block iDevice_content">
+<div id="intro" class="box generalbox boxaligncenter">
+<div class="no-overflow" id="yui_3_17_2_1_1509384215871_496">Elabora un diagrama DHCP incloent els noms dels missatges que s'intercanvien per a establir una nova configuració IP, els equips que participen, ports UDP i explicacions de cada missatge.</div>
+<div class="no-overflow">A més a més, afig una captura de la seqüència de missatges capturats amb wireshark (filtre: bootp).</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_configuraci_dels_equips_de_la_xarxa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_intervals_exclusions_concessions_i_reserves.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

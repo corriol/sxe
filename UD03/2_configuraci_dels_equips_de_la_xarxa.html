@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Configuració dels equips de la xarxa | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-48"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servei DHCP</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_evoluci_del_protocol_dhcp.html" class="no-ch">1.1. Evolució del protocol DHCP</a></li>
+      <li><a href="12_un_servei_clientservidor.html" class="no-ch">1.2. Un servei client/servidor</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="active no-ch">2. Configuració dels equips de la xarxa</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervals_exclusions_concessions_i_reserves.html" class="no-ch">4. Intervals, exclusions, concessions i reserves</a></li>
+   <li><a href="5__opcions_addicionals_del_protocol.html" class="daddy">5.  Opcions addicionals del protocol.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servei DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemes_del_servei.html" class="no-ch">6. Problemes del servei</a></li>
+   <li><a href="installaci_dun_servidor__dhcp.html" class="no-ch">Instal·lació d'un servidor  DHCP</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="12_un_servei_clientservidor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_el_model_funcional_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2. Configuració dels equips de la xarxa</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id1">
+<div class="iDevice emphasis0">
+<div id="ta1_85" class="block iDevice_content">
+<h2>Configuració d'un equip de xarxa</h2>
+<p>Qualsevol equip que pertany a una xarxa requereix que es configuri amb uns paràmetres mínims, que són l’adreça IP, la màscara i la porta d’enllaç per defecte. L’adreça IP identifica l’equip de manera única, i la màscara permet determinar la xarxa o subxarxa en què es troba l’equip. Amb aquests dos paràmetres n’hi ha prou per tenir connectivitat en la xarxa. Si es vol disposar d’accés fora de la xarxa pròpia (per exemple, a Internet o a la resta de la xarxa corporativa) cal definir també la porta d’enllaç predeterminada. A part de la configuració bàsica, els equips poden necessitar (i de fet ho necessiten) més paràmetres de configuració com, per exemple: el nom del host, el servidor DNS, el fitxer d’iniciació a baixar, etc.</p>
+<div class="destacado">
+<p>Tot equip de xarxa necessita disposar d’una <strong>adreça IP</strong> que l’identifica de manera única a la xarxa. Cal també una <strong>màscara</strong> per poder separar de l’<strong>adreça IP</strong> quina és la part d’<strong>adreça de xarxa</strong> i quina la part d’adreça de host. Finalment, és imprescindible disposar de l’adreça de la porta d’enllaç predeterminada o passarel·la per defecte (o <em>gateway</em>), per disposar d’accés a xarxes externes.</p>
+</div>
+<p><strong>Exemple de configuració de xarxa d'un equip de casa:</strong></p>
+<p>La majoria d’usuaris disposen a casa d’un equip (o més) connectats a un <em>router</em> que proporciona l’accés a Internet. Aquest equip està configurat com a client DHCP i en iniciar-se rep la configuració de xarxa del <em>router</em>. Podeu comprovar a casa quina configuració teniu. Una configuració d’exemple podria ser:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>Dirección IP. . . . . . . . . . . : 192.168.1.33
+Máscara de subred . . . . . . . . : 255.255.255.0
+Puerta de enlace predeterminada.. : 192.168.1.1
+Servidor DHCP . . . . . . . . . . : 192.168.1.1
+Servidores DNS . . . . . . . . .  : 80.58.61.250 80.58.61.254</code></pre>
+</div>
+</div>
+<div class="emphasis1">
+<p><strong>L'inconvenient de la configuració estàtica</strong></p>
+<p>La configuració estàtica implica configurar els equips un a un. Fins i tot encara que es tingui accés remot als equips (per Telnet o SSH), com que cal modificar la configuració de xarxa no es pot fer assegut des de l’equip de l’administrador, sinó que cal anar equip per equip a modificar la configuració.</p>
+</div>
+<p>Aquest procés de configuració cal que es faci per a cada equip de la xarxa. Fer-lo manualment implica configurar equip per equip sense cometre errades en teclejar les adreces i les màscares. Qualsevol canvi en l’estructura de la xarxa, com per exemple redefinir les subxarxes o modificar algunes adreces IP, significa tornar a configurar manualment els equips implicats. És evident que tota aquesta feinada no és agradable per a l’administrador de xarxa (i és molt avorrida!). Tant si la xarxa corporativa consta de pocs equips com de molts, cal una solució que permeti automatitzar la configuració de xarxa de cada equip de manera centralitzada.</p>
+<p>Les opcions de configuració de xarxa es poden assignar a cada equip estàticament o es poden configurar de manera dinàmica utilitzant DHCP.</p>
+<p>Com a administradors de xarxa, la gestió centralitzada que ens proporciona DHCP ens permet modificar la xarxa afegint, eliminant i redefinint, equips amb un cost mínim.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id77">
+<div class="iDevice emphasis0">
+<div id="ta77_154" class="block iDevice_content">
+<h3>2.2. Tipus d'assignacions d'adreces IP</h3>
+<p>Cada equip de xarxa té assignada una adreça IP que l’identifica de manera única dins la xarxa. La composició de l’adreça IP i la màscara determina la xarxa o subxarxa a la qual pertany. A més a més, es configuren altres paràmetres de xarxa com la porta d’enllaç predeterminada, servidors DNS, etc. Això es pot configurar manualment anant equip per equip i introduint aquesta informació.</p>
+<p>Quan l’adreça IP i els altres paràmetres necessaris de configuració de la xarxa es configuren equip per equip, manualment, es diu que tenen una <strong>configuració IP estàtica</strong>.</p>
+<p>Quan la configuració de xarxa d'un equip no es fa manualment i localment en l’equip sinó que es rep per mitjà d’un servidor DHCP, es diu que l’equip utilitza una <strong>configuració IP dinàmica</strong>. Per realitzar configuracions de xarxa dinàmicament caldran un o més servidors de DHCP (a manera de redundància) que proporcionaran la configuració als equips clients (els que cal configurar). Per tant, serà una estructura client-servidor. Les adreces IP dinàmiques que rep el client les podem classificar en dues categories: assignació dinàmica d'interval i assignació fixa.</p>
+<p>El servidor DHCP disposa d’un interval d’adreces que pot assignar als clients que demanen una adreça IP. Quan el servidor assigna una adreça qualsevol de l’interval al client (a l’atzar) es tracta d’una assignació dinàmica d’interval. El client no sap quina adreça IP tindrà i no hi ha manera de predir quina adreça se li concedirà en una futura configuració. A cada nova assignació l’adreça IP pot ser diferent.</p>
+<p>Una assignació fixa es produeix quan el servidor DHCP sempre assigna la mateixa adreça al client. Per assignar sempre la mateixa adreça IP al client cal que el servidor pugui identificar inequívocament el client (per l’adreça MAC). El servidor disposa d’una taula amb les correspondències entre les adreces MAC i les adreces IP fixes.</p>
+<p>Quan la configuració de xarxa d’un equip es rep per mitjà d’un servidor DHCP es diu que utilitza <strong>una adreça IP dinàmica</strong>. Aquesta adreça pot variar dins d’un interval d’adreces disponibles per al servidor DHCP o pot ser fixa. Si l'assignació de la configuració es fa per a sempre es diu que es fa una assignació de <strong>configuració IP automàtica</strong>.</p>
+<p>Els avantatges de disposar d’una IP fixa són que la vostra identificació a Internet (la vostra adreça IP) no varia i tothom us pot identificar sempre per la mateixa IP. Podeu proporcionar serveis a altres equips, els clients us identifiquen sempre amb la mateixa adreça sense haver de recordar en cada moment quina adreça IP teniu avui (com passa en el cas d’una IP dinàmica).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id78">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Cal que conegues</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_129" class="block iDevice_content">
+<p><strong>MAC: </strong>Cada interfície de xarxa s’identifica de manera única físicament per l’adreça MAC (<em>media acces control</em>, adreça d’accés al medi).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id84">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Per saber més</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta84_128" class="block iDevice_content">
+<p><strong>Macchange</strong></p>
+<p>L’ordre GNU permet (<em>mascarade</em>) emmascarar l’adreça MAC pròpia. Compte! No feu maldats.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="12_un_servei_clientservidor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_el_model_funcional_dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Característiques d'HTTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li class="current-page-parent"><a href="2_el_protocol_http.html" class="current-page-parent daddy">2. El protocol HTTP</a>
+   <ul>
+      <li><a href="21_un_poc_dhistria.html" class="no-ch">2.1. Un poc d'història</a></li>
+      <li id="active"><a href="22_caracterstiques_dhttp.html" class="active no-ch">2.2. Característiques d'HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapes_duna_transacci_http.html" class="no-ch">3. Etapes d'una transacció HTTP</a></li>
+   <li><a href="4_lestandard_http10.html" class="daddy">4. L'estandard HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transaccions_http.html" class="no-ch">Pràctica 1: Transaccions HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_installaci_i_configuraci_dapache2.html" class="daddy">5. Instal·lació i configuració d'Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_installaci_dapache2.html" class="no-ch">Pràctica 2: Instal·lació d'Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidors_virtuals.html" class="daddy">6. Servidors virtuals</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuraci_bsica.html" class="no-ch">Pràctica 3: Configuració bàsica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_accs_annim_i_autenticat_formes_dautenticaci.html" class="daddy">7. Accés anònim i autenticat. Formes d'autenticació.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_daccs_autoritzaci_i_autenticaci.html" class="no-ch">Pràctica 4: Control d'accés, autorització i autenticació</a></li>
+   </ul>
+   </li>
+   <li><a href="8_execuci_de_codi_scripts_de_servidor_i_de_client.html" class="daddy">8. Execució de codi. Scripts de servidor i de client.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_execuci_del_codi_en_el_client_i_en_el_servidor.html" class="no-ch">Pràctica 5: Execució del codi en el client i en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establiment_de_connexions_segures_.html" class="daddy">9. Establiment de connexions segures .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="21_un_poc_dhistria.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_etapes_duna_transacci_http.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.2. Característiques d'HTTP</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id4">
+<div class="iDevice emphasis0">
+<div id="ta4_85" class="block iDevice_content">
+<p>El protocol de transferència d’hipertext (HTTP) és un protocol client-servidor força senzill que articula els intercanvis d'informació entre els clients web i els servidors HTTP. HTTP va ser desenvolupat pel consorci W3C i la IETF. Aquesta col·laboració va culminar l’any 1999 amb la publicació d'una sèrie de RFC, el més important dels quals va ser el RFC 2616, que especificava la versió 1.1</p>
+<div class="exe-block-info">
+<p>Els <em>Request for Comments</em>, més coneguts per les seves sigles RFC, són una sèrie de publicacions del grup de treball d'enginyeria d'internet que descriuen diversos aspectes del funcionament d'Internet i altres xarxes de computadores, com protocols, procediments, etc. i comentaris i idees sobre estos.</p>
+</div>
+<p>Des del punt de vista de les comunicacions, està suportat en els serveis de connexió TCP/IP i funciona de la mateixa manera que la resta de serveis propis dels entorns UNIX.</p>
+<p>Tècnicament, un procés servidor escolta en un port de comunicacions TCP (per defecte, el 80) i espera les sol·licituds de connexió dels clients web. Una vegada establerta la connexió, el protocol TCP s'encarrega de mantenir la comunicació i garantir un intercanvi de dades lliure d'errors.</p>
+<p>El protocol de transferència d'hipertext es basa en <strong>operacions senzilles de sol·licitud/resposta</strong>. Quan un client estableix una connexió amb un servidor i envia un missatge amb les dades de la sol·licitud, el servidor respon amb un missatge similar, que conté l'<strong>estat de l'operació</strong> i el seu resultat possible. Totes les operacions poden adjuntar un objecte o recurs sobre el qual actuen; cada objecte web (document HTML, arxiu multimèdia o aplicació CGI) és conegut pel seu localitzador uniforme de recursos (URL, <em>uniform resource locator</em>). Els recursos poden ser arxius, el resultat de l'execució d'un programa, una consulta a una base de dades, la traducció automàtica d’un document, etc</p>
+<p><strong>HTTP és un protocol sense estat</strong>, és a dir, no guarda cap informació sobre connexions anteriors. El desenvolupament d'aplicacions web freqüentment necessita mantenir estat. Per això s'utilitzen les galetes (<em>cookies</em>), és a dir, la informació que un servidor pot emmagatzemar en el sistema client. Això permet que les aplicacions web institueixin la noció de “sessió”, i, alhora, permet rastrejar usuaris, ja que les galetes es poden emmagatzemar en el client durant un temps indeterminat.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta5_151" class="block iDevice_content">
+<div class="exe-block-info">
+<p><strong>Localitzador uniforme de recursos (URL)</strong></p>
+<p>Generalment, la via de què disposa un usuari per accedir a una pàgina web o un objecte (arxiu) és mitjançant el seu localitzador uniforme de recursos (URL), que és una mena d’adreça que indica la localització exacta d’un document a Internet.</p>
+<p>L’adreça que indica la localització exacta del document es compon del nom o l’adreça d’Internet (IP, Internet protocol) del servidor i el camí relatiu del document dins del servidor. També pot incloure altres aspectes com el port pel qual se sol·licita el servei (per defecte, s’assumeix que el 80 és per al protocol HTTP, el 21 per al protocol FTP, etc.) i un nom d’usuari i una contrasenya per a aquells documents que requereixin autenticació per accedir-h</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="21_un_poc_dhistria.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_etapes_duna_transacci_http.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

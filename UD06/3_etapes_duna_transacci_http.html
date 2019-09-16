@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Etapes d'una transacció HTTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poc_dhistria.html" class="no-ch">2.1. Un poc d'història</a></li>
+      <li><a href="22_caracterstiques_dhttp.html" class="no-ch">2.2. Característiques d'HTTP</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="3_etapes_duna_transacci_http.html" class="active no-ch">3. Etapes d'una transacció HTTP</a></li>
+   <li><a href="4_lestandard_http10.html" class="daddy">4. L'estandard HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transaccions_http.html" class="no-ch">Pràctica 1: Transaccions HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_installaci_i_configuraci_dapache2.html" class="daddy">5. Instal·lació i configuració d'Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_installaci_dapache2.html" class="no-ch">Pràctica 2: Instal·lació d'Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidors_virtuals.html" class="daddy">6. Servidors virtuals</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuraci_bsica.html" class="no-ch">Pràctica 3: Configuració bàsica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_accs_annim_i_autenticat_formes_dautenticaci.html" class="daddy">7. Accés anònim i autenticat. Formes d'autenticació.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_daccs_autoritzaci_i_autenticaci.html" class="no-ch">Pràctica 4: Control d'accés, autorització i autenticació</a></li>
+   </ul>
+   </li>
+   <li><a href="8_execuci_de_codi_scripts_de_servidor_i_de_client.html" class="daddy">8. Execució de codi. Scripts de servidor i de client.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_execuci_del_codi_en_el_client_i_en_el_servidor.html" class="no-ch">Pràctica 5: Execució del codi en el client i en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establiment_de_connexions_segures_.html" class="daddy">9. Establiment de connexions segures .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="22_caracterstiques_dhttp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_lestandard_http10.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. Etapes d'una transacció HTTP</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_154" class="block iDevice_content">
+<p>Amb la intenció de conèixer amb més profunditat el protocol HTTP podem avaluar en què consisteix una transacció HTTP.</p>
+<p>Cada vegada que un client fa una petició a un servidor, s’executen un seguit d'accions:</p>
+<ol>
+<li>Un usuari accedeix a una adreça d’Internet (URL) seleccionant un enllaç d’un document HTML o introduint-la directament a la barra de navegació d’un navegador web des de la perspectiva del client web. El client web descodifica l’adreça d’Internet (URL) separant-ne les diferents parts. És així com s'identifiquen el <strong>protocol d'accés</strong>, el node expressat amb el nom de domini o la seua adreça IP, el possible port opcional (el valor per defecte és el 80) i l'objecte del servidor requerit.</li>
+<li>S’obre una connexió TCP/IP amb el servidor cridant el port TCP corresponent. Es fa la petició. En conseqüència, s’envien l’ordre necessària (GET, POST, HEAD, etc.), l’adreça de l’objecte requerit (el contingut de l’adreça d’Internet del servidor), la versió del protocol HTTP utilitzada (en la major part de les ocasions és HTTP/1.0) i un conjunt variable d’informació que inclou dades sobre les capacitats del navegador web, dades opcionals per al servidor, etc.</li>
+<li>El servidor localitza el recurs sol·licitat i torna la resposta al client.</li>
+<li>Aquesta resposta consisteix en un codi d’estat i el tipus de dada amb extensions multipropòsit de correu d’Internet (MIME, <em>Multipurpose Internet Mail Extension</em>) de la informació de tornada, seguit de la mateixa informació.</li>
+<li>El client formata i mostra el recurs rebut.</li>
+<li>Es tanca la connexió TCP.</li>
+</ol>
+<p>Aquest procés es repeteix en cada accés que es faça al servidor HTTP. Per exemple, si es recull un document HTML que conté quatre imatges, el procés de transició mostrat amb anterioritat es repeteix cinc vegades, és a dir, una pel document HTML i quatre per les imatges.</p>
+<div class="exe-figure exe-image position-center" style="width: 829px;">
+<div class="figcaption header"><strong>Etapes en la transició HTTP</strong></div>
+<img src="HTTP_Steps.png" alt="Etapes en la transacció HTTP" title="Etapes en la transacció HTTP" width="829" height="304" /></div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta7_151" class="block iDevice_content">
+<div class="exe-block-warning">
+<p><strong>Extensió MIME</strong></p>
+<p>El protocol HTML fou dissenyat per transportar per la xarxa arxius en format ASCII. Amb el progrés de les tecnologies i la inclusió de diferents tipus d’arxius en un format diferent a l’ASCII (imatges, vídeos, sons, etc.) en les aplicacions per Internet, va sorgir la necessitat de transformar aquests format a ASCII per la seva correcta recepció en el navegador web.</p>
+<p>El 1992, es van crear els tipus MIME, que eren especificacions per donar format a missatges en un format diferent a l’ASCII perquè poguessin ser enviats i interpretats per Internet. Més endavant es van aplicar també als documents web.</p>
+<p><strong>Nomenclatura de tipus</strong></p>
+<p>MIME assigna un nom a cada tipus de dades. Els noms segueixen el següent format:</p>
+<pre style="padding-left: 30px;">tipus / subtipus (tipus com a subtipus són cadenes de caràcters)</pre>
+<p>El <code>tipus</code> defineix la categoria general de les dades i el <code>subtipus</code> defineix un tipus més específic d'aquestes dades. El tipus tenir els següents valors:</p>
+<ul>
+<li><strong>text</strong>: Indica que el contingut és text pla. Exemples de subtipus: html, xml</li>
+<li><strong>multipart</strong>: Indica que té múltiples parts de dades independents. Exemples de subtipus: form-data, enviat a diari</li>
+<li><strong>message</strong>: Per encapsular un missatge existent. Per exemple quan volem respondre a un missatge de correu incorporant el missatge origen. Exemples de subtipus: partial, RFC822</li>
+<li><strong>image</strong>: Indica que és una imatge. Ex de subtipus: png, gif</li>
+<li><strong>audio</strong>: Indica que és un àudio. Exemples de subtipus: mpeg, avi</li>
+<li><strong>video</strong>: Indica que és un vídeo. Exemples de subtipus: mp4, 32kadpcm</li>
+<li><strong>application</strong>: Indica que es tracta de dades d'aplicació dels quals poden ser binaris. Exemples de subtipus: json, pdf</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="22_caracterstiques_dhttp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_lestandard_http10.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

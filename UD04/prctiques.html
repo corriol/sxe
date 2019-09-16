@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pràctiques | 3. Servei FTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-48"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. Servei FTP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Servei FTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_funcionament.html" class="no-ch">2. Funcionament</a></li>
+   <li><a href="3_gesti_dusuaris_i_permisos.html" class="no-ch">3. Gestió d'usuaris i permisos</a></li>
+   <li><a href="4_comandaments.html" class="no-ch">4. Comandaments</a></li>
+   <li><a href="5_transferncia_en_mode_text_i_binari.html" class="no-ch">5. Transferència en mode text i binari.</a></li>
+   <li><a href="exercicis.html" class="no-ch">Exercicis</a></li>
+   <li id="active"><a href="prctiques.html" class="active no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="exercicis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Pràctiques</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id8">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Activitat 4.1: FTP en mode consola</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_148" class="block iDevice_content">
+<p><span>Prova les següents comandes del client FTP en mode consola:</span></p>
+<ul>
+<li>help</li>
+<li>ascii</li>
+<li>binary</li>
+<li>cd</li>
+<li>chmod</li>
+<li>close</li>
+<li>quit</li>
+<li>bye</li>
+<li>delete</li>
+<li>mkdir</li>
+<li>get</li>
+<li>dir</li>
+<li>ls</li>
+<li>put</li>
+<li>pwd</li>
+<li>prompt</li>
+<li>rename</li>
+<li>rmdir</li>
+<li>size</li>
+<li>passive</li>
+<li>open</li>
+</ul>
+<p><span>Hi ha també una sèrie de comandes interessants que comencen per "m" (ex: mput, mget, ...)</span><br /><br /><span>Després d'haver provat com funciona el client FTP en mode consola elabora una taula resum de les comandes que has utilitzat.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id9">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Activitat 4.2: Instal·lació i Configuració FTP anònim</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_148" class="block iDevice_content">
+<h2>Objectius</h2>
+<ul>
+<li>Aprendre a instal·lar i configurar un servei FTP en GNU/Linux.</li>
+<li>Entendre el concepte d'usuari virtual.</li>
+<li>Treballar amb els permisos en el sistemes de fitxers.</li>
+</ul>
+<h2>Activitats</h2>
+<ol>
+<li>Instal·la i configura el servidor FTP (vsFTPd) perquè permeta l'accés anònim per a solament lectura a una carpeta anomenada <code>public</code>.</li>
+<li>Configura el DNS perquè tinga nom el servidor ftp. (<code>ftp.##.aula.loca</code>l).</li>
+<li>Afegeix alguns arxius a eixa carpeta i comprova el funcionament.</li>
+<li>Permet a l'usuari anònim penjar arxius en una nova carpeta anomenada <code>incoming</code>.</li>
+<li>Assegura't que els arxius es poden descarregar després de penjar-los.</li>
+</ol>
+<h3>Recursos</h3>
+<ul>
+<li>Instal·lació d'un servidor FTP en Ubuntu Server Guide: <a href="https://help.ubuntu.com/lts/serverguide/ftp-server.html">https://help.ubuntu.com/lts/serverguide/ftp-server.html</a></li>
+<li>Informació de les opcions de configuració: <a href="https://security.appspot.com/vsftpd/vsftpd_conf.html">https://security.appspot.com/vsftpd/vsftpd_conf.html</a> </li>
+<li>Les opcions que afecten als usuaris anònims comencen per anon_</li>
+<li>Tin en compte que l'usuari virtual necessita disposar d'un usuari local, en aquest cas és ftp.</li>
+</ul>
+<h3>Entregable</h3>
+<ol>
+<li>Manual de passos realitzats per a la instal·lació i per a la configuració.</li>
+<li>Captures de pantalla que mostren el funcionament. Sols lectura, accés al directori, permisos, etc.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id10">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Activitat 4.3: Configuració VSFTP per a usuaris autenticats</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_148" class="block iDevice_content">
+<p><a href="https://security.appspot.com/vsftpd/vsftpd_conf.html">Manual de vsftpd.conf</a></p>
+<p>Recorda: <a href="http://www.ite.educacion.es/formacion/materiales/85/cd/linux/m1/permisos_de_archivos_y_carpetas.html">Permisos en Linux</a></p>
+<p>Configura el servidor FTP (vsFTPd)</p>
+<ol>
+<li>Modifica la taxa de transferència per als usuaris anònims a 10 bytes per segon.(<code>anon_max_rate</code>)</li>
+<li>Gestiona les connexions màximes per IP (2) [<code>max_per_ip</code>] i màxim número de clients (5) [<code>max_clients</code>].</li>
+<li>Ajusta els "timeouts" [<code>timeout</code>...]</li>
+<li>Ajusta el servidor per a permetre accés a alguns dels usuaris del sistema (no a tots) [<code>local_enable</code>, <code>userlist_file</code>, <code>userlist_enable</code>]. Crea un nou usuari <code>ftp_user</code> que serà l'únic que tindrà accés. [<code>adduser</code>]</li>
+<li>Document el procés, explicant els canvis realitzats.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="exercicis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

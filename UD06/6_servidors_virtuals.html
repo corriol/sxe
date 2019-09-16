@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6. Servidors virtuals </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poc_dhistria.html" class="no-ch">2.1. Un poc d'història</a></li>
+      <li><a href="22_caracterstiques_dhttp.html" class="no-ch">2.2. Característiques d'HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapes_duna_transacci_http.html" class="no-ch">3. Etapes d'una transacció HTTP</a></li>
+   <li><a href="4_lestandard_http10.html" class="daddy">4. L'estandard HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transaccions_http.html" class="no-ch">Pràctica 1: Transaccions HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_installaci_i_configuraci_dapache2.html" class="daddy">5. Instal·lació i configuració d'Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_installaci_dapache2.html" class="no-ch">Pràctica 2: Instal·lació d'Apache2</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_servidors_virtuals.html" class="active daddy">6. Servidors virtuals</a>
+   <ul>
+      <li><a href="prctica_3_configuraci_bsica.html" class="no-ch">Pràctica 3: Configuració bàsica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_accs_annim_i_autenticat_formes_dautenticaci.html" class="daddy">7. Accés anònim i autenticat. Formes d'autenticació.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_daccs_autoritzaci_i_autenticaci.html" class="no-ch">Pràctica 4: Control d'accés, autorització i autenticació</a></li>
+   </ul>
+   </li>
+   <li><a href="8_execuci_de_codi_scripts_de_servidor_i_de_client.html" class="daddy">8. Execució de codi. Scripts de servidor i de client.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_execuci_del_codi_en_el_client_i_en_el_servidor.html" class="no-ch">Pràctica 5: Execució del codi en el client i en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establiment_de_connexions_segures_.html" class="daddy">9. Establiment de connexions segures .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_installaci_dapache2.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3_configuraci_bsica.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6. Servidors virtuals</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id22">
+<div class="iDevice emphasis0">
+<div id="ta22_86" class="block iDevice_content">
+<p>Quan parlem de la creació de llocs virtuals ens estem referint a l’acció de fer treballar més d’un lloc web, per exemple, les pàgines web <code>www.web1.cat</code> i <code>www.web2.cat</code> en un únic ordinador.</p>
+<p>Tal com mostra la figura següent tot i que tots dos dominis estiguen treballant en la mateixa màquina física, mai no ens n’adonarem quan visitem aquests llocs web.</p>
+<p><img src="smx_m07u3-36_1.png" alt="Servidors virtuals" title="Servidors virtuals" style="display: block; margin-left: auto; margin-right: auto;" width="430" height="623" /></p>
+<p>Els llocs web virtuals es poden <strong>basar tant en adreces d'Internet (IP)</strong>, on cada lloc web té una adreça d'Internet (IP) diferent, com <strong>en noms diferents</strong>, és a dir, diversos llocs web amb diferents noms de domini estaran treballant amb una única adreça d'Internet (IP). Val a dir que, tot i que estiguem treballant en la mateixa màquina física, com a usuaris observarem que l'usuari, quan visita aquests llocs web, no se n'adona.</p>
+<p>Per explicar la tècnica de la creació de llocs web virtuals, treballarem amb dos exemples:<code> www.aplicacionsweb.org</code> i <code>www.serveisenxarxa.org</code>.</p>
+<p>Els dos llocs webs virtuals seran servits pel mateix servidor web. El directori per defecte on es troben les pàgines web és <code>/var/www</code>, on crearem les diferents estructures de directori. Per tant, dins dels directoris <code>/var/www/aplicacionsweb</code> i <code>/var/www/seveisenxarxa</code> trobarem els arxius dels llocs web corresponents a les pàgines web anteriors.</p>
+<p>Per a la configuració i posada en marxa dels llocs web virtuals hem de construir, en primer lloc, l'estructura de directoris on desarem els llocs. Utilitzarem dintre del directori reservat a cada lloc web la carpeta de <code>public_html</code> per allotjar els arxius del lloc web.</p>
+<p>Un cop definits els directoris on desarem els llocs web virtuals, haurem d’adreçar-nos al directori <code>/etc/apache2</code>, on trobarem els arxius de configuració d’Apache. En aquest cas, l'arxiu principal de configuració és <code>apache2.conf</code>.</p>
+<p>Considerant que per treballar amb els llocs virtuals haurem de fer alguns canvis en el contingut de l’arxiu, haurem de considerar, abans d'establir cap canvi, quina configuració de llocs web virtuals volem crear, és a dir, llocs virtuals basats en adreces d’Internet (IP) o bé basats en noms.<span style="font-size: 1em;"></span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_86" class="block iDevice_content">
+<h3>Servidors virtuals en Apache</h3>
+<p>Apache2 es lliura amb una configuració predeterminada <em>virtual-host-friendly</em>. És a dir, està configurat amb un únic <em>host</em> virtual predeterminat (utilitzant la directiva <code>VirtualHost</code>) que es pot modificar o utilitzar com si tingués un sol lloc o que s'utilitzés com a plantilla per a servidors virtuals addicionals si teniu diversos llocs. Si es deixa sol, l'amfitrió virtual predeterminat servirà com a lloc predeterminat o els usuaris del lloc veuran si l'URL que introduïu no coincideix amb la directiva <code>ServerName</code> de cap dels vostres llocs personalitzats. Per modificar el servidor virtual predeterminat, editeu el fitxer <code>/etc/apache2/sites-available/000-default.conf.</code></p>
+<p><span style="font-size: 1em;">Si voleu configurar un nou host virtual o lloc, copieu aquests fitxers en el mateix directori amb el nom que seleccioneu. Per exemple:</span></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/elmeullocweb.conf
+</code></pre>
+</div>
+</div>
+<p>La configuració per defecte és la següent:</p>
+<div class="highlighted-code language-clike line-numbers">
+<div>
+<pre><code>&lt;VirtualHost *:80&gt;
+	# The ServerName directive sets the request scheme, hostname and port that
+	# the server uses to identify itself. This is used when creating
+	# redirection URLs. In the context of virtual hosts, the ServerName
+	# specifies what hostname must appear in the request's Host: header to
+	# match this virtual host. For the default virtual host (this file) this
+	# value is not decisive as it is used as a last resort host regardless.
+	# However, you must set it for any further virtual host explicitly.
+	#ServerName www.example.com
+
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+
+	# Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+	# error, crit, alert, emerg.
+	# It is also possible to configure the loglevel for particular
+	# modules, e.g.
+	#LogLevel info ssl:warn
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	# For most configuration files from conf-available/, which are
+	# enabled or disabled at a global level, it is possible to
+	# include a line for only one particular virtual host. For example the
+	# following line enables the CGI configuration for this host only
+	# after it has been globally disabled with "a2disconf".
+	#Include conf-available/serve-cgi-bin.conf
+&lt;/VirtualHost&gt;
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet</code></pre>
+</div>
+</div>
+<p>Una vegada realitzats els canvis activarem en lloc web amb el comandament <code>a2ensite</code>:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>#a2ensite elmeullocweb</code></pre>
+</div>
+</div>
+<p>Després carregarem de nou la configuració d'Apache2 amb el comandament:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>#service apache2 reload
+</code></pre>
+</div>
+</div>
+<p>Per a la depuració d'error en els arxius de configuració de llocs virtuals cal utilitzar:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>#apache2ctl -t</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id24">
+<div class="iDevice emphasis0">
+<div id="ta24_86" class="block iDevice_content">
+<h2>Llocs virtuals basats en l’adreça d’Internet (IP)</h2>
+<p>En aquest cas, podrem allotjar múltiples dominis en una única màquina que disposarà de diferents adreces d’Internet (IP) i, en cadascuna d’elles, s’hi executarà un lloc virtual.</p>
+<p>Haurem de canviar la directiva <code>&lt;VirtualHost *:80&gt;</code> de forma que s'especifique a quina adreça IP ha de respondre. Per exemple <code>&lt;VirtualHost 192.168.2.112:80&gt;</code> si ha de respondre a l'adreça IP 192.168.2.112.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>&lt;VirtualHost 192.168.2.112:80&gt;
+<span style="color: #993300;">DocumentRoot </span>"/var/www/serveisenxarxa/public_html"<strong>
+</strong>&lt;/VirtualHost&gt;</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_86" class="block iDevice_content">
+<h2>Llocs virtuals basats en el nom de domini</h2>
+<p>El problema dels llocs web virtuals basats en adreces d’Internet (IP) és que, considerant que s'allotgen molts dominis, necessitarem una adreça d’Internet (IP) per a cadascun dels dominis. Per tant, pot ser preferible treballar amb llocs virtuals basats en noms. En aquest cas, després de copiar l'arxiu de configuració per defecte, haurem d'afegir la directriu <code>ServerName</code> donat que, si bé els llocs virtuals es troben en la mateixa IP, s'ha de canviar el nom per a cadascun dels llocs. En el cas de treballar amb servidor DNS, aquest haurà d'estar configurat per resoldre aquests llocs en les zones corresponents. I la directiva DocumentRoot per a indicar des de quin directori es serviran les pàgines. Aquesta seria la configuració per a lloc www.serveisenxarxa.org:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>&lt;VirtualHost *:80&gt;
+<span style="color: #993300;">ServerName</span> www.serveisenxarxa.org<span style="color: #993300;">
+DocumentRoot </span>"/var/www/serveisenxarxa/public_html"<strong>
+</strong>&lt;/VirtualHost&gt;</code></pre>
+</div>
+</div>
+<p>Finalment, per verificar que tots els canvis aplicats han tingut èxit, tornarem a arrencar el servidor web.</p>
+<p></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_installaci_dapache2.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3_configuraci_bsica.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

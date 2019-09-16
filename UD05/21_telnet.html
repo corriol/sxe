@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1. Telnet </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Serveis de control i accés remot</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="no-ch">1.1. Usos més freqüents de l'accés remot a ordinadors</a></li>
+      <li><a href="12_diferents_tipus_daccs_remot.html" class="no-ch">1.2. Diferents tipus d'accés remot</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_accs_remot_amb_lnia_dordres.html" class="current-page-parent daddy">2. Accés remot amb línia d'ordres</a>
+   <ul>
+      <li id="active"><a href="21_telnet.html" class="active no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introducci_a_la_criptografia.html" class="no-ch">2.2. Introducció a la criptografia</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_installaci_del_servei_telnet.html" class="no-ch">Pràctica 1: Instal·lació del servei Telnet</a></li>
+      <li><a href="prctica_2_installaci_del_servei_ssh.html" class="no-ch">Pràctica 2: Instal·lació del servei SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_accs_remot_amb_interfcie_grfica.html" class="daddy">3. Accés remot amb interfície gràfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="no-ch">Pràctica 3: Accés remot amb terminal gràfic</a></li>
+   </ul>
+   </li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_accs_remot_amb_lnia_dordres.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="22_introducci_a_la_criptografia.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.1. Telnet</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_85" class="block iDevice_content">
+<h2>2.1. Telnet</h2>
+<p><strong>telnet</strong> és un protocol que emula un terminal remot per a connectar-se a una màquina multiusuari. Igual que amb el protocol FTP, cal el programari necessari i un protocol específic per aquest servei.</p>
+<p>El port que s'utilitza és generalment el 23. Només serveix per accedir-hi en mode terminal, és a dir, sense gràfics, però va ser una eina molt útil per arreglar problemes a distància. També s'ha fet servir per consultar dades a distància, com dades personals accessibles a través de la xarxa, informació bibliogràfica, etc. Els requisits per accedir a aquest servei són molt senzills: conèixer el nom i l'adreça del servidor remot i estar habilitat per a poder utilitzar-lo mitjançant un identificador d'usuari i una contrasenya. Normalment es crida a una aplicació externa que és la que realitza la connexió. En aquest cas s'ha d'indicar la màquina i el login: <code>telnet://maquina.domini@login</code>.</p>
+<p>El seu principal problema és de seguretat, ja que tots els noms d'usuari i contrasenyes necessàries per entrar a les màquines viatjaven per la xarxa sense xifrar. Això feia que qualsevol persona que espies el tràfic de la xarxa pogués obtenir aquestes dades i d'aquesta manera accedir també a les màquines. Es va deixar de fer servir quasi totalment, fa uns anys, quan va aparèixer i es va popularitzar l'SSH, que es pot descriure com una versió xifrada de Telnet.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_accs_remot_amb_lnia_dordres.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="22_introducci_a_la_criptografia.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6. Problemes del servei | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-50"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servei DHCP</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_evoluci_del_protocol_dhcp.html" class="no-ch">1.1. Evolució del protocol DHCP</a></li>
+      <li><a href="12_un_servei_clientservidor.html" class="no-ch">1.2. Un servei client/servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="no-ch">2. Configuració dels equips de la xarxa</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervals_exclusions_concessions_i_reserves.html" class="no-ch">4. Intervals, exclusions, concessions i reserves</a></li>
+   <li><a href="5__opcions_addicionals_del_protocol.html" class="daddy">5.  Opcions addicionals del protocol.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servei DHCP</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_problemes_del_servei.html" class="active no-ch">6. Problemes del servei</a></li>
+   <li><a href="installaci_dun_servidor__dhcp.html" class="no-ch">Instal·lació d'un servidor  DHCP</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="installaci_dun_servidor__dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6. Problemes del servei</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id85">
+<div class="iDevice emphasis0">
+<div id="ta85_154" class="block iDevice_content">
+<h2>6.1. Atacs al funcionament de DHCP i conflictes d'adreces IP</h2>
+<p>Com tot servei de xarxa, el servidor DHCP és susceptible de patir atacs mal intencionats. L’atac més fàcil i clàssic és el DoS o de denegació de servei. Consisteix a inundar de peticions un servidor per tal de saturar-lo i bloquejar-ne el funcionament. Un client pot realitzar innumerables peticions DHCP <em>discovery</em> fingint que són clients diferents (emmascarant la seva MAC) amb la intenció d’esgotar les adreces IP disponibles del servidor o simplement amb la intenció de sobrecarregar-lo amb tantes peticions que no done a l’abast a atendre-les o que ho faci lentament.</p>
+<p>Un altre tipus d’atac consisteix a falsejar la informació que s’envia al client (<em>DHCP Spoofing</em>). Recordem que el client fa una sol·licitud d’IP en forma de difusió (<em>broadcast</em>) i la seva petició pot ser atesa per un o més servidors DHCP. Un dels servidors DHCP pot ser un atacant que intentarà proporcionar informació de configuració falsa al client. Per exemple indicant un servidor DNS també maliciós. Aquest pot falsejar les identitats de les màquines de la xarxa i, quan el client s’adreça a la seva entitat bancària, el servidor DNS en realitat li ha proporcionat una IP d’una màquina que falseja la de l’entitat bancària. Perillós, veritat?</p>
+<p>Per posar remei a la inseguretat en la comunicació client-servidor DHCP, el protocol permet utilitzar mecanismes d’autenticació i xifratge. Aquests mecanismes queden fora de l’abast d’aquesta explicació.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 516px;">
+<div class="figcaption header"><strong>Esquema de funcionament del DHCP Spoofing</strong></div>
+<img src="dhcp-spoofing.jpg" alt="DHCP Spoffing" width="516" height="299" />
+<div class="figcaption"><a href="https://smr.iesharia.org/wiki/doku.php/sgf:ut1:ataques_dhcp" target="_blank" class="author" rel="noopener noreferrer">IES Haría</a>. <span class="title"><em>Esquema de funcionament del DHCP Spoofing</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<h2>6.2. Conflictes amb les adreces IP</h2>
+<p>Un dels principals motius per utilitzar DHCP és simplificar el procés de configuració de xarxa i minimitzar els conflictes per encavalcament d’adreces IP. Per desgràcia, això no garanteix que no es puguin produir conflictes. Per exemple, ens podem trobar en situacions en què dues màquines diferents tinguin la mateixa IP per una simple mala configuració del servidor DHCP. Un altre cas típic és el d’un client que s’ha configurat ell mateix una IP estàtica quan en la xarxa ja hi havia un equip que utilitzava la mateixa adreça IP assignada pel servidor DHCP.</p>
+<p>Un problema habitual per als administradors poc experimentats és definir una configuració de xarxa local al client (hostname, servidor DNS, porta d’enllaç a utilitzar, etc.), però demanar l’adreça IP dinàmicament. La configuració dinàmica no és solament la IP i la màscara, sinó que el servidor DHCP pot proporcionar altres paràmetres de xarxa que sobreescriuran els que el client tenia definits localment (aquest és l’objectiu de DHCP!).</p>
+<p>La configuració rebuda per DHCP sobreescriu la configuració local del client.</p>
+<h2>6.3. Diversos servidors DHCP en la mateixa xarxa</h2>
+<p>Un altre dels problemes habituals és que per error o maldat es connecte a la xarxa un altre servidor DHCP que responga primer a les peticions de DHCP Discover. En els entorns corporatius cal tindre control de què es connecta a la xarxa per a evitar problemes. Aquests tipus d'escenaris es poden minimitzar indicant que el servidor és autoritari en el segment de xarxa afectat.</p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="installaci_dun_servidor__dhcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

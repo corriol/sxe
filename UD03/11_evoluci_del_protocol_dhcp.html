@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1. Evolució del protocol DHCP | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-57"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servei DHCP</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li class="current-page-parent"><a href="1_introducci.html" class="current-page-parent daddy">1. Introducció</a>
+   <ul>
+      <li id="active"><a href="11_evoluci_del_protocol_dhcp.html" class="active no-ch">1.1. Evolució del protocol DHCP</a></li>
+      <li><a href="12_un_servei_clientservidor.html" class="no-ch">1.2. Un servei client/servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="no-ch">2. Configuració dels equips de la xarxa</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervals_exclusions_concessions_i_reserves.html" class="no-ch">4. Intervals, exclusions, concessions i reserves</a></li>
+   <li><a href="5__opcions_addicionals_del_protocol.html" class="daddy">5.  Opcions addicionals del protocol.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servei DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemes_del_servei.html" class="no-ch">6. Problemes del servei</a></li>
+   <li><a href="installaci_dun_servidor__dhcp.html" class="no-ch">Instal·lació d'un servidor  DHCP</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_un_servei_clientservidor.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.1. Evolució del protocol DHCP</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id80">
+<div class="iDevice emphasis0">
+<div id="ta80_154" class="block iDevice_content">
+<h2>El protocol DHCP i els seus components.</h2>
+<p>El protocol DHCP ve descrit, com la majoria de protocols de xarxa, per un document oficial anomenat RFC. Al llarg dels anys ha sofert diverses evolucions per anar-se adaptant a les necessitats de cada moment. Tot protocol implica un diàleg entre els equips que hi intervenen, ens caldrà doncs analitzar quin és i com es produeix aquest diàleg. Finalment es descriurà el significat de termes tan usuals en DHCP com intervals, exclusions, concessions i reserves.</p>
+<h3>Evolució del protocol DHCP</h3>
+<p>El servei DHCP és un servei del tipus client-servidor que proporciona la configuració de xarxa als clients que ho sol·liciten. Proporciona els paràmetres bàsics de xarxa com l’adreça IP, la màscara de xarxa, la porta d’enllaç i també d’altres paràmetres necessaris per a una connexió en una xarxa IP. Es tracta d’un protocol de la capa d’aplicació del model TCP/IP.</p>
+<p>El protocol DHCP està basat en l’arquitectura de serveis client-servidor i utilitza com a transport el protocol UDP de la pila de protocols TCP/ IP. El servidor DHCP es comunica amb els clients utilitzant paquets UDP, que rep en el seu port 67 i envia al port 68 del client.</p>
+<p>La configuració dinàmica d’equips de xarxa es va iniciar amb el protocol BOOTP (BOOT <em>strap protocol</em>, protocol d’arrencada). Un protocol més bàsic que principalment permetia definir l’adreça IP, la màscara de xarxa i la passarel·la per defecte per al client. El protocol BOOTP (<abbr title="Request for comments">RFC</abbr> 951, any 1985) és un protocol pensat per proporcionar automàticament la IP a clients de xarxa en el procés d’arrencada. Originàriament s’utilitzava per a estacions de treball sense disc que obtenien la configuració de xarxa del protocol BOOTP i també obtenien el nom d’un fitxer d’arrencada que s’havia de baixar per mitjà del TFTP, que usualment era el sistema operatiu.</p>
+<p>El BOOTP va donar pas al protocol DHCP, que n’és una evolució amb moltes més prestacions. El DHCP sorgeix l’octubre del 1993 a través de l’RFC 1531. Ràpidament evoluciona per mitjà de diverses RFC, com l’RFC 1541 el mateix any 1993, que serà substituïda per l’RFC 2131 el març del 1997. Aquest document és la base del protocol DHCP actual. A grans trets, el protocol es descriu en l’RFC 2131 per a xarxes Ipv4, el conjunt d’opcions de configuració de DHCP es descriuen en l’RFC 2132, i l’especificació de DHCP per a xarxes Ipv6 és en l’RFC 3315.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id81">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Per saber més</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_128" class="block iDevice_content">
+<p><strong>Què són els RFC?</strong></p>
+<p>Els Request for Comments (RFC) són memoràndums sobre noves investigacions, innovacions i metodologies relacionades amb les tecnologies d’Internet. Quan els publica l’IETF (Internet Engineering Task Force) defineixen a escala mundial els protocols i les seves revisions. És a dir, són les publicacions oficials que descriuen els protocols.</p>
+<p><strong>RFC de DHCP</strong></p>
+<p>Principals RFC dedicades a DHCP:</p>
+<ul>
+<li>RFC 2131. Març 1997. DHCP dynamic host configuration protocol.</li>
+<li>RFC 2132. DHCP options.</li>
+<li>RFC 3396. Encoding long options.</li>
+<li>RFC 4361. No especific client identifications for dhcpv4.</li>
+<li>RFC 3315. DHCPv6 dinamic host configuration protocol Ipv6.</li>
+</ul>
+<div style="overflow: hidden; position: absolute; top: -5000px; height: 1px;">
+<p class="ioctitle">RFC de DHCP</p>
+<p>Principals <acronym title="Request for Comments">RFC</acronym> dedicades a <acronym title="Dynamic Host Configuration Protocol">DHCP</acronym>:</p>
+<ul>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 2131. Març 1997. <acronym title="Dynamic Host Configuration Protocol">DHCP</acronym> <em>dynamic host configuration protocol</em>.</div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 2132. <acronym title="Dynamic Host Configuration Protocol">DHCP</acronym> <em>options</em>.</div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 3396. <em>Encoding long options</em>.</div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 4361. <em>No especific client identifications for dhcpv4.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 3315. DHCPv6 <em>dinamic host configuration protocol</em> <em>Ipv6.</em></div>
+</li>
+</ul>
+</div>
+<div style="overflow: hidden; position: absolute; top: -5000px; height: 1px;">
+<p class="ioctitle">RFC de DHCP</p>
+<p>Principals <acronym title="Request for Comments">RFC</acronym> dedicades a <acronym title="Dynamic Host Configuration Protocol">DHCP</acronym>:</p>
+<ul>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 2131. Març 1997. <acronym title="Dynamic Host Configuration Protocol">DHCP</acronym> <em>dynamic host configuration protocol</em>.</div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 2132. <acronym title="Dynamic Host Configuration Protocol">DHCP</acronym> <em>options</em>.</div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 3396. <em>Encoding long options</em>.</div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 4361. <em>No especific client identifications for dhcpv4.</em></div>
+</li>
+<li class="level1">
+<div class="li"><acronym title="Request for Comments">RFC</acronym> 3315. DHCPv6 <em>dinamic host configuration protocol</em> <em>Ipv6.</em></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_un_servei_clientservidor.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

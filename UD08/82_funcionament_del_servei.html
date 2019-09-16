@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.2. Funcionament del servei | 8. Correu electrònic </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Vicent Jordà" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">8. Correu electrònic</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8. Gestió de serveis de correu electrònic</a></li>
+   <li><a href="81_introducci.html" class="no-ch">8.1. Introducció</a></li>
+   <li id="active"><a href="82_funcionament_del_servei.html" class="active no-ch">8.2. Funcionament del servei</a></li>
+   <li><a href="83_protocols_en_la_gesti_de_correu_electrnic.html" class="no-ch">8.3. Protocols en la gestió de correu electrònic</a></li>
+   <li><a href="84_servidors_de_correu_electrnic.html" class="no-ch">8.4. Servidors de correu electrònic</a></li>
+   <li><a href="85_clients_de__correu_electrnic.html" class="no-ch">8.5. Clients de  correu electrònic</a></li>
+   <li><a href="86_seguretat_i_vulnerabilitats.html" class="no-ch">8.6. Seguretat i vulnerabilitats</a></li>
+   <li><a href="qestionari.html" class="no-ch">Qüestionari</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="81_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="83_protocols_en_la_gesti_de_correu_electrnic.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2. Funcionament del servei</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id2">
+<div class="iDevice emphasis0">
+<div id="ta2_86" class="block iDevice_content">
+<p>L'enviament i la recepció de correus electrònics comporta la intervenció de més d'un protocol d'aplicació i, en conseqüència, de més d'un tipus de servidor. Aquesta separació en funció de diferents protocols es basa en el fet que la comunicació via correu electrònic entre dos usuaris no és un procés client-servidor síncron. És a dir, quan un usuari envia un correu electrònic no té la certesa que el destinatari estigui connectat i, en conseqüència, el missatge haurà de ser emmagatzemat per poder ser llegit més endavant.</p>
+<p>Dins d'aquesta comunicació asíncrona intervenen algunes funcionalitats ben diferenciades com són l'agent de transferència de correu (MTA,<em> Mail Transfer Agent</em>), l'agent de lliurament de correu (MDA, <em>Mail Delivery Agent</em>) i l'agent d'usuari de correu (MUA, <em>Mail User Agent</em>).</p>
+<p>Els <strong>agents de transferència de correu</strong> (MTA, <em>Mail transfer Agent</em>) utilitzen el protocol simple de transferència de fitxers (SMTP, <em>Simple Mail transfer Protocol</em>) per comunicar-se amb altres agents de transferència de correu i amb els clients de correu electrònic. Val a dir que els agents de transferència de correu s'anomenen “servidors de correu”, atès que s'encarreguen de rebre el correu i lliurar-lo on correspongui.</p>
+<p>D'altra banda, els<strong> agents de lliurament de correu</strong> són els “servidors de recollida de correu”, és a dir, la seva missió és copiar els missatges del servidor de correu a la bústia de correu de l'usuari. Considerant que aquests agents permetran als clients de correu la recol·lecció dels missatges emmagatzemats en bústies remotes, és possible afirmar que els protocols POP i IMAP són agents MDA.</p>
+<p>Per últim, els <strong>agents d'usuari de correu</strong> són programes que executen l'usuari per la lectura del correu entrant, o bé, enviar missatges de correu electrònic. Els agents d'usuari de correu (MUA) es comuniquen amb els agents de transferència de correu (MTA) mitjançant el protocol simple de transferència de correu. Aquests programes són els anomenats clients de correu i posseeixen una interfície que faciliten a l'usuari l'edició, recepció i enviament de correus electrònics. A mode d'exemple, podríem destacar clients de correu com l'Outlook, Pegasus, Thunderbird, Eudora, etc.</p>
+<p>Tal com mostra la figura següent tots aquests elements tenen força rellevància dins del procés bàsic d'enviament d'un correu electrònic.</p>
+<figure class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 500px;">
+<div class="figcaption header"><strong>Esquema del procés de transmissió de correu electrònic</strong></div>
+<img src="smxm7uf1ud2_im46.png" alt="Esquema del procés de transmissió de correu electrònic" title="Esquema del procés de transmissió de correu electrònic" width="500" height="377" />
+<figcaption class="figcaption"><a href="http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M07/web/html/WebContent/u2/a2/continguts.html" target="_blank" class="title" rel="noopener noreferrer"><em>Esquema del procés de transmissió de correu electrònic</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En aquest cas, l'usuari <code>bernat@tardor</code> vol enviar un correu electrònic a l'usuari <code>mar@estiu</code>. Per fer-ho, l'usuari redacta un missatge amb el seu agent d'usuari de correu (MUA) i l'envia.</p>
+<p>Un cop l'agent de transferència de correu (MTA) de tardor rep el missatge, determina el punt d'entrega. Com que no es tracta d'un compte d'un usuari local (tenen dominis diferents), certifica que <code>bernat@tardor</code> té permís per utilitzar aquest agent de transferència de correu (MTA) per enviar correus a d'altres servidors -això és rellevant, per exemple, per evitar que s'utilitzi un agent de transferència de correu (MTA) de forma indiscriminada per enviar correu com si es tractés de correu brossa.</p>
+<p>Definitivament, el correu anirà adreçat a un altre servidor i, a més, el client que l'envia té permís per utilitzar l'agent de transferència de correu (MTA). Per tant, el servidor de tardor utilitza el protocol SMTP per entregar el correu a l'agent de transferència de correu (MTA) d'estiu. Quan el servidor d'estiu hagi rebut el missatge, determinarà el punt d'entrega que, en aquest cas, és en un compte local. Per tant, s'adreçarà a la bústia corresponent i finalitzarà l'entrega deixant-hi el correu.</p>
+<p>Per últim, en un altre extrem de la xarxa, l'usuari <code>mar@estiu</code> utilitza el seu agent d'usuari de correu (MUA) per comprovar si té algun correu nou. En aquest cas utilitzarà el protocol POP3 de recollida de correu. Val a dir que el servidor POP3 d'estiu comprova que l'usuari sí que tingui correu (el que li va enviar <code>bernat@tardor</code>) i l'entrega al seu agent d'usuari de correu (MUA). És, arribats en aquest punt, quan finalitza la recollida.</p>
+<h3>Els comptes de correu electrònic</h3>
+<p>El concepte correu electrònic (E-mail, <em>Electronic mail</em>) fa referència al sistema que permet redactar, enviar i rebre missatges mitjançant sistemes de comunicació electrònica. En conseqüència, considerant que la xarxa d'Internet és la xarxa de comunicacions universal arreu del món, és lògic que els sistemes de correu electrònic utilitzin Internet. És més, el correu electrònic ha esdevingut tant un element imprescindible en el nostre dia a dia com un dels elements més rellevants de l'evolució tecnològica recent.</p>
+<p>La majoria dels correus electrònics es transmeten mitjançant servidors que treballen amb el protocol simple de transferència de correus (SMTP,<em>Simple Mail Transfer Protocol</em>) i tant pot ser de caràcter privat, empresarial o institucional.</p>
+<p>De fet, els comptes de correu electrònic més populars pertanyen a llocs web de caràcter privat (pertanyen a empreses) que ofereixen un espai en el seus servidors perquè qualsevol qui ho desitgi pugui accedir-hi, crear un compte de correu electrònic i deixar-hi els missatges rebuts. Aquestes companyies (Microsoft, Google, Yahoo) que ofereixen capacitat de disc dels seus servidors i, alhora, gestionen l'enviament i la recepció dels correus electrònics sense cap despesa per part de l'usuari amortitzen la despesa provocada per proporcionar aquest servei mitjançant la incorporació de publicitat.</p>
+<p>De fet, són molts els comptes de correu electrònic que, en funció del títol (o assumpte) del correu electrònic rebut, els apareix publicitat relacionada. Per exemple, si estem intercanviant-nos correus electrònics per parlar d'una acampada que realitzarem a finals d'any, la publicitat que sorgirà dins del compte de correu electrònic estarà relacionada, per exemple, amb materials per fer muntanya, tendes de campanya, fogonets, etc.</p>
+<p>Aquestes accions publicitàries de les companyies que ofereixen comptes de correu electrònic (i la seva gestió) busquen fidelitzar possibles empreses interessades a incorporar publicitat en aquell lloc web (dins dels diferents comptes) davant d'una concreció dels usuaris a qui s'adreci mitjançant l'anàlisi de l'assumpte del correu electrònic enviat o rebut.</p>
+<h3>Instal·lació d'un servei de correu electrònic</h3>
+<p>L'estructura d'un compte de correu electrònic és determinada per una adreça composta per dues parts fonamentals, això és, l'usuari i el domini amb el símbol arrova entremig. Per tant, l'adreça de correu electrònic té la forma <code>usuari@domini.exemple</code>. La part corresponent a l'usuari correspon al nom d'usuari que s'utilitzarà per validar-se en una màquina remota. D'altra banda, el domini correspon a l'adreça electrònica de l'ordinador o conjunt d'ordinadors que s'encarregaran de distribuir el correu als usuaris. Per exemple, l'adreça <code>alumne@cicles.cat</code> representa l'adreça electrònica d'un usuari alumne que es connecta a una màquina el domini de la qual és <code>cicles.cat</code> i es llegeix com a alumne en <code>cicles.cat</code>.</p>
+<p>A títol pràctic, quan un usuari envia un missatge de correu electrònic, aquest queda emmagatzemat en el servidor de correu de la bústia del destinatari. Per tant, quan el destinatari vulgui consultar el seu correu electrònic es connectarà al seu servidor de correu i podrà consultar els missatges mitjançant web o baixar-los a la seva màquina mitjançant un programa de correu. Òbviament, en un servei de correu no és necessari que l'emissor i el receptor coincideixin ni en l'espai ni en el temps.</p>
+<p>Arribats en aquest punt, ja podem començar a treballar amb servidor de correu electrònic, és a dir, un sistema de correu que, principalment, gestionarà els protocols d'oficina de correus (POP, <em>Post Office Protocol</em>) i el protocol simple de transferència de correus (SMTP, <em>Simple Mail Transfer Protocol</em>).</p>
+<p></p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="81_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="83_protocols_en_la_gesti_de_correu_electrnic.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

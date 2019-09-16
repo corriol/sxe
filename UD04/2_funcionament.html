@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Funcionament | 3. Servei FTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-41"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. Servei FTP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Servei FTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li id="active"><a href="2_funcionament.html" class="active no-ch">2. Funcionament</a></li>
+   <li><a href="3_gesti_dusuaris_i_permisos.html" class="no-ch">3. Gestió d'usuaris i permisos</a></li>
+   <li><a href="4_comandaments.html" class="no-ch">4. Comandaments</a></li>
+   <li><a href="5_transferncia_en_mode_text_i_binari.html" class="no-ch">5. Transferència en mode text i binari.</a></li>
+   <li><a href="exercicis.html" class="no-ch">Exercicis</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_gesti_dusuaris_i_permisos.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2. Funcionament</h1></div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id91">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Recorda: port de xarxa</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta91_129" class="block iDevice_content">
+<p>Un<strong> port de xarxa </strong>és una interfície utilitzada per comunicar-se amb un programa a través d’una xarxa. Acostumen a estar numerats i una determinada implementació de protocol de transmissió de xarxa (per exemple, TCP o UDP) assigna algun d’aquests números a la informació que envia; per exemple, el programari de correu electrònic utilitza el port 25.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id92">
+<div class="iDevice emphasis0">
+<div id="ta92_154" class="block iDevice_content">
+<p>A diferència de la majoria dels protocols utilitzats a Internet, el servei de protocol de transferència d’arxius (FTP, <em>File Transfer Protocol</em>) necessita utilitzar múltiples ports de xarxa per establir les comunicacions i les diferents transferències de dades.</p>
+<p>Per defecte, els ports que utilitza un servidor FTP són el 20 i el 21 on, des del punt de vista del servidor, el port 21 (també anomenat <strong>port d'ordres</strong>) és l’encarregat d’escoltar (o rebre) les ordres provinents del client així com d'iniciar la connexió, mentre que el port 20 és el seleccionat per arrancar la connexió de dades amb el client. Paral·lelament, qualsevol petició de dades des del servidor cap al client es realitza mitjançant el port 20, això és el <strong>port de dades</strong>.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 600px;">
+<div class="figcaption header"><strong>Ports del protocol de transferència de fitxers </strong></div>
+<img src="smxm7uf1ud2_im16.png" alt="Ports del protocol de transferència de fitxers " width="600" height="451" />
+<div class="figcaption"><span class="title"><em>Ports del protocol de transferència de fitxers </em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Arribats a aquest punt, cal destacar que tant el port escollit per a la connexió de dades com la modalitat en què s'inicien les connexions depenen de l'opció que el client seleccione per a la transferència de dades des del servidor d'arxius, això és, una transferència en mode actiu o passiu.</p>
+<p>Quan establim una comunicació amb el servidor d'arxius en<strong> mode actiu</strong> s'estableixen dues connexions diferents on el servidor estableix la connexió des del port 20 a un port aleatori sense privilegis especificat per l'ordinador que actua com a client.</p>
+<div id="ta3_85" class="block iDevice_content">
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 639px;">
+<div class="figcaption header"><strong>Mode actiu</strong></div>
+<img src="1000px-Activo.svg.png" alt="Diagrama de connexió en el mode actiu" width="639" height="388" />
+<div class="figcaption"><a href="https://upload.wikimedia.org/wikipedia/commons/9/90/Activo.svg" target="_blank" class="author">By Gabiwxp (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Ara bé, atès que molts usuaris han anat apostant, al llarg dels anys, per la utilització de tallafocs per protegir-se de possibles atacs provinents (o mitjançant) la xarxa d’Internet, va sorgir el mode passiu. Cal destacar que els tallafocs presents en els ordinadors client tendeixen a rebutjar les connexions entrants des dels servidors d’arxius, ja que les interpreten com a processos desconeguts.</p>
+<p>En el <strong>mode passiu,</strong> és l’ordinador client qui inicia la connexió adreçant-se al servidor d’arxius per sol·licitar l’accés a les dades i l’obertura dels ports corresponents per a l’establiment de les connexions de control i dades. En conseqüència, els tallafocs presents en els ordinadors client no detecten cap mena de connexió des de l’exterior que puga ser considerada perillosa.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 640px;">
+<div class="figcaption header"><strong>Mode passiu</strong></div>
+<img src="640px-Pasivo.svg.png" alt="Mode passiu" width="640" height="392" />
+<div class="figcaption"><a href="https://es.wikipedia.org/wiki/File_Transfer_Protocol#/media/File:Pasivo.svg" target="_blank" class="author">De Gabiwxp - Trabajo propio, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5512764</a>. <span class="title"><em>Mode passiu</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Tallafocs</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_129" class="block iDevice_content">
+<p>Dispositiu configurat per controlar connexions de dades segons una política de seguretat. La tasca bàsica d’un tallafocs (firewalls) -en forma de maquinari o programari- és controlar el trànsit entre xarxes establint diferents nivells de confiança com, per exemple, entre la xarxa d’Internet i una xarxa d’àrea local.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_gesti_dusuaris_i_permisos.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

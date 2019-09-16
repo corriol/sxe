@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. Els serveis de xarxa | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-76"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexió de xarxes</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="criteris_davaluaci.html" class="no-ch">Criteris d'avaluació</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_arquitectura_de_xarxa_tcpip.html" class="no-ch">1. Arquitectura de xarxa TCP/IP</a></li>
+   <li><a href="2_el_protocol_ip.html" class="no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li id="active"><a href="4_els_serveis_de_xarxa.html" class="active no-ch">4. Els serveis de xarxa</a></li>
+   <li><a href="5_commandaments.html" class="no-ch">5. Commandaments</a></li>
+   <li><a href="6_elements_dinterconnexi.html" class="no-ch">6. Elements d'interconnexió</a></li>
+   <li><a href="7_interconnexi_de_xarxes.html" class="daddy">7. Interconnexió de xarxes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li><a href="72_tallafocs_firewall.html" class="daddy">7.2. Tallafocs (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traducci_dadreces_de_xarxa_nat.html" class="no-ch">7.3. Traducció d'adreces de xarxa (NAT)</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_el_protocol_tcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_commandaments.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4. Els serveis de xarxa</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id180">
+<div class="iDevice emphasis0">
+<div id="ta180_86" class="block iDevice_content">
+<p>Quan parlem de serveis de xarxa ens referim a aquelles aplicacions que s'executen en segon plànol (<em>background</em>), normalment sense interacció per part de l'usuari, i que estan contínuament esperant (<em>listening</em>) la petició per part d'un client. Una vegada reben una petició s'encarreguen de gestionar la resposta adequada.</p>
+<p>L'ordre <code>netstat</code> amb els paràmetres <code>-tln</code> ens mostra els serveis que actualment estan escoltant peticions per TCP.</p>
+<div class="exe-figure exe-image position-center" style="width: 400px;">
+<div class="figcaption header"><strong>Serveis esperant peticions per TCP</strong></div>
+<img src="captura.png" alt="Execució de netstat -tl" title="Serveis esperant peticions per TCP" width="400" height="79" />
+<div class="figcaption"><span class="title"><em>Serveis esperant peticions per TCP</em></span></div>
+</div>
+<p>Els serveis de xarxa és situen en el nivell més alt de l'estructura de capes, el d'aplicació. Algunes dels serveis més significatius són:</p>
+<ul>
+<li>HTTP</li>
+<li>DHCP</li>
+<li>DNS</li>
+<li>FTP</li>
+<li>SMTP</li>
+<li>SSH</li>
+<li>POP</li>
+<li>IMAP</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id181">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Activitat: Serveis de xarxa</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta181_105_2" class="block iDevice_content">
+<p>1. Crea un taula en un document de text en les següents columnes: servei, significat de les sigles, funció, port/s que usa, protocol de transport. Per exemple:</p>
+<table style="width: 100%;">
+<tbody>
+<tr style="height: 15px;">
+<td style="height: 15px;">Servei</td>
+<td style="height: 15px;">Nom</td>
+<td style="height: 15px;">Funció</td>
+<td style="height: 15px;">Ports</td>
+<td style="height: 15px;">Protocol de transport</td>
+</tr>
+<tr style="height: 15px;">
+<td style="height: 15px;">HTTP</td>
+<td style="height: 15px;">HyperText Transport Protocol</td>
+<td style="height: 15px;">Intercanviar documents d'hipertext i multimedia</td>
+<td style="height: 15px;">80</td>
+<td style="height: 15px;">TCP</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>2. Comprova quins serveis estan actualment executant-se en el teu equip tant en TCP com en UDP. Hi ha algun ben conegut?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id0">
+<div class="iDevice emphasis0">
+<div id="ta0_85" class="block iDevice_content">
+<div class="exe-block-info">
+<p>El fitxer <strong>/etc/services</strong></p>
+<p>Cada línia d'aquest fitxer especifica el nom, el número de port, el protocol utilitzat i els àlies de tots els serveis de xarxa existents (o, si no tots els existents, d'un subconjunt prou ampli per a que determinats programes de xarxa funcionin correctament). Per exemple, per especificar que el servei SMTP usarà el port 25, el protocol TCP i que un àlies perquè siga <em>mail</em>, hi haurà una línia similar a la següent:</p>
+<p><code>smtp 25 / tcp mail</code></p>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_el_protocol_tcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_commandaments.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. Un servei client/servidor | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-58"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servei DHCP</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li class="current-page-parent"><a href="1_introducci.html" class="current-page-parent daddy">1. Introducció</a>
+   <ul>
+      <li><a href="11_evoluci_del_protocol_dhcp.html" class="no-ch">1.1. Evolució del protocol DHCP</a></li>
+      <li id="active"><a href="12_un_servei_clientservidor.html" class="active no-ch">1.2. Un servei client/servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="no-ch">2. Configuració dels equips de la xarxa</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervals_exclusions_concessions_i_reserves.html" class="no-ch">4. Intervals, exclusions, concessions i reserves</a></li>
+   <li><a href="5__opcions_addicionals_del_protocol.html" class="daddy">5.  Opcions addicionals del protocol.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servei DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemes_del_servei.html" class="no-ch">6. Problemes del servei</a></li>
+   <li><a href="installaci_dun_servidor__dhcp.html" class="no-ch">Instal·lació d'un servidor  DHCP</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="11_evoluci_del_protocol_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.2. Un servei client/servidor</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id87">
+<div class="iDevice emphasis0">
+<div id="ta87_154" class="block iDevice_content">
+<p>Com acostuma a passar amb els serveis client/servidor, un equip pot realitzar les dues funcions al mateix temps.</p>
+<p>El servei DHCP és un més dels serveis de xarxa que tenen l’estructura client /servidor. Els servidors DHCP són els equips que tenen en execució el programa servidor. És el programa encarregat d’atendre les peticions dels clients i oferir-los la configuració de xarxa, tot portant el registre de les IP que concedeix i el registre de totes les accions que realitza. Els clients DHCP són aquells equips que realitzen peticions per obtenir una configuració de xarxa a un servidor DHCP.</p>
+<h2>El client DHCP</h2>
+<p>Un equip client DHCP és un equip que sol·licita la IP i altres paràmetres de configuració de xarxa a un servidor DHCP en lloc de tenir-los definits localment en l’equip.</p>
+<blockquote class="destacado">
+<p><strong>ISP</strong></p>
+<p>ISP:<em> Internet service provider</em> o proveïdor de servei/accés a Internet. Ho són per exemple les empreses Ono, Vodafone, Jazztel, etc.</p>
+</blockquote>
+<p>Si connecteu el vostre equip informàtic a la xarxa Internet per mitjà d’un ISP (<em>Internet service provider</em> o proveïdor de servei/accés a Internet), segurament rebreu una IP dinàmica del vostre proveïdor. Quan es realitzava una trucada telefònica amb mòdem i usant el protocol PPP (<em>point to point protocol,</em> protocol punt a punt), el proveïdor proporcionava una adreça IP dinàmica. Si utilitzeu ADSL i un encaminador o <em>router</em>, segurament l’encaminador us proporciona una adreça IP dinàmica privada a l’ordinador de casa. Al mateix temps, l’encaminador obté una IP dinàmica pública del proveïdor. Aquestes adreces IP dinàmiques són fixes (sempre les mateixes) o dinàmiques d’interval (pot ser qualsevol IP del conjunt d’adreces IP que té disponibles per concedir el servidor DHCP).</p>
+<blockquote class="destacado">
+<p><strong>IP pública / IP privada</strong></p>
+<p>La diferència entre una IP pública i una IP privada és que la pública és visible per a tots els equips d’Internet, mentre que la privada és visible només dins de la mateixa xarxa local.</p>
+</blockquote>
+<p>El client DHCP ha de tenir en funcionament un dimoni (<em>daemon</em>) encarregat de la gestió de les tasques DHCP per part del client. El programa client realitza la part de negociació encarregada al client (DHCP <em>discovery</em>, <em>request</em>) i també porta un registre de les concessions (<em>leases</em>) rebudes. Aquest registre és el que utilitza el client per tornar a demanar la mateixa IP que tenia anteriorment. Un cop rebuda la concessió el programa client queda “adormit”, pendent de tornar-se a executar automàticament quan calgui renegociar la concessió. Sense intervenció de l’usuari, el programa client s’activa i segueix el procediment necessari per renegociar l’adreça IP cada cop que el temps de la concessió s’exhaureix.</p>
+<p><strong>Configuració client</strong></p>
+<p>Usualment les configuracions clients es poden fer de tres maneres diferents:</p>
+<ul>
+<li>fitxer de text: editar directament els fitxers de configuració.</li>
+<li>menús en mode text: usant algun programa de menús amb interfície de text.</li>
+<li>aplicació gràfica: usant una aplicació de finestres en l’entorn gràfic.</li>
+</ul>
+<p>Els programes client varien d’un sistema operatiu a un altre i la manera d’executar-los també. Generalment es disposa d’un client executable en mode text o ordres i d’una interfície gràfica (GUI, <em>graphics user interface</em> o interfície gràfica d’usuari) per a la configuració. No cal dir que els sistemes Windows tendeixen a la configuració gràfica usant finestres i a la configuració i execució interna d’amagat de l’usuari. Normalment, en els sistemes GNU/Linux, la configuració es fa usant fitxers de text o com a opcions en l’ordre d’execució. La interfície gràfica acostuma a ser un frontal (<em>front-end</em>) per cridar l’ordre. Segons sigui el sistema operatiu es pot consultar el fitxer de registre de les concessions rebudes pel client, el fitxer de <em>leases</em>, més o menys detalladament.</p>
+<p>Generalment el programa client es pot configurar per definir-ne el comportament en la comunicació amb el servidor: informació a demanar, informació a proporcionar al servidor, opcions per defecte, etc.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id88">
+<div class="iDevice emphasis0">
+<div id="ta88_154" class="block iDevice_content">
+<h2>El servidor DHCP</h2>
+<p>L'administrador de xarxa és l'encarregat de pensar la ubicació del servidor o servidors DHCP en l'estructura corporativa. Com més complicada sigui la topologia de la xarxa, més difícil en serà la gestió. Una xarxa corporativa bàsica pot disposar d'un únic servidor DHCP que ofereix els seus serveis a tots els equips de la xarxa. Els clients poden estar en una mateixa subxarxa o en diverses subxarxes, però totes amb connectivitat amb el servidor DHCP. Aquest també pot ser l'esquema d'una xarxa privada a casa, on un encaminador (el de l’ISP, per exemple) proporciona el servei DHCP a tots els ordinadors de la casa.</p>
+<p>Si la xarxa corporativa creix i passa a tenir subxarxes segmentades amb tallafocs les unes de les altres, la configuració del servidor DHCP es complica. Si es vol continuar amb un únic servidor per a tota la xarxa, caldrà que els tallafocs (firewalls) deixin passar els paquets DHCP entre les subxarxes i el servidor. Una altra opció és posar un servidor DHCP per a cada subxarxa o grups de subxarxes. Fent-ho així, l’administració de cada servidor és més senzilla però hi ha més servidors a administrar. Una xarxa amb una casuística completa és la que té diversos servidors DHCP per a diverses parts de la xarxa i tallafocs entre clients i servidors que han de permetre el pas de paquets DHCP.</p>
+<p>Si el servidor DHCP és l’encarregat de donar adreces IP als clients, qui li proporciona una adreça IP a ell? O bé un altre servidor DHCP (i podríem tornar a fer la mateixa pregunta indefinidament) o bé l’administrador. Usualment, en una xarxa corporativa el servidor DHCP utilitza una IP estàtica definida per l’administrador. Això li permet estar sempre disponible per als clients amb la mateixa IP i no el fa dependre d’un altre servidor extern.</p>
+<p>Hi ha diversos programes servidors DHCP: en mode text, en mode gràfic, en mode “màgic” (no es veu què fan) i en mode Unix (tot basat en fitxers de text). Cada administrador treballa amb les seves eines preferides. Les tasques bàsiques per aprendre a utilitzar un servidor DHCP són observar/fer una llista de la configuració actual, activar/aturar el servei, modificar la configuració, monitorar els logs (registre de successos del servei) i, evidentment, saber instal·lar i desinstal·lar l’aplicació servidor.</p>
+<p>Els fitxers de logs (successos) recullen els esdeveniments que es volen monitorar.</p>
+<p>Com la majoria de serveis de xarxa, el servei DHCP és un servei que s’executa en segon pla en forma de dimoni. El servidor DHCP sempre està engegat escoltant en el port 67 les peticions que rep dels clients. Quan rep una petició entrant, el programa executable del servidor DHCP la processa i posa en marxa tot el mecanisme DHCP pertinent per tornar a escoltar noves peticions. De fet, el servidor sempre escolta peticions i les processa simultàniament (segons la configuració).</p>
+<p>Els fitxers del registre del servei, on s’anoten les concessions, permeten mantenir la informació encara que el servei s’aturi o que el servidor s’apagui. En tornar a engegar es llegiran de nou els fitxers de registres per tal de saber quines són les concessions que s’havien realitzat.</p>
+<p>Els fitxers de concessions permeten mantenir la coherència de l’assignació d’adreces IP entre aturades del servei.</p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="11_evoluci_del_protocol_dhcp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

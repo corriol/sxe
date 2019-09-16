@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pràctica 3: Accés remot amb terminal gràfic </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Serveis de control i accés remot</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="no-ch">1.1. Usos més freqüents de l'accés remot a ordinadors</a></li>
+      <li><a href="12_diferents_tipus_daccs_remot.html" class="no-ch">1.2. Diferents tipus d'accés remot</a></li>
+   </ul>
+   </li>
+   <li><a href="2_accs_remot_amb_lnia_dordres.html" class="daddy">2. Accés remot amb línia d'ordres</a>
+   <ul class="other-section">
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introducci_a_la_criptografia.html" class="no-ch">2.2. Introducció a la criptografia</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_installaci_del_servei_telnet.html" class="no-ch">Pràctica 1: Instal·lació del servei Telnet</a></li>
+      <li><a href="prctica_2_installaci_del_servei_ssh.html" class="no-ch">Pràctica 2: Instal·lació del servei SSH</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_accs_remot_amb_interfcie_grfica.html" class="current-page-parent daddy">3. Accés remot amb interfície gràfica</a>
+   <ul>
+      <li id="active"><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="active no-ch">Pràctica 3: Accés remot amb terminal gràfic</a></li>
+   </ul>
+   </li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="3_accs_remot_amb_interfcie_grfica.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="activitats.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Pràctica 3: Accés remot amb terminal gràfic</h1></div>
+<div class="iDevice_wrapper objectivesIdevice em_iDevice" id="id32">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Objectius</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta32_44_2" class="block iDevice_content">
+<p>Els objectius de la següent pràctica són:</p>
+<ul>
+<li>Conèixer els diferents protocols i aplicacions d'accés remot amb terminal gràfic.</li>
+<li>Treballar amb diversos escenaris i triar la millor opció per a cadascun d'ells.</li>
+<li>Treballar en equip.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Requisits</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_46_2" class="block iDevice_content">
+<p>Caldrà disposar d'ordinadors amb diferents famílies de sistemes operatius: Microsoft Windows, GNU/Linux. En el seu defecte es poden utilitzar màquines virtuals.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id17">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Enunciat</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_46_2" class="block iDevice_content">
+<h4>Accés remot a Ubuntu (VNC)</h4>
+<ul>
+<li>Guia d'instal·lació: <a href="http://somebooks.es/habilitar-escritorio-remoto-ubuntu-16-04-lts/">http://somebooks.es/habilitar-escritorio-remoto-ubuntu-16-04-lts/</a></li>
+<li>Client VNC: https://pendriveapps.com/portable-vnc-viewer-tightvnc/</li>
+<li>Solució a un problema amb VNC Server: http://www.bonusbits.com/wiki/KB:Fix_VNC_Desktop_Sharing_on_Ubuntu_Desktop_14.04#Solution_2</li>
+<li>Recurs: https://es.wikipedia.org/wiki/VNC</li>
+</ul>
+<h4>Accés remot a Windows (RDP)</h4>
+<ul>
+<li>Guia d'instal·lació: http://somebooks.es/habilitar-el-escritorio-remoto-en-windows-8-1/</li>
+<li>Recurs: <a href="https://es.wikipedia.org/wiki/Remote_Desktop_Protocol">https://es.wikipedia.org/wiki/Remote_Desktop_Protocol</a></li>
+</ul>
+<h4>TeamViewer 13</h4>
+<p>TeamViewer és un programari que la seva funció és connectar-se remotament a un altre equip. Entre les seves funcions estan: compartir i controlar escriptoris, reunions en línia, videoconferències i transferències d'arxius entre ordinadors. A diferència de la resta de sistemes la connexió no es fa punt a punt sinó mitjançant un servidor que fa d'intermediari, per aqueix motiu és més recomanable en entorns amb NAT i tallafocs.</p>
+<h3>Activitat</h3>
+<ul>
+<li>Junt a un company prova els diversos sistemes de control remot en diversos escenaris:<br />
+<ul>
+<li>Controlar un equip amb Ubuntu des de Window  amb VNC.</li>
+<li>Controlar un equip amb Windows des d'Ubuntu.</li>
+<li>...</li>
+</ul>
+</li>
+<li>Realitza una memòria de la pràctica afegint captures de les diferents proves realitzades, explicant el motiu de cada elecció i descrivint els problemes detectats i la seua solució.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="3_accs_remot_amb_interfcie_grfica.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="activitats.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

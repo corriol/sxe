@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3. Secure SHell (SSH) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Serveis de control i accés remot</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="no-ch">1.1. Usos més freqüents de l'accés remot a ordinadors</a></li>
+      <li><a href="12_diferents_tipus_daccs_remot.html" class="no-ch">1.2. Diferents tipus d'accés remot</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_accs_remot_amb_lnia_dordres.html" class="current-page-parent daddy">2. Accés remot amb línia d'ordres</a>
+   <ul>
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introducci_a_la_criptografia.html" class="no-ch">2.2. Introducció a la criptografia</a></li>
+      <li id="active"><a href="23_secure_shell_ssh.html" class="active no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_installaci_del_servei_telnet.html" class="no-ch">Pràctica 1: Instal·lació del servei Telnet</a></li>
+      <li><a href="prctica_2_installaci_del_servei_ssh.html" class="no-ch">Pràctica 2: Instal·lació del servei SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_accs_remot_amb_interfcie_grfica.html" class="daddy">3. Accés remot amb interfície gràfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="no-ch">Pràctica 3: Accés remot amb terminal gràfic</a></li>
+   </ul>
+   </li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="22_introducci_a_la_criptografia.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_1_installaci_del_servei_telnet.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.3. Secure SHell (SSH)</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_154" class="block iDevice_content">
+<p>SSH és un protocol de xarxa que permet l’intercanvi d’informació de manera segura. Utilitza encriptació i criptografia de clau pública per tal de fer l’autenticació de l’estació remota.</p>
+<p>Una de les funcions més emprades és iniciar una sessió remota per tal d’executar ordres. Però les seves capacitats són més àmplies, ja que també permet:</p>
+<ul>
+<li>Transmetre fitxers de manera segura.</li>
+<li>Fer túnels per assegurar qualsevol servei que no es transmeti encriptat (HTTP, SMTP, VNC, etc.) o per travessar tallafocs que estiguin bloquejant el protocol.</li>
+<li>Reenviament automàtic de sessions X11.</li>
+<li>Fins i tot, en fer servir SSHFS, actuar com a sistema de fitxers en xarxa.</li>
+</ul>
+<p>Les seves possibilitats es poden combinar de moltes maneres diferents. Donades les seves capacitats criptogràfiques, SSH és una eina fonamental per a l’administrador de xarxa.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_85" class="block iDevice_content">
+<h2>1. Com funciona l'encriptació en SSH</h2>
+<p>El protocol SSH empra un model client-servidor per autenticar les dues parts i xifrar les dades entre ells.</p>
+<p>El servidor escolta en un port designat per a les connexions. És responsable de la negociació de la connexió segura, l'autenticació, i preparar l'entorn si s'accepten les credencials.</p>
+<p>El client és responsable de començar la connexió inicial de TCP amb el servidor, de negociar de la connexió segura, de verificar que la identitat del servidor coincideix amb la informació prèviament gravada, i de proporcionar credencials per autenticar-se.</p>
+<p>Una sessió SSH s'estableix en dues etapes separades. La primera és la d'aprovar i establir el xifrat per a protegir les comunicacions futures. La segona etapa és per autenticar a l'usuari.</p>
+<h3>La negociació del xifrat per a la sessió SSH</h3>
+<p>Quan un client es connecta, el servidor respon amb les versions de protocol que suporta. Si el client accepta alguna de les versions de protocol suportades, la connexió continua. El servidor també proporciona la seva clau pública, que el client pot utilitzar per comprovar si el servidor és realment el que diu ser. En aquest punt, les dues parts negocien una clau de sessió.</p>
+<p>La clau de sessió (simètrica) serà utilitzada per xifrar tota la sessió. Els parells de claus públiques i privades que s'utilitzen en aquesta negociació són totalment independents de les claus SSH utilitzades per autenticar un client al servidor. Aquestes claus públiques s'usaran per a compartir la clau de sessió creada i per a xifrar totes de les comunicacions que es duguen a terme durant la sessió.</p>
+<div class="exe-figure exe-image position-center license-CC-BY" style="width: 599px;"><img src="ssh-esquema.png" alt="Esquema de negocació SSH" title="Negociació SSH" width="599" height="312" />
+<div class="figcaption"><span class="license"><span class="tit">Llicència: </span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY">CC BY</a></span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_85" class="block iDevice_content">
+<h2>2. Mètodes d'autenticació del servei SSH</h2>
+<p>L’autenticació és l’acció de comprovar la identitat del remitent en una comunicació. El servidor SSH, en rebre una sol·licitud de connexió nova, necessita autenticar l’origen d’aquesta connexió com a pas previ per autoritzar o denegar la connexió.</p>
+<p>El servidor SSH pot emprar  diversos mecanismes diferents d’autenticació. Entre aquests mecanismes destaquem, per ordre de preferència:</p>
+<ol>
+<li>Autenticació basada en l’amfitrió</li>
+<li>Autenticació de clau pública</li>
+<li>Autenticació desafiament-resposta</li>
+<li>Autenticació basada en la contrasenya</li>
+</ol>
+<p>És molt important aclarir que abans de l’autenticació, tant a SSH1 com a SSH2, s’establirà una comunicació encriptada entre el client i el servidor. Per establir aquesta connexió encriptada es fan servir tècniques criptogràfiques de clau pública. Una vegada acordada una clau comuna s’utilitzarà una encriptació simètrica per a la resta de la sessió.</p>
+<h4>Autenticació basada en l'amfitrió</h4>
+<p>Aquesta és la tècnica més segura, impedeix els atacs basats en la suplantació d’adreces IP, de DNS i de la taula de rutes.</p>
+<p>SSH genera una parella de claus, pública i privada, durant la seva instal·lació en cada equip. Aquestes claus identifiquen l’estació en què s’executa SSH, no els seus usuaris. Són les anomenades claus d’amfitrió (<em>host</em>) i, si el compte de superusuari (<em>root</em>) no està compromès (és a dir, si ningú no s’ha convertit en superusuari de manera fraudulenta), no és necessari canviar-les.</p>
+<p>SSH2 pot emprar els algorismes RSA i DSA, mentre que SSH1 només pot fer servir RSA.</p>
+<p>Per tal de que l’autenticació basada en l’amfitrió permeti a l’usuari iniciar sessió mitjançant SSH, cal:</p>
+<ol>
+<li>Que el servidor pugui verificar la clau d’amfitrió del client. Aquesta verificació es produeix si el servidor registra en el fitxer known_hosts la clau d’amfitrió pública del client. (Aquest fitxer es troba a <code>/etc/SSH/ SSH_known_hosts</code> per a tot el sistema o bé a <code>/.SSH/known_hosts</code> per a cada usuari).</li>
+<li>Que la màquina que inicia la connexió estigui llistada en el fitxer <code>/etc/ SSH/shosts.equiv</code> (o la seva versió insegura <code>/etc/hosts.equiv</code>) i el nom d’usuari en l’estació client i en el servidor sigui el mateix. O bé que en servidor, en el directori de l’usuari que intenta iniciar sessió, hi hagi el fitxer <code>.shosts</code> (o la seva versió insegura <code>.rhosts</code>), en què apareguin la màquina client i el nom d’usuari en aquella estació.</li>
+</ol>
+<h4>Autenticació de clau pública</h4>
+<p>Aquest sistema es basa, com el seu nom indica, en tècniques criptogràfiques de clau pública en què el que s'encripta mitjançant la clau pública només es pot desencriptar mitjançant la clau privada associada, i en què la clau privada es pot emprar per signar els missatges per tal que el receptor pugui autenticar l'emissor.</p>
+<p>Cal que l'usuari que vol iniciar una sessió remota al servidor construïsca una parella de claus, normalment fent ús de l'eina <code>SSH-keygen.</code> Aquestes claus s'emmagatzemaran en el directori <code>/.SSH/</code> (en els fitxers <code>id_rsa/id_rsa.pub</code>, <code>id_dsa/id_dsa.pub</code> per a SSH2 o bé <code>identity/identity.pub</code> per a SSH1).</p>
+<p>En construir la parella de claus, l’eina <code>SSH-keygen</code> ens permetrà definir si volem emprar una clau RSA o DSA. També serà possible protegir les claus mitjançant un mot de pas que serà necessari escriure per desbloquejar la clau i poder emprar-la. De fet, aquesta és una opció molt recomanable; només es deixaran claus sense protegir si es tracta de les claus d'amfitrió o bé si es vol iniciar sessió de manera automatitzada (mitjançant <em>scripts</em>) sense que sigui necessària la intervenció de l'usuari per desbloquejar les claus.</p>
+<p>Una vegada s'han generat les claus serà necessari transportar la clau pública a l'estació en què es vol iniciar sessió i afegir-la al fitxer <code>/.SSH/</code><code>authorized_keys</code> de l'usuari corresponent.</p>
+<p>A partir d'aquest moment l'usuari podrà iniciar una sessió SSH sense haver d'especificar la seva contrasenya. Però si ha especificat una frase de pas per bloquejar les claus, encara serà necessari introduir-la per poder fer servir les claus.</p>
+<div class="exe-block-warning">
+<p><strong>RSA i DSA</strong></p>
+<p>Són dos algorismes que fan servir l’encriptació de clau pública.RSA són les inicials dels investigadors que van desenvolupar l’algorisme: Ron Rivest, Adi Shamir i Leonard Adleman.DSA són les sigles de<em>digital signature algorithm</em>, és a dir, algoritme de signatura digital.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id21">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta21_151" class="block iDevice_content">
+<div class="exe-block-info">
+<p><strong>Fitxer <code>known_hosts</code></strong></p>
+<p>Quan un client SSH estableix una connexió per primera vegada amb un amfitrió, enregistra en fitxer <code>known_hosts</code> la clau pública de l’estació. La propera vegada que s’estableixi una connexió es comprovarà aquesta clau pública.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="22_introducci_a_la_criptografia.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_1_installaci_del_servei_telnet.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

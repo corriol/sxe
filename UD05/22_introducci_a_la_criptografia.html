@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Introducció a la criptografia </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Serveis de control i accés remot</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="no-ch">1.1. Usos més freqüents de l'accés remot a ordinadors</a></li>
+      <li><a href="12_diferents_tipus_daccs_remot.html" class="no-ch">1.2. Diferents tipus d'accés remot</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_accs_remot_amb_lnia_dordres.html" class="current-page-parent daddy">2. Accés remot amb línia d'ordres</a>
+   <ul>
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li id="active"><a href="22_introducci_a_la_criptografia.html" class="active no-ch">2.2. Introducció a la criptografia</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_installaci_del_servei_telnet.html" class="no-ch">Pràctica 1: Instal·lació del servei Telnet</a></li>
+      <li><a href="prctica_2_installaci_del_servei_ssh.html" class="no-ch">Pràctica 2: Instal·lació del servei SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_accs_remot_amb_interfcie_grfica.html" class="daddy">3. Accés remot amb interfície gràfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="no-ch">Pràctica 3: Accés remot amb terminal gràfic</a></li>
+   </ul>
+   </li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="21_telnet.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="23_secure_shell_ssh.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.2. Introducció a la criptografia</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_154" class="block iDevice_content">
+<p>La criptografia ens aporta tècniques per encriptar i desencriptar informació, de manera que es puguin transmetre, amb seguretat, missatges per un canal que no és de confiança. L’objectiu evident és assegurar que el missatge transmès romandrà secret. Però a les comunicacions electròniques també s’utilitza sovint per autenticar que l’emissor i el destinatari del missatge són qui pensem i per garantir que el mateix missatge no ha estat alterat durant la seva transmissió.</p>
+<p>Hi ha diferents tècniques criptogràfiques, però dues de les més emprades són:</p>
+<ul>
+<li>Criptografia simètrica o de clau compartida</li>
+<li>Criptografia asimètrica o de clau pública</li>
+</ul>
+<h3>Criptografia de clau compartida</h3>
+<p>En emprar un algorisme d’encriptació de clau compartida s’utilitza la mateixa clau per encriptar i desencriptar. Aquesta característica és el seu principal inconvenient, ja que si es vol canviar la clau es necessitarà un mitjà de comunicació segur per fer-la arribar de l’emissor al receptor. El principal avantatge de la criptografia simètrica és la seva velocitat. Alguns algorismes d’encriptació simètrics són: 3DES, AES, Blowfish i IDEA.</p>
+<h3>Criptografia de clau pública</h3>
+<p>La criptografia asimètrica o de clau pública evita el problema de l’intercanvi de claus. En aquest cast, tant l’emissor com el receptor tindran una parella de claus diferents. A cada parella de claus n’hi ha una de pública i una de privada. La clau privada mai no viatja pel canal de comunicació, cal garantir-ne la protecció. La clau pública, com el seu nom indica, es pot oferir a tothom que la demani, pot viatjar per mitjans insegurs o fins i tot es pot publicar.</p>
+<p>Cada parella de claus està fortament relacionada:</p>
+<ul>
+<li>Els missatges que s’encripten emprant una clau pública només es poden desencriptar mitjançant la clau privada associada.</li>
+<li>Les claus privades permeten signar un missatge per tal que el receptor verifiqui la identitat de l’emissor. La comprovació de la signatura es farà mitjançant la clau pública associada.</li>
+</ul>
+<p>En una comunicació típica tindrem els passos que es mostren a continuació i que podeu veure de manera gràfica en la figura.2.</p>
+<ol>
+<li>L’emissor farà servir la seva pròpia clau privada per signar el missatge.</li>
+<li>L’emissor farà servir la clau pública del receptor per encriptar el missatge.</li>
+<li>Es transmet el missatge encriptat i signat.</li>
+<li>El receptor desencriptarà el missatge fent servir la seva pròpia clau privada.</li>
+<li>El receptor comprovarà la signatura del missatge fent servir la clau pública de l’emissor.</li>
+</ol>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 591px;">
+<div class="figcaption header"><strong>Comunicació amb clau pública</strong></div>
+<img src="smxm7uf4ud4_im7.png" alt="Comunicació amb clau pública" width="591" height="544" />
+<div class="figcaption"><a href="http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M07/web/html/WebContent/u4/a2/continguts.html" target="_blank" class="author" rel="noopener noreferrer">IOC</a>. <span class="title"><em>Comunicació amb clau pública</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>En aquest procediment mai no es transmeten les claus privades. L’intercanvi de les claus públiques és senzill, ja que no cal que es transmetin fent ús d’un canal segur. Es garanteix que el missatge no pot ser compromès en la seva transmissió i tant l’emissor com el receptor comproven l’autenticitat de l’altra entitat.</p>
+<p>El principal inconvenient de la criptografia de clau pública és el seu consum de recursos. És més costosa en temps d’encriptació/desencriptació i el missatge encriptat ocupa més que el text clar. En la taula.3 podeu veure un resum dels principals avantatges i inconvenients de les diferents tècniques criptogràfiques.</p>
+<h4>Criptografia híbrida</h4>
+<p>La criptografia híbrida combina el sistema de clau compartida i el de clau pública per obtenir tots els avantatges sense els inconvenients. En aquest sistema només s’utilitza la criptografia de clau pública per transmetre una clau compartida, normalment generada de manera dinàmica per aquesta comunicació, al receptor. Una vegada s’ha comunicat la clau compartida a totes dues estacions, s’utilitza l’encriptació convencional per tal d’encriptar el gruix del missatge.</p>
+<p>Els sistemes basats en criptografia híbrida són tan forts com els sistemes de clau compartida i clau pública que utilitzin.</p>
+<p>La criptografia híbrida combina el sistema de clau compartida i el de clau pública per obtenir tots els avantatges sense els inconvenients. En aquest sistema només s’utilitza la criptografia de clau pública per transmetre una clau compartida, normalment generada de manera dinàmica per aquesta comunicació, al receptor. Una vegada s’ha comunicat la clau compartida a totes dues estacions, s’utilitza l’encriptació convencional per tal d’encriptar el gruix del missatge.</p>
+<p>Els sistemes basats en criptografia híbrida són tan forts com els sistemes de clau compartida i clau pública que utilitzin.</p>
+<table class="exe-table"><caption>Comparació de tècniques criptogràfiques</caption>
+<tbody>
+<tr>
+<td><strong>Tècnica criptogràfica</strong></td>
+<td><strong> Avantatges </strong></td>
+<td><strong>Inconvenients </strong></td>
+</tr>
+<tr>
+<td>Criptografia clau compartida.</td>
+<td>
+<p>Consumeix pocs recursos.<br />S’encripta/desencripta amb gran velocitat</p>
+</td>
+<td>L’intercanvi de claus necessita un canal segur</td>
+</tr>
+<tr>
+<td>Criptografia clau pública.</td>
+<td>No necessita un canal segur per intercanviar les claus.</td>
+<td>
+<p>Consumeix recursos.<br />El procés d’encriptació/desencriptació és lent</p>
+</td>
+</tr>
+<tr>
+<td>Criptografia híbrida.</td>
+<td>S’encripta/desencripta amb gran velocitat.</td>
+<td>No necessita un canal segur per intercanviar les claus.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="21_telnet.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="23_secure_shell_ssh.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.4. Servidors de correu electrònic | 8. Correu electrònic </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Vicent Jordà" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">8. Correu electrònic</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8. Gestió de serveis de correu electrònic</a></li>
+   <li><a href="81_introducci.html" class="no-ch">8.1. Introducció</a></li>
+   <li><a href="82_funcionament_del_servei.html" class="no-ch">8.2. Funcionament del servei</a></li>
+   <li><a href="83_protocols_en_la_gesti_de_correu_electrnic.html" class="no-ch">8.3. Protocols en la gestió de correu electrònic</a></li>
+   <li id="active"><a href="84_servidors_de_correu_electrnic.html" class="active no-ch">8.4. Servidors de correu electrònic</a></li>
+   <li><a href="85_clients_de__correu_electrnic.html" class="no-ch">8.5. Clients de  correu electrònic</a></li>
+   <li><a href="86_seguretat_i_vulnerabilitats.html" class="no-ch">8.6. Seguretat i vulnerabilitats</a></li>
+   <li><a href="qestionari.html" class="no-ch">Qüestionari</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="83_protocols_en_la_gesti_de_correu_electrnic.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="85_clients_de__correu_electrnic.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.4. Servidors de correu electrònic</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id10">
+<div class="iDevice emphasis0">
+<div id="ta10_85" class="block iDevice_content">
+<p>Com s'ha explicat anteriorment per a disposar d'un servei complet de correu electrònic és necessària la cooperació de diversos protocols, un d'enviament de correu (SMTP) i altre de descàrrega de correu (IMAP o POP3).</p>
+<p>En els sistemes <strong>Linux</strong> tenim diverses opcions, alguns exemples significatius són</p>
+<ul>
+<li>Postfix o Sendmail per a l'enviament (SMTP)</li>
+<li>Dovecot  o Courier per a la descàrrega (IMAP o POP3).</li>
+</ul>
+<p>En entorns <strong>Windows</strong> és Microsoft Exchange l'opció més triada.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_85" class="block iDevice_content">
+<h2>1. Instal·lació d'un servidor de correu electrònic en Ubuntu.</h2>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id4">
+<div class="iDevice emphasis0">
+<div id="ta4_86" class="block iDevice_content">
+<h3>1.1. Instal·lació d'un MTA: Postfix</h3>
+<h4>1.1.1. Postfix</h4>
+<p><span id="result_box" class="" lang="ca" tabindex="-1"><span><em>Postfix</em> és l'agent de transferència de correu predeterminat (MTA) a l'Ubuntu.</span> <span>Intenta ser ràpid i fàcil d'administrar i protegir.</span> <span class="">És compatible amb el <em>sendmail</em> MTA.</span></span></p>
+<h4>1.1.2. Configuració dels registres MX</h4>
+<p>En aquesta configuració suposo que el vostre domini és yourdomain.com i té una configuració de registre MX vàlida com mail.yourdomain.com. Recordeu substituir yourdomain.com amb el vostre domini real en els codis d'exemple d'aquest mode. També suposo que saps què és un registre MX. Per descobrir registres MX, escriviu en un terminal:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>dig mx yourdomain.com
+</code></pre>
+</div>
+</div>
+<h4>1.1.3. Instal·lació</h4>
+<p>Per instal·lar <em>postfix</em></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo apt-get install postfix
+</code></pre>
+</div>
+</div>
+<p>Instal·leu el paquet <code>mailx</code> per utilitzar-lo com a programa d'utilitat de correu d'ordres. L'ordre de correu s'instal·la amb aquest paquet. </p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo apt-get install mailutils
+</code></pre>
+</div>
+</div>
+<h4>1.1.4. Proveu la configuració predeterminada</h4>
+<p>Afegiu un usuari abans de començar.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo useradd -m -s /bin/bash fmaster
+sudo passwd fmaster</code></pre>
+</div>
+</div>
+<p>Proveu la vostra instal·lació predeterminada mitjançant el següent segment de codi.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>telnet localhost 25
+</code></pre>
+</div>
+</div>
+<p>(si això no funciona, comproveu si el postfix s'està executant)</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo service postfix status
+</code></pre>
+</div>
+</div>
+<p>Si no s'està executant, inicieu-lo</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo service postfix start
+</code></pre>
+</div>
+</div>
+<p>Postfix indicarà com a continuació al terminal perquè pugui utilitzar per escriure ordres SMTP.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>S'està provant 127.0.0.1 ...
+Connectat a localhost.
+El caràcter d'escapament és "^]".
+220 localhost.localdomain Postfix d'ESMTP (Ubuntu)
+</code></pre>
+</div>
+</div>
+<p>Escriviu el següent segment de codi a l'indicador de Postfix.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>ehlo localhost
+mail from: root@localhost
+rcpt to: fmaster@localhost
+data
+Subject: El meu primer correu a Postfix
+
+Hola,
+Estàs allà?
+Salutacions,
+Administrador
+. (Escriviu el. [punt] en una nova línia i premeu Retorn)
+quit</code></pre>
+</div>
+</div>
+<p>Consulteu la bústia de correu de fmaster</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>su - fmaster
+mail</code></pre>
+</div>
+</div>
+<p>Quan escriviu el comandament de correu, una sortida com la següent es mostrarà al vostre terminal.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>Versió per correu electrònic 8.1.2 01/15/2001. Escriu? per ajuda.
+"/var/mail/fmaster": 2 missatges 2 nous
+&gt; N 1 root @ localhost Dl Mar 6 12:49 13/479 Només una prova
+  N 2 root @ localhost dl. Mar 6 12:51 15/487 El meu primer correu
+&amp;</code></pre>
+</div>
+</div>
+<p>Observareu que els correus es indexen per números i podeu escriure el número del correu que voleu llegir. Per exemple, escriviu "2" per llegir el segon correu. El tipus "q" per sortir. El correu electrònic s'escriurà en un fitxer anomenat <code>mbox</code> al directori personal de l'usuari. Segons el nostre exemple, serà <code>/home/fmaster/mbox</code>.</p>
+<p>Tots els missatges en un tipus <code>mbox</code> de bústia de correu estan concatenats i emmagatzemats en un únic fitxer. El començament de cada missatge està indicat per una línia els primers cinc caràcters són "From" i una línia en blanc s'afegeix al final de cada missatge.</p>
+<h4>1.1.5. Configuració del suport Postfix per a les bústies d'estil de Maildir</h4>
+<p>Maildir és un format per una cua de correu electrònic que no requereix bloqueig de fitxers per mantenir la integritat del missatge, ja que els missatges es mantenen en fitxers separats amb noms únics. Un <em>Maildir</em> és un directori (sovint anomenat Maildir) amb tres subdirectoris anomenats tmp, new i cur. Els subdirectoris haurien de residir en el mateix sistema de fitxers.</p>
+<p>Una altra raó per utilitzar el format Maildir és que els servidors Courier IMAP / POP3 només funcionen amb el format Maildir de les bústies.</p>
+<p>Indiqueu a Postfix per utilitzar <code>Maildir</code> en lloc de <code>mbox</code>:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo postconf -e "home_mailbox = Maildir/"
+</code></pre>
+</div>
+</div>
+<p>Assegureu-vos que no s'utilitza Procmail: (per si es va configurar durant l'execució de <code>dpkg-reconfigure</code>, per error) </p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo postconf -e "mailbox_command ="
+</code></pre>
+</div>
+</div>
+<p>Reinicia Postfix per fer efectes els canvis.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo service postfix restart
+</code></pre>
+</div>
+</div>
+<p>Torneu a provar la configuració.</p>
+<p>Consulteu la bústia de correu de <code>fmaster</code></p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>su - fmaster
+MAIL=/home/fmaster/Maildir
+mail</code></pre>
+</div>
+</div>
+<h4>1.1.6. Qüestions de seguretat</h4>
+<p>Cal afegir les vostres xarxes al paràmetre <code>mynetworks</code> perquè funcione l'autenticació des de l'exterior:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>mynetworks = 192.168.189.0/24, 10.0.216.0/24, 127.0.0.0/8</code></pre>
+</div>
+</div>
+<p><br /><br /></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_85" class="block iDevice_content">
+<h3>1.2. Instal·lació d'un MDA: Dovecot</h3>
+<p>Dovecot és un agent de lliurament de missatges (<em>Message Delivery Agent</em>), escrit principalment amb la seguretat en ment. Suporta els principals formats de bústia: mbox o Maildir. Aquesta secció explica com configurar-la com un servidor imap o pop3.</p>
+<h4>1.2.1. Instal·lació</h4>
+<p>Per a instal·lar dovecot, executa el següent comandament en el terminal:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo apt install dovecot-imapd dovecot-pop3d</code></pre>
+</div>
+</div>
+<h4>1.2.2. Configuració</h4>
+<p>Per configurar  dovecot, podeu editar el fitxer /etc/dovecot/dovecot.conf. Podeu triar el protocol que feu servir. Pot ser pop3, pop3s (pop3 <em>secure</em>), imap i imaps (imap <em>secure</em>). Per obtenir més informació, consulteu els articles de Wikipedia sobre POP3 i IMAP.</p>
+<p>IMAPS i POP3S són més segurs que els simples IMAP i POP3 perquè utilitzen el xifrat SSL per connectar-se. Un cop seleccionat el protocol, modifiqueu la següent línia al fitxer <code>/etc/dovecot/dovecot.conf</code>:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>protocols = pop3 pop3s imap imaps</code></pre>
+</div>
+</div>
+<p>A continuació, trieu la bústia que voleu utilitzar. Dovecot admet els formats <em>maildir</em> i <em>mbox</em>. Aquests són els formats de bústia més utilitzats. Tots dos tenen els seus propis beneficis i es discuteixen al lloc web <em>Dovecot</em>.</p>
+<p>Un cop hagueu escollit el vostre tipus de bústia, editeu el fitxer<code> /etc/dovecot/conf.d/10-mail.conf</code> i canvieu la següent línia:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>mail_location = maildir:~/Maildir # (for maildir)</code></pre>
+</div>
+</div>
+<p>o</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>mail_location = mbox:~/mail:INBOX=/var/spool/mail/%u # (for mbox)</code></pre>
+</div>
+</div>
+<p>Heu de configurar el vostre agent de transport de correu (MTA) per transferir el correu entrant a aquest tipus de bústia si és diferent del que heu configurat.</p>
+<p>Ara permetrem l'autenticació amb text pla des de fora per a simplificar el sistema:</p>
+<p>Obri  /etc/dovecot/conf.d/10-auth.conf i edita les línies següents perquè queden així:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>disable_plaintext_auth = no
+auth_mechanisms = plain login
+</code></pre>
+</div>
+</div>
+<p>Un cop hagueu configurat dovecot, reinicieu el servei per comprovar la configuració</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>sudo service dovecot restart</code></pre>
+</div>
+</div>
+<p>Si heu activat <code>imap</code> o <code>pop3</code>, també podeu intentar iniciar sessió amb les ordres <code>telnet localhost pop3</code> o <code>telnet localhost imap2</code>. Si veieu alguna cosa així com la següent, la instal·lació ha tingut èxit:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>bhuvan@rainbow:~$ telnet localhost pop3
+Trying 127.0.0.1...
+Connected to localhost.localdomain.
+Escape character is '^]'.
++OK Dovecot ready.</code></pre>
+</div>
+</div>
+<h4>1.2.3. Configuració de seguretat</h4>
+<p>Cal modificar l'arxiu <code>/etc/dovecot/dovecot.conf</code> i afegir a <code>login_trusted_networks</code> les vostres adreces de xarxa perquè funcione la autenticació.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>login_trusted_networks = 192.168.1.0/30</code></pre>
+</div>
+</div>
+<p><br />Podeu provar si funciona seguint en següent tutorial (les versions insegures del protocols sols funcionen des del servidor local): <a href="https://notes.sagredo.eu/en/qmail-notes-185/testing-dovecot-90.html">https://notes.sagredo.eu/en/qmail-notes-185/testing-dovecot-90.html</a></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_86" class="block iDevice_content">
+<h2>Recursos</h2>
+<ul>
+<li><a href="https://help.ubuntu.com/community/Postfix#Postfix_Basic_Setup">How To Install and Configure Postfix on Ubuntu 16.04</a></li>
+<li><a href="https://help.ubuntu.com/community/PostfixBasicSetupHowto" target="_blank" title="Postfix Basic Setup Howto" rel="noopener">Postfix Basic Setup Howto </a></li>
+<li><a href="https://help.ubuntu.com/community/Dovecot">Dovecot </a>en Ubuntu Documentation</li>
+<li><a href="https://help.ubuntu.com/lts/serverguide/dovecot-server.html">https://help.ubuntu.com/lts/serverguide/dovecot-server.html</a></li>
+</ul>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="83_protocols_en_la_gesti_de_correu_electrnic.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="85_clients_de__correu_electrnic.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

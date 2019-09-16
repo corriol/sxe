@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pràctica 2: Instal·lació del servei SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Serveis de control i accés remot</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="no-ch">1.1. Usos més freqüents de l'accés remot a ordinadors</a></li>
+      <li><a href="12_diferents_tipus_daccs_remot.html" class="no-ch">1.2. Diferents tipus d'accés remot</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_accs_remot_amb_lnia_dordres.html" class="current-page-parent daddy">2. Accés remot amb línia d'ordres</a>
+   <ul>
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introducci_a_la_criptografia.html" class="no-ch">2.2. Introducció a la criptografia</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_installaci_del_servei_telnet.html" class="no-ch">Pràctica 1: Instal·lació del servei Telnet</a></li>
+      <li id="active"><a href="prctica_2_installaci_del_servei_ssh.html" class="active no-ch">Pràctica 2: Instal·lació del servei SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_accs_remot_amb_interfcie_grfica.html" class="daddy">3. Accés remot amb interfície gràfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="no-ch">Pràctica 3: Accés remot amb terminal gràfic</a></li>
+   </ul>
+   </li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_installaci_del_servei_telnet.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="3_accs_remot_amb_interfcie_grfica.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Pràctica 2: Instal·lació del servei SSH</h1></div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id14">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">A. Accés remot mitjançant SSH</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_43_2" class="block iDevice_content">
+<div id="intro" class="box generalbox boxaligncenter">
+<div class="no-overflow">
+<h2>Objectiu</h2>
+<p>L'objectiu d'aquesta activitat és que us habitueu a l'ús del client SSH tant per accedir a equips remots com per transferir fitxers.</p>
+<p>SSH permet l'accés segur a recursos remots, ja sigui al sistema de l'equip o a algun dels seus recursos.</p>
+<p>Per fer aquesta pràctica haureu de disposar de dues màquines, la local i la remota. En cas que no sigui així, podeu instal·lar el client i el servidor a la mateixa màquina.</p>
+<p>Podeu consultar el següent recurs: <a href="https://help.ubuntu.com/16.04/serverguide/openssh-server.html">https://help.ubuntu.com/16.04/serverguide/openssh-server.html</a></p>
+<h2>Recursos necessaris</h2>
+<p>Dos ordinadors, ja que un actuarà de servidor SSH (al que ens connectarem de forma remota), i l'altre de client SSH, des del que ens connectarem. En el seu defecte podem disposar d'una màquina virtual que faça de servidor SSH.</p>
+<p>El node que actue de servidor SSH haurà de disposar d'un sistema operatiu basat en Ubuntu.</p>
+<h2>Activitat</h2>
+<p>Seguiu les instruccions següents per fer l'activitat:</p>
+<ol>
+<li>Instal·leu el programa client i el servidor SSH: <em><strong>openssh-server.</strong></em></li>
+<li>Accediu al terminal del equip remot.</li>
+<li>Quina pregunta apareixerà la primera vegada que us connecteu a l'equip remot? Què vol dir?</li>
+<li>Llista el contingut de la carpeta a la que has accedit.</li>
+<li>Des del client escull un fitxer de l'equip local i copia'l a l'equip remot mitjançant el comandament <em>scp</em>. Explica els paràmetres utilitzats.</li>
+<li>Connectat mitjançant el protocol <em>sftp</em> al servidor SSH<strong></strong>. Descarrega algun fitxer.</li>
+</ol>
+<p><strong>Documenta el procés.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id15">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">B. Configuració del servei SSH</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_44_2" class="block iDevice_content">
+<div id="intro" class="box generalbox boxaligncenter">
+<div class="no-overflow">
+<h1>Objectiu</h1>
+<p>L'objectiu d'aquesta activitat és que aprengueu a configurar els paràmetres bàsic d'un client i un servidor SSH.</p>
+<p>Per fer aquesta pràctica haureu de disposar de dues màquines, la local i la remota. En cas que no sigui així, podeu instal·lar el client i el servidor a la mateixa màquina.</p>
+<p>Per a obtenir informació de les opcions de configuració podeu usar:</p>
+<ul>
+<li><code>man ssh_config</code> - per al client</li>
+<li><code>man sshd_config</code> - per al servidor</li>
+</ul>
+<h2>Activitats</h2>
+<p>Seguiu les instruccions següents per fer l'activitat:</p>
+<ul>
+<li>Configura el client SSH [Linux Mint] de forma que al accedir al servidor s'indique l'usuari per defecte i no siga necessari indicar l'usuari.</li>
+<li>Configura el servidor de forma que només escolte per l'<strong>adreça IP externa</strong> i sols puga accedir l'usuari <strong>ftp_user</strong>. Configura també que el temps de login no podrà superar els 60 segons.</li>
+</ul>
+<p><strong>Documenta el procés.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id16">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">C. Autenticació mitjançant clau pública</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_45_2" class="block iDevice_content">
+<div id="intro" class="box generalbox boxaligncenter">
+<div class="no-overflow">
+<h2>Objectiu</h2>
+<p>L'objectiu d'aquesta activitat és que aprengueu a configurar els paràmetres bàsic d'un client i un servidor SSH.</p>
+<p>Per fer aquesta pràctica haureu de disposar de dues màquines, la local i la remota. En cas que no sigui així, podeu instal·lar el client i el servidor a la mateixa màquina.</p>
+<p>Consulta els apartats 2.2.2 dels apunts per a configurar-ho.</p>
+<h2>Activitat</h2>
+<p>Seguiu les instruccions següents per fer l'activitat:</p>
+<ul>
+<li>Configura el client SSH [Linux Mint] de forma que no demane usuari i contrasenya per a accedir mitjançant <strong>el mètode de clau pública</strong>.</li>
+</ul>
+<p><strong>Documenta el procés.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id22">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">D. Accés remot des de Windows a Ubuntu amb SSH</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_42_2" class="block iDevice_content">
+<h3>Objectius</h3>
+<p>L'objectiu d'aquesta activitat és que aprengueu algunes utilitats per a connectar equips en Windows a servidors SSH basats en Linux tant en mode gràfic com en mode text. </p>
+<h4>Activitat. Client SSH per línia de comandament</h4>
+<p>PuTTY és un client de terminal Transmission Control Protocol, desenvolupat per Simon Tatham, distribuït com a Programari lliure. Inicialment va ser desenvolupat per funcionar sobre el Sistema Operatiu Microsoft Windows però actualment n'existeixen versions per diverses plataformes Unix i Linux, i ja es troben en desenvolupament versions per Mac OS X.</p>
+<p>Recursos: Equip amb Windows i equip un sistema basat en Linux amb el servidor OpenSSH instal·lat.</p>
+<ol>
+<li>Descarrega't i instal·lat el servidor de finestres Xming X Server (inclou el client SSH putty) en Windows. Més endavant utilitzarem el servidor de finestres.</li>
+<li>Connectat a l'equip amb Linux</li>
+<li>Fes una captura de la connexió i un altra de la sessió. </li>
+</ol>
+<h5>Informació addicional</h5>
+<p>Windows 10 ja inclou de forma nativa un client i un servidor Open SSH, actualment es troba en la versió beta. Si voleu provar-la (<a href="https://www.redeszone.net/2017/12/14/activar-cliente-openssh-oculto-windows-10/" target="_blank" title="Cómo activar el cliente OpenSSH oculto en Windows 10" rel="noopener noreferrer">Cómo activar el cliente OpenSSH oculto en Windows 10</a>)</p>
+<p>Altres aplicacions les podreu trobar en <a href="https://winscp.net/eng/docs/lang:es" target="_blank" rel="external noopener noreferrer" title="Free SFTP, SCP and FTP client for Windows">Free SFTP, SCP and FTP client for Windows</a></p>
+<h4>Activitat. Connexió de forma gràfica des de Windows a un equip amb Linux.</h4>
+<p>Recursos: un equip en Windows i l'altre amb Linux en entorn gràfic. </p>
+<ol>
+<li>Instal·lat en Windows el servidor de finestres xming (si no ho has fet abans) i les fonts xming-fonts</li>
+<li>Fes una captura de l'execució d'alguna aplicació gràfica de Linux en Windows. </li>
+</ol>
+<p>Recurs de vídeo: <a href="https://www.youtube.com/watch?v=QRsma2vkEQE">https://www.youtube.com/watch?v=QRsma2vkEQE</a></p>
+<p>Recurs de text: <a href="http://courses.cms.caltech.edu/cs11/misc/xwindows.html">http://courses.cms.caltech.edu/cs11/misc/xwindows.html</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_installaci_del_servei_telnet.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="3_accs_remot_amb_interfcie_grfica.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

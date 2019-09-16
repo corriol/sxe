@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3. Traducció d'adreces de xarxa (NAT) | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-83"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexió de xarxes</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="criteris_davaluaci.html" class="no-ch">Criteris d'avaluació</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_arquitectura_de_xarxa_tcpip.html" class="no-ch">1. Arquitectura de xarxa TCP/IP</a></li>
+   <li><a href="2_el_protocol_ip.html" class="no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li><a href="4_els_serveis_de_xarxa.html" class="no-ch">4. Els serveis de xarxa</a></li>
+   <li><a href="5_commandaments.html" class="no-ch">5. Commandaments</a></li>
+   <li><a href="6_elements_dinterconnexi.html" class="no-ch">6. Elements d'interconnexió</a></li>
+   <li class="current-page-parent"><a href="7_interconnexi_de_xarxes.html" class="current-page-parent daddy">7. Interconnexió de xarxes</a>
+   <ul>
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li><a href="72_tallafocs_firewall.html" class="daddy">7.2. Tallafocs (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="73_traducci_dadreces_de_xarxa_nat.html" class="active no-ch">7.3. Traducció d'adreces de xarxa (NAT)</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bibliografia.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3. Traducció d'adreces de xarxa (NAT)</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id202">
+<div class="iDevice emphasis0">
+<div id="ta202_85" class="block iDevice_content">
+<p>La traducció d'adreces de xarxa (<em>Network Address Translation</em>, NAT) és el procés pel qual es modifiquen la informació sobre adreces a la capçalera del paquet IPv4 mentre està en trànsit per un dispositiu d'encaminament.</p>
+<p>L'ús de NAT és molt habitual en escenaris on dispositius amb una adreça IP privada (d'una LAN per exemple) volen accedir a una xarxa en adreces IP públiques, com Internet. Per evitar l'ambigüitat en la gestió dels paquets de tornada, un NAT d'un-a-molts ha de modificar informació de més alt nivell com els ports TCP/UDP a les comunicacions sortint, i ha de mantenir una taula de traducció perquè els paquets de tornada puguin traduir-se correctament. La RFC 2663 utilitza el terme NAPT (<em>network address and port translation</em>, traducció d'adreça de xarxa i de port) per a aquest tipus de NAT. D'altres vegades també s'anomena PAT (<em>port address translation</em>), IP <em>masquerading</em>, NAT Overload i many-to-one NAT. Com que aquest és el tipus de NAT més corrent, també se sol anomenar simplement NAT.</p>
+<p>Com s'ha dit, aquest mètode permet la comunicació a través del <em>router</em> només quan la conversa s'origina dins de la xarxa "dissimulada", perquè això inicialitza les taules de traducció. Per exemple, un navegador web dins de la xarxa dissimulada pot navegar per un web que estigui a fora, però un navegador de fora no pot navegar per un web que estigui a la xarxa dissimulada. Això no obstant, la majoria dels dispositius NAT actuals permeten a l'administrador de xarxa que preconfigure la taula amb algunes traduccions permanents. Aquesta funcionalitat es coneix normalment com a "NAT estàtic" o <strong><em>port forwarding</em></strong> i permet que el trànsit originat a la xarxa "exterior" arribi a ordinadors concrets dins de la xarxa dissimulada.</p>
+<p>Des de mitjans dels anys 1990, el NAT ha estat una eina molt popular per alleujar els problemes provocats per l'esgotament de l'espai d'adreces IPv4. S'ha convertit en una funció estàndard i indispensable en tots els <em>routers</em> per a connexions domèstiques i d'oficina petita. La majoria dels sistemes que utilitzen NAT ho fan per permetre que múltiples ordinadors d'una xarxa privada accedeixin a la Internet amb una sola adreça IP pública.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id203">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Emmascarament IP en Ubuntu Server 16.04</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta203_152" class="block iDevice_content">
+<p>L'emmascarament IP és el tipus de NAT més popular i és senzill de configurar usant regles de l'ufw.</p>
+<p>Per a fer-ho cal editar algun dels arxius que es troben en la carpeta /<code>etc/ufw/*.rules</code>.</p>
+<p>Les regles es divideixen en dos fitxers diferents, regles que s'han d'executar abans de les regles de línia d'ordres ufw, i les regles que s'executen després de les regles de la línia d'ordres ufw.</p>
+<p>En primer lloc, el reenviament de paquets ha d'estar habilitat.</p>
+<p>Ara afegiu regles al fitxer <code>/etc/ufw/before.rules</code>. Les regles predeterminades només configuren la taula <code>filter</code>, i per permetre que la configuració de la taula <code>nat</code> s'hagi de configurar. Afegiu el següent text  a la part superior del fitxer just després de l'encapçalament:</p>
+<blockquote>
+<div class="highlighted-code language-python">
+<div>
+<pre><code># nat table rules 
+*nat :POSTROUTING ACCEPT [0:0] 
+
+# Forward traffic from eth1 through eth0. 
+-A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE 
+
+# don't delete the 'COMMIT' line or these nat table rules won't be processed 
+COMMIT</code></pre>
+</div>
+</div>
+</blockquote>
+<p>Els comentaris no són estrictament necessaris, però es considera bona pràctica documentar la vostra configuració. A més, quan modifiqueu algun dels fitxers de regles a <code>/etc/ufw</code>, assegureu-vos que aquestes línies siguin l'última línia de cada taula modificada:</p>
+<blockquote>
+<pre># don't delete the 'COMMIT' line or these nat table rules won't be processed
+COMMIT</pre>
+</blockquote>
+<p>Per a cada taula es requereix una declaració COMMIT corresponent. En aquests exemples només es mostren les taules <code>nat</code> i <code>filter</code>.</p>
+<p>A l'exemple anterior substituïu <code>eth0</code>, <code>eth1</code> i 192.168.0.0/24 amb les interfícies apropiades i el rang d'IP per a la vostra xarxa.</p>
+<p>Finalment, desactiva i torna a habilitar <code>ufw</code> per aplicar els canvis:</p>
+<blockquote>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>sudo ufw disable &amp;&amp; sudo ufw enable</code></pre>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id204">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Cas pràctic: taules d'enrutament i NAT</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta204_147" class="block iDevice_content">
+<p>Com es pot observar en l'esquema disposem d'un dispositiu que pot realitzar NAT (R2). Crea les taules de rutes de R1 i R2 i les regles NAT que cregues convenients perquè els equips de la xarxa 192.168.2.0/24 puguen accedir a internet sense problemes.</p>
+<p style="text-align: center;"><img src="xarxa-nat-enrutament.png" alt="Xarxa " width="599" height="155" /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id205">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Redirecció de ports  en Ubuntu 16.04</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta205_152" class="block iDevice_content">
+<p>La redirecció de ports (<em>port forwarding</em>) és l'acció de redirigir un port de xarxa d'un node de xarxa a un altre. Aquesta tècnica pot permetre que un usuari extern tinga accés a un port en una adreça IP privada (dins d'una LAN) des de l'exterior via un encaminador amb NAT activat.</p>
+<p>La redirecció de ports permet que ordinadors remots (per exemple, màquines públiques a Internet) es connecten a un ordinador en concret dins d'una LAN privada.</p>
+<p>Per exemple, la redirecció del port 3389 a l'encaminador a la màquina d'un altre usuari permet l'accés remot.</p>
+<p>Les màquines amb Linux moderns aconsegueixen això afegint regles d'iptables a la taula nat: amb la destinació DNAT (<em>destination</em> NAT) a la cadena de PREROUTING o amb la destinació SNAT (<em>source</em> NAT) en la cadena de POSTROUTING.</p>
+<p>Suposant que disposem d'un servei web a la xarxa privada interna, concretament a l'equip 192.168.0.2 i que volem que siga accessible des de l'exterior mitjançant NAT i l'adreça pública de l'encaminador és 214.15.11.12.</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code># nat table rules
+
+*nat
+:PREROUTING ACCEPT [0:0]
+
+# Forward traffic from eth0 port 80 to 192.168.0.2.
+-A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to-destination 192.168.0.2:80
+
+# don't delete the 'COMMIT' line or these nat table rules won't be processed
+COMMIT</code></pre>
+</div>
+</div>
+<p>Amb la regla anterior les peticions a l'encaminador al port TCP/80 seran adreçades a l'adreça IP 192.168.0.2 al mateix port.</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bibliografia.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

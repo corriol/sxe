@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Commandaments | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-77"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexió de xarxes</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="criteris_davaluaci.html" class="no-ch">Criteris d'avaluació</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_arquitectura_de_xarxa_tcpip.html" class="no-ch">1. Arquitectura de xarxa TCP/IP</a></li>
+   <li><a href="2_el_protocol_ip.html" class="no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li><a href="4_els_serveis_de_xarxa.html" class="no-ch">4. Els serveis de xarxa</a></li>
+   <li id="active"><a href="5_commandaments.html" class="active no-ch">5. Commandaments</a></li>
+   <li><a href="6_elements_dinterconnexi.html" class="no-ch">6. Elements d'interconnexió</a></li>
+   <li><a href="7_interconnexi_de_xarxes.html" class="daddy">7. Interconnexió de xarxes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li><a href="72_tallafocs_firewall.html" class="daddy">7.2. Tallafocs (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traducci_dadreces_de_xarxa_nat.html" class="no-ch">7.3. Traducció d'adreces de xarxa (NAT)</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_els_serveis_de_xarxa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_elements_dinterconnexi.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5. Commandaments</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id182">
+<div class="iDevice emphasis0">
+<div id="ta182_86" class="block iDevice_content">
+<p>Les següents utilitats són emprades en la majoria de sistemes operatius i permeten diagnosticar problemes, controlar els serveis i canviar la configuració.</p>
+<p><strong>PING</strong></p>
+<p>Ping (<em>Packet Internet Groper</em>) és una utilitat que serveix per a enviar missatges a una adreça concreta de xarxa amb la finalitat de realitzar una comprovació utilitzat el protocol ICMP. El node destinatari ens respondrà amb un paquet per a confirmar-nos que els dos nodes poden comunicar-se perfectament.</p>
+<p><strong>ifconfig</strong></p>
+<p>Permet obtenir la informació de la configuració IP del node, així com modificar-la de forma no persistent. El comandament <code>iwconfig</code> permet veure la configuració IP de les connexions sense fils. </p>
+<p><strong>netstat</strong></p>
+<p><code>netstat</code> proporciona informació sobre les connexions de xarxa. </p>
+<p><strong>ip route</strong></p>
+<p><code>ip route</code> mostra la taula d'encaminament del node on s'executa.</p>
+<p><strong>traceroute</strong></p>
+<p><code>traceroute</code> ens mostra els encaminadors (routers) pels que passa un paquet fins arribar al seu destí.</p>
+<p><strong>nslookup </strong></p>
+<p><code>nslookup</code> permet fer consultes de noms de domini i comprovar quin servidor ens ofereix la resposta.</p>
+<p><strong>ifup / ifdown</strong></p>
+<p>els dos comandaments permeten activar o desactivar la interfície de xarxa indicada.</p>
+<div class="destacado">
+<p>Per a més informació de cada utilitat podeu usar el comandament <code>man</code> seguit de la utilitat de la que es vol mostrar informació.</p>
+<p>Per exemple: <code>man nslookup</code></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id183">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Activitat: Commandaments</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta183_106_2" class="block iDevice_content">
+<p>Realitza amb els comandaments anteriors les tasques necessàries per a descobrir quina és la configuració de la xarxa, demostrant mitjançant captures la justificació de la resposta:</p>
+<ul>
+<li>Adreça IP</li>
+<li>Màscara de xarxa</li>
+<li>Porta d'enllaç</li>
+<li>Servidors DNS</li>
+</ul>
+<p>En acabar, afig una captura de pantalla de la configuració de xarxa per comprovar que les dades són correctes. Ho són?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id184">
+<div class="iDevice emphasis0">
+<div id="ta184_86" class="block iDevice_content">
+<h2>1.5.2. Gestió de serveis</h2>
+<p>Per a la gestió dels serveis s'utilitza la utilitat <code>service</code> de la següent forma:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code># service nom-del-servei [stop|start|force-load|restart]</code></pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id185">
+<div class="iDevice emphasis0">
+<div id="ta185_86" class="block iDevice_content">
+<h2>1.5.3. Registre del sistema (<em>logs</em>)</h2>
+<p>Tots els sistemes operatius inclouen un sistema per a registrar els esdeveniments que ocorren en el sistema operatiu. En el cas de Linux aquestos registres són arxius de text pla que es troben a la carpeta <code>/var/log</code>.</p>
+<p>En la configuració i monitorització dels serveis de xarxa tenen un paper molt important perquè ens poden ajudar a diagnosticar els problemes que sorgeixen.</p>
+<p>Els serveis poden tindre el seu propi arxiu de registre o usar el registre del sistema. El registre del sistema es guarda en l'arxiu <code>/var/log/syslog</code> i al tractar-se d'un arxiu de text el podem consultar simplement usant el comandament cat.</p>
+<blockquote>
+<pre>$cat /var/log/syslog</pre>
+</blockquote>
+<p>Un altra utilitat interessant és el comandament <code>tail</code>, que permet visualitzar les últimes línies dels arxius de text. Amb l'argument <code>-f</code> mostra les últimes línies en temps real, és a dir, a mesura que va modificant-se l'arxiu. Mitjançant l'argument <code>-n</code> podem indicar el número de línies que es possible visualitzar. En el següent exemple mostrem en temps real les últimes 20 línies de l'arxiu de registre dels sistema.</p>
+<blockquote>
+<pre>$tail -fn 20 /var/log/syslog</pre>
+</blockquote>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id186">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Activitat: Resol</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta186_107_2" class="block iDevice_content">
+<p>Imagina que vas a configurar i un node IP però desconeixes la configuració IP de la xarxa. Sols disposes de la següent informació:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>ip route 
+default via 192.168.1.1 dev eth1 proto static 
+192.168.1.0/24 dev eth1 proto kernel scope link src 192.168.1.132 metric 1</code></pre>
+</div>
+</div>
+<p>i</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>nslookup www.google.com 
+
+Server: 201.20.1.1 
+Address: 201.20.1.1#53 
+
+Non-authoritative answer: 
+Name: www.google.com 
+Address: 172.217.17.36</code></pre>
+</div>
+</div>
+<p>Planteja una possible configuració per al node IP. Seria suficient? Justifica la resposta.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_els_serveis_de_xarxa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_elements_dinterconnexi.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

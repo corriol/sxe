@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1. Arquitectura de xarxa TCP/IP | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-73"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexió de xarxes</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="criteris_davaluaci.html" class="no-ch">Criteris d'avaluació</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li id="active"><a href="1_arquitectura_de_xarxa_tcpip.html" class="active no-ch">1. Arquitectura de xarxa TCP/IP</a></li>
+   <li><a href="2_el_protocol_ip.html" class="no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li><a href="4_els_serveis_de_xarxa.html" class="no-ch">4. Els serveis de xarxa</a></li>
+   <li><a href="5_commandaments.html" class="no-ch">5. Commandaments</a></li>
+   <li><a href="6_elements_dinterconnexi.html" class="no-ch">6. Elements d'interconnexió</a></li>
+   <li><a href="7_interconnexi_de_xarxes.html" class="daddy">7. Interconnexió de xarxes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li><a href="72_tallafocs_firewall.html" class="daddy">7.2. Tallafocs (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traducci_dadreces_de_xarxa_nat.html" class="no-ch">7.3. Traducció d'adreces de xarxa (NAT)</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="continguts.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_el_protocol_ip.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1. Arquitectura de xarxa TCP/IP</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id160">
+<div class="iDevice emphasis0">
+<div id="ta160_154" class="block iDevice_content">
+<p>Internet és una xarxa pública i global d'ordinadors que estan interconnectats mitjançant el protocol d'Internet (<em>Internet Protocol</em>) i que comuniquen mitjançant la commutació de paquets. Internet és la unió de milions de subxarxes domèstiques, acadèmiques, comercials i governamentals; és per això que a vegades se l'anomena «la xarxa de xarxes».</p>
+<p>Malgrat que hi ha una gran diversitat d'arquitectures de xarxa, la família de protocols TCP/IP s'utilitza en la majoria de xarxes que conformen Internet, així com les intranet d'empreses, centres educatius, zones WIFI, oficines i llars.</p>
+<p>La denominació TCP/IP fa referència als seus dos protocols més importants: el Protocol d'Internet (IP) i el Protocol de Transferència de Dades (TCP).</p>
+<h2>1.1. Model de capes</h2>
+<div class="exe-figure exe-image position-center license-copyright" style="width: 651px;">
+<div class="figcaption header"><strong>Model TCP/IP vs OSI<br /></strong></div>
+<img src="TCP-IP-model-vs-OSI-model.png" alt="Model ISO vs TCP/IP" width="597" height="341" />
+<div class="figcaption"><a href="http://fiberbit.com.tw/tcpip-model-vs-osi-model/" target="_blank" class="author" rel="noopener noreferrer">Fiberbit</a>. <a href="Model OSI vs TCP/IP" target="_blank" class="title" rel="noopener noreferrer"><em>Model OSI vs TCP/IP</em></a> <span class="license"><span class="sep">(</span><span>Tots els drets reservats</span><span class="sep">)</span></span></div>
+</div>
+<h3>Capa d'aplicació</h3>
+<p>La capa d’aplicació TCP/IP es correspon amb les capes d’aplicació, presentació i sessió del model OSI.</p>
+<p>La capa d’aplicació és la capa que els programes utilitzen per comunicar-se a través de la xarxa amb altres programes.</p>
+<p>Alguns programes que proporcionen serveis que treballen directament amb les aplicacions d’usuari i els seus corresponents protocols de la capa d’aplicació són, per exemple, HTTP (<em>hypertext transfer protocol</em>), FTP (<em>file transfer protocol</em>), SMTP (<em>simple mail transfer protocol</em>), SSH (<em>secure shell</em>), entre d’altres.</p>
+<h3>Capa de transport</h3>
+<p>La capa de transport TCP/IP es correspon amb la capa de transport del model OSI.</p>
+<p>Els protocols de la capa de transport solucionen problemes com la fiabilitat i la seguretat que les dades arriben a la destinació i ho fan en l’ordre correcte. Hi ha dos protocols bàsics en la capa de transport:</p>
+<ul>
+<li><strong>TCP</strong>. És un protocol fiable orientat a la connexió, que fa que un flux de bytes de l’aplicació de la màquina origen sigui lliurat sense errors a l’aplicació de qualsevol màquina destinació de la xarxa. Aquest protocol fragmenta el flux procedent de la capa d’aplicació en missatges més petits i després d’encapsular-los els transmet a la capa d’interxarxa. En la màquina destinació, el procés que els rep els reassembla per obtenir el flux original que envia cap a la capa d’aplicació.</li>
+<li><strong>UDP</strong>. És un protocol no fiable, sense connexió, per a aplicacions que no necessiten ni l’assignació d’una seqüència ni el control de flux de TCP, o que volen utilitzar els seus mitjans de control propis. Aquest protocol és molt utilitzat en consultes de petició i resposta d’un sol cop i en aplicacions en què la rapidesa del lliurament és més important que l’exactitud de les dades, com per exemple en la transmissions de veu o de vídeo.</li>
+</ul>
+<h3>Capa de xarxa (o interxarxa)</h3>
+<p>La capa d’Internet del model TCP/IP és equivalent a la capa de xarxa del model OSI.</p>
+<p>La missió fonamental d’aquesta capa és fer que <strong>els nodes implicats en la comunicació envien els paquets per qualsevol xarxa i els facen viatjar independentment cap a la seva destinació</strong>. Els paquets fins i tot podrien arribar a la seva destinació cada un per un camí diferent, i fins i tot en diferent ordre de com van sortir de l’emissor. En qualsevol cas, la seva reorganització correspon a la capa de transport.</p>
+<p>Per a realitzar dita funció ha de proporcionar també un <strong>mecanisme d'adreçament</strong>.</p>
+<h3>Capa d'accés a la xarxa</h3>
+<p>La capa d’accés a la xarxa del model TCP/IP és equivalent a les capes d’enllaç i física del model OSI.</p>
+<p>En el model TCP/IP només s’indica que el node s’ha de connectar a la xarxa fent ús dels protocols que hi ha a la xarxa física en qüestió, de manera que es puguin enviar paquets IP. Aquests protocols varien segons quines siguin les tecnologies de transmissió i els medis de xarxa que s’utilitzin.</p>
+<h4>Capa física</h4>
+<p>El propòsit de la capa física és transportar un corrent de bits en brut d’una màquina a una altra.</p>
+<p>La capa física és la capa més baixa de la jerarquia de comunicacions. En la capa física hi ha definits els senyals i els medis utilitzats per transmetre aquests senyals.</p>
+<p> Hi ha diferents tipus de medis físics per fer aquest transport, cada un en el seu ambient propi en termes d’amplada de banda, retard, cost, facilitat d’instal·lació o manteniment.</p>
+<div class="exe-figure exe-image position-center" style="width: 600px;">
+<div class="figcaption header"><strong>Quadre resum model TCP/IP</strong></div>
+<img src="capas-tcp-ip.png" alt="Quadre resum model TCP/IP" width="600" height="201" />
+<div class="figcaption"><a href="Quadre resum model TCP/IP" target="_blank" class="title" rel="noopener noreferrer"><em>Quadre resum model TCP/IP</em></a></div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id161">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Què és un protocol?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta161_129" class="block iDevice_content">
+<p>Un protocol és un conjunt de normes perfectament organitzades i mútuament acordades entre els participants en una comunicació. La seua missió es regular algun aspecte de la comunicació.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id162">
+<div class="iDevice emphasis0">
+<div id="ta162_85" class="block iDevice_content">
+<h2>1.1.2. Què és un servei de capa?</h2>
+<p>En el model TCP/IP, el protocols de les capes inferiors ofereixen un servei al protocol de la capa immediatament superior mitjançant una interfície que comunica ambdues capes. A més a més ofereix un servei a l'usuari final, és a dir, facilita a les aplicacions d'usuari l'ús d'Internet i d'altres xarxes.</p>
+<h3>Encapsulament</h3>
+<p>Per a aconseguir els objectius descrits anteriorment cada protocol afegeix una informació de control a la unitat de dades entregada per la capa superior.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 596px;">
+<div class="figcaption header"><strong>Exemple d'encapçalament</strong></div>
+<img src="ic10m7u1_11.png" alt="Exemple d'encapsulament de dades." width="596" height="400" />
+<div class="figcaption"><a href="https://ioc.xtec.cat/materials/FP/Materials/2251_ASIX/ASIX_2251_M07/web/html/WebContent/u1/a2/continguts.html" target="_blank" class="author">IOC</a>. <span class="title"><em>Exemple d'encapçalament</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id163">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Cal que conegues</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta163_129" class="block iDevice_content">
+<p><strong>Unitats d'informació</strong></p>
+<p>El conjunt d’informació composta per l’encapçalament més les dades rep noms diferents segons el nivell on està situada:</p>
+<ul>
+<li>En la capa de transport es denomina <em>segment</em>.</li>
+<li>En el nivell de capa de xarxa es denomina <em>paquet</em>.</li>
+<li>En el nivell de capa d’enllaç, <em>trama</em>.</li>
+<li>En el nivell de capa física, <em>bit</em>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id164">
+<div class="iDevice emphasis0">
+<div id="ta164_154" class="block iDevice_content">
+<h2>1.1.3. Estructura de xarxa</h2>
+<p>Quan la gent intenta accedir a informació en els seus dispositius, ja siguin un ordinador personal o portàtil, una tauleta digital, un telèfon o qualsevol altre dispositiu connectat a la xarxa, les dades poden estar o no emmagatzemades físicament als seus dispositius, en cas de no estar-hi caldrà accedir a ells de forma remota fent ús de xarxes client-servidor o xarxes d’igual a igual (P2P).</p>
+<h3>Model client/servidor</h3>
+<p>Una xarxa client-servidor és aquella on tots els clients estan connectats a un servidor on es centralitzen els diferents recursos. Aquests recursos estan a disposició dels clients cada cop que els sol·liciten. Això fa que totes les gestions que es realitzen es concentren en el servidor, que disposa dels requeriments dels clients amb prioritat, els arxius que són d'ús públic i els restringits, els arxius de només lectura, els que poden ser modificats, etc.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 400px;"><img src="ic10m5u1_22.png" alt="" width="400" height="297" />
+<div class="figcaption"><a href="http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M05/web/html/WebContent/u1/a1/continguts.html" target="_blank" class="author">ioc</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p></p>
+<p>En el model client/servidor, el dispositiu que sol·licita informació es denomina client i el dispositiu que respon la sol·licitud es denomina servidor. Els processos de client i servidor es consideren una part de la capa d’aplicació. El client comença l’intercanvi sol·licitant les dades al servidor, que respon enviant un o més blocs de dades al client. Els protocols de capa d’aplicació descriuen el format de les sol·licituds i respostes entre clients i servidor. A més de la transferència real de dades, aquest intercanvi pot requerir informació addicional, com l’autentificació de l’usuari i la identificació d’un arxiu de dades per transferir.</p>
+<p>Un exemple d’una xarxa client/servidor és un entorn corporatiu en què els empleats utilitzen un servidor de correu electrònic de l’empresa per enviar, rebre i emmagatzemar correu. El client de correu electrònic en l’ordinador d’un empleat emet una sol·licitud al servidor de correu per un missatge no llegit. El servidor respon enviant el correu sol·licitat al client.</p>
+<p>Encara que les dades generalment es descriuen com un flux del servidor al client, algunes dades sempre flueixen del client al servidor. El flux de dades pot ser el mateix en les dues direccions o fins i tot ser major en la direcció que va del client al servidor. Per exemple, un client pot transferir un arxiu al servidor amb finalitats d’emmagatzemament. La transferència de dades d’un client a un servidor es coneix com a pujada i la de les dades d’un servidor a un client, baixada.</p>
+<h3>Xarxes d'igual a igual (punt a punt)</h3>
+<p>En una xarxa entre iguals, dos o més ordinadors estan connectats per mitjà d’una xarxa i poden compartir recursos (per exemple, impressora i arxius) sense tenir un servidor dedicat. Cada dispositiu final connectat (conegut com a punt) pot funcionar com un servidor o com un client. Un ordinador pot assumir el paper de servidor per a una transacció mentre funciona de manera simultània com a client per a una altra transacció. Els papers del client i del servidor es configuren segons les sol·licituds.</p>
+<p>Un exemple d’una xarxa entre iguals és una simple xarxa domèstica amb dos ordinadors connectats que comparteixen una impressora. Cada persona pot configurar el seu ordinador per compartir arxius, habilitar jocs en xarxa o compartir una connexió d’Internet. Un altre exemple sobre la funcionalitat de la xarxa punt a punt són dos ordinadors connectats a una gran xarxa que utilitzen aplicacions de programari per compartir recursos a través de la Xarxa.</p>
+<p>A diferència del model client/servidor, que utilitza servidors dedicats, les xarxes punt a punt descentralitzen els recursos en una xarxa com es detalla en la figura següent. En lloc d’ubicar informació per compartir en els servidors dedicats, la informació es pot col·locar en qualsevol part d’un dispositiu connectat. La majoria dels sistemes operatius actuals admeten compartir arxius i impressores sense requerir programari addicional del servidor. Ja que les xarxes punt a punt generalment no utilitzen comptes d’usuaris centralitzats, permisos ni monitors, és difícil implementar les polítiques d’accés i seguretat en les xarxes que contenen més quantitat d’ordinadors. Cal establir comptes d’usuari i drets d’accés de manera individual per a cada dispositiu.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 401px;">
+<div class="figcaption header"><strong>Model Client-servidor</strong></div>
+<img src="ic10m5u1_24.png" alt="Model Client-servidor" width="401" height="255" />
+<div class="figcaption"><a href="Model Client-servidor" target="_blank" class="author">IOC</a>. <span class="title"><em>Model Client-servidor</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id165">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Qüestionari</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta165_105_2" class="block iDevice_content">
+<ol>
+<li>Quines són les capes que formen el model OSI? Fes una gràfic indicant les capes OSI i la relació que tenen en les capes de la familía TCP/IP. Indica també el nom de les PDU (unitats de dades) i el seu sistema adreçament. Posa també exemples de protocols de cada capa.</li>
+<li>Què és l'encapsulament?</li>
+<li>Quins dos tipus d'estructura de xarxes hi han? Explica les diferències.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="continguts.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_el_protocol_ip.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

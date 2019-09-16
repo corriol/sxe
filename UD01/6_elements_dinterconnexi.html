@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6. Elements d'interconnexió | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-78"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexió de xarxes</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="criteris_davaluaci.html" class="no-ch">Criteris d'avaluació</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_arquitectura_de_xarxa_tcpip.html" class="no-ch">1. Arquitectura de xarxa TCP/IP</a></li>
+   <li><a href="2_el_protocol_ip.html" class="no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li><a href="4_els_serveis_de_xarxa.html" class="no-ch">4. Els serveis de xarxa</a></li>
+   <li><a href="5_commandaments.html" class="no-ch">5. Commandaments</a></li>
+   <li id="active"><a href="6_elements_dinterconnexi.html" class="active no-ch">6. Elements d'interconnexió</a></li>
+   <li><a href="7_interconnexi_de_xarxes.html" class="daddy">7. Interconnexió de xarxes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li><a href="72_tallafocs_firewall.html" class="daddy">7.2. Tallafocs (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traducci_dadreces_de_xarxa_nat.html" class="no-ch">7.3. Traducció d'adreces de xarxa (NAT)</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_commandaments.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_interconnexi_de_xarxes.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6. Elements d'interconnexió</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id187">
+<div class="iDevice emphasis0">
+<div id="ta187_86" class="block iDevice_content">
+<p>Els dispositius d'interconnexió permeten connectar els diferents dispositius amb diversos objectius.</p>
+<h2>Repetidor</h2>
+<p>Un repetidor (en anglès <em>repeater)</em> és un dispositiu electrònic que rep un senyal dèbil o de baix nivell i la retransmet a un nivell més alt i/o a més potència, de manera que el senyal pugui cobrir distàncies més llargues sense degradació.</p>
+<h2>Concentrador</h2>
+<p>Els concentradors (en anglès <em>hub</em>) permeten interconnectar els diferents nodes existents en una xarxa d'àrea local, funcionen d'una forma molt senzilla, reenvien pel tots els ports la informació que els arriba. No obstant això, el problema principal dels concentradors és que l'ús de la xarxa no és l'òptim.</p>
+<h2>Pont</h2>
+<p>Un pont de xarxa (o <em>bridge</em>) és un dispositiu d'interconnexió de xarxes d'ordinadors que opera amb la capa 2 (nivell d'enllaç de dades) del model OSI. Aquest interconnecta dos segments de xarxa (o divideix una xarxa en segments) fent el transllat de dades d'una xarxa a l'altra amb base de la direcció física de destí de cada paquet. Un <em>bridge</em> connecta dos segments de xarxa com una sola xarxa fent servir el mateix protocol de nivell de xarxa.</p>
+<h2>Commutador</h2>
+<p>Un commutador (en anglès <em>switch</em>) és un aparell de xarxes que permet agrupar un conjunt d'ordinadors i fer que passin pel mateix cable. A diferència dels concentradors, per cada paquet que hi arriba, el commutador l'envia només al seu destí.</p>
+<p>El commutador ha de saber, per a cada cable que hi té connectat, a quina adreça MAC correspon cada un. Per fer-ho, internament guarda una taula de correspondències, que va actualitzant a mesura que li arriben paquets de nous ordinadors.</p>
+<p>Quan no sap una adreça, utilitza una adreça de difusió (<em>broadcast</em>) per preguntar-la a tothom.</p>
+<h2>Encaminador</h2>
+<p>Un encaminador (en anglès: <em>router</em>) és un dispositiu de xarxa que reenvia paquets de dades entre xarxes de computadors. L'encaminador pertany al de nivell 3 del model OSI. Com que l'encaminador està connectat a dues o més línies de diferents xarxes, quan un paquet de dades ve d'una de les línies, el <em>router</em> llegeix la informació de direcció en el paquet i així determina la seva destinació final. Després usant una política d'enrutament dirigeix els paquets en funció de certs paràmetres (origen, destí, congestió, seguretat...) a la següent xarxa, aquest paquet va passant d'una xarxa a una altra fins a arribar al seu destí. Aquestes polítiques d'enrutament poden ser estàtiques (introduïdes manualment) o dinàmiques (RIP, BGP...). D'aquesta manera els encaminadors “dirigeixen el trànsit” a internet.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 320px;"><img src="Linksys-Wireless-G-Router.jpg" alt="Linksys wireless-G router, model WRT54GS" width="320" height="274" />
+<div class="figcaption"><a href="https://es.m.wikipedia.org/wiki/Archivo:Linksys-Wireless-G-Router.jpg" target="_blank" class="author" rel="noopener noreferrer">Col·laboradors de Wikipedia</a>. <span class="title"><em>Linksys wireless-G router, model WRT54GS</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Els routers més comuns són els de les cases i els de les petites oficines que simplement passen els paquets d'una xarxa a una altra. Un exemple seria el DLS router que es connecta a través d'un ISP. També hi ha encaminadors més sofisticats, com routers empresarials que connecten grans xarxes o ISP fins als routers centrals que reenvien dades a alta velocitat al llarg de les fibres òptiques. Normalment els routers es dediquen a dispositius hardware, però cada vegada és més comú trobar routers encaminadors basats en software.</p>
+<h2>Passarel·la</h2>
+<p>Una passarel·la (en anglès <em>gateway</em>) és un dispositiu que permet interconnectar xarxes que utilitzen arquitectures o protocols diferents, és una porta d'enllaç en una xarxa. Les passarel·les actuen en el nivell 4 (capa de transport) i superiors del model OSI. La majoria de les passarel·les s'implementen per programari.</p>
+<p>Les passarel·les també s'anomenen convertidors de protocol i són més complexes que els encaminadors o els commutadors de xarxa.</p>
+<p>Les passarel·les són una part molt important en la majoria d'encaminadors, ja que interconnecten xarxes Ethernet amb xarxes Wi-Fi.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id188">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Cal que conegues</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta188_129" class="block iDevice_content">
+<ul>
+<li><strong>Segment de xarxa:</strong> En l’àmbit lògic, forma un únic segment tota secció d’una xarxa Ethernet que comparteix un mateix domini de col·lisió, de manera que els diferents segments s’uneixen entre si mitjançant encaminadors o commutadors; en aquest sentit, dos o més seccions de la xarxa unides per un concentrador es consideren parts d’un mateix segment de xarxa.</li>
+<li><strong>Domini de col·lisió:</strong> Segmento físic d'una xarxa d'ordinadors on és possible que les trames puguen col·lisionar amb altres.</li>
+<li><strong>Domini de difusió:</strong> Conjunt de tots els dispositius que reben trames de difusió (<em>broadcast</em>) que s'originen en qualsevol dispositiu del conjunt. Els encaminadors divideixen els dominis de difusió, ja que no envien trames de difusió.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id189">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Activitat: mapa de xarxa</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta189_107_2" class="block iDevice_content">
+<p>Realitza en l'aplicació DIA un plànol de la xarxa de classe tant de nivell físic com lògic.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SortIdeviceInc em_iDevice" id="id190">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Dispositius per nivells</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+
+<div id="ta190_4" class="block iDevice_content">
+<p>Ordena de dalt cap a baix els següents dispositius pel nivell en què treballen</p>
+</div>
+
+
+
+<script src="jquery-ui-1.10.3.custom.min.js" type='text/javascript'> </script>
+<script type="text/javascript">
+	// Before in common.js
+	function playAndReset(e) {
+		if (e && e.paused == true && e.currentTime == 0) {
+			try {
+				e.play()
+			} catch (t) {}
+		} else {
+			try {
+				e.pause();
+				e.addEventListener("seeked", function() {
+					e.play()
+				}, true);
+				e.currentTime = 0
+			} catch (n) {}
+		}
+	}
+
+	function playPositiveFeedbackDefault() {
+		var e = Math.floor(Math.random() * 3);
+		var t = document.getElementById("exesfx_good" + e);
+		playAndReset(t)
+	}
+
+	function playNegativeFeedbackDefault() {
+		var e = document.getElementById("exesfx_wrong");
+		playAndReset(e)
+	}
+	var exe_isTouchScreenDev = false;
+	var touchScreenDetectDone = false;
+	function doTouchScreenDetect() {
+		if (touchScreenDetectDone == true) {
+			return
+		}
+		var e = navigator.userAgent;
+		if (e.indexOf("Android") != -1) {
+			exe_isTouchScreenDev = true
+		}
+	}
+	doTouchScreenDetect();
+	// / Before in common.js
+
+	var sortmeItemIds190 = new Array();
+
+	//correct
+	var sortMeEffect190 = "bounce";
+
+	//wrong
+	var sortMeEffectWrong190 = "transfer";
+	
+	var sortMeStyle190 = "background-color: green; color: white; margin: 10px; padding: 5px;";
+</script>
+<script src="sortItems.js" type='text/javascript'> </script>
+
+<div id="sortmecorrectoverlay190" style="position: absolute; z-index: 3;">
+	<div id="ta190_9" class="block iDevice_content">
+<p style="text-align: center;"><span style="font-size: 24pt;"><strong>Correcte</strong></span></p>
+</div>
+
+</div>
+<div id="sortmewrongoverlay190" style="position: absolute; z-index: 3">
+	<div id="ta190_10" class="block iDevice_content">
+<p>Incorrecte</p>
+</div>
+
+</div>
+
+<!-- home of contents before being sorted  will be randomized first -->
+<div id="sortmeitemcontainer190" class='sortitemcontainer' style='display: none; z-index: 1'>
+
+<div id='sortmeitem190_14'><div id="ta190_14" class="block iDevice_content">
+<p>Passarel·la</p>
+</div>
+</div><div id='sortmeitem190_992'><div id="ta190_992" class="block iDevice_content">
+<p>Encaminador</p>
+</div>
+</div><div id='sortmeitem190_993'><div id="ta190_993" class="block iDevice_content">
+<p>Commutador</p>
+</div>
+</div><div id='sortmeitem190_994'><div id="ta190_994" class="block iDevice_content">
+<p>Concentrador</p>
+</div>
+</div></div>
+<script type='text/javascript'>sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_14";
+sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_992";
+sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_993";
+sortmeItemIds190[sortmeItemIds190.length] = "sortmeitem190_994";
+</script><ul class='sortableitemulcontainer' id='sortme190' style="list-style-type: none; margin: 0; padding: 0; ">
+
+</ul>
+
+<input type='button' value="Comprova" style="color: white; background-color: green;" onclick='checkOrder("190")'/><br/><br/>
+<script type='text/javascript'>initSortActivity('190');</script>
+
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_commandaments.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_interconnexi_de_xarxes.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

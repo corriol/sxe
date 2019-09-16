@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. El protocol IP | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-74"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexió de xarxes</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="criteris_davaluaci.html" class="no-ch">Criteris d'avaluació</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_arquitectura_de_xarxa_tcpip.html" class="no-ch">1. Arquitectura de xarxa TCP/IP</a></li>
+   <li id="active"><a href="2_el_protocol_ip.html" class="active no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li><a href="4_els_serveis_de_xarxa.html" class="no-ch">4. Els serveis de xarxa</a></li>
+   <li><a href="5_commandaments.html" class="no-ch">5. Commandaments</a></li>
+   <li><a href="6_elements_dinterconnexi.html" class="no-ch">6. Elements d'interconnexió</a></li>
+   <li><a href="7_interconnexi_de_xarxes.html" class="daddy">7. Interconnexió de xarxes</a>
+   <ul class="other-section">
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li><a href="72_tallafocs_firewall.html" class="daddy">7.2. Tallafocs (firewall)</a>
+      <ul class="other-section">
+         <li><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traducci_dadreces_de_xarxa_nat.html" class="no-ch">7.3. Traducció d'adreces de xarxa (NAT)</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_arquitectura_de_xarxa_tcpip.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_el_protocol_tcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2. El protocol IP</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id166">
+<div class="iDevice emphasis0">
+<div id="ta166_85" class="block iDevice_content">
+<div style="overflow: hidden; position: absolute; top: -5000px; height: 1px;">
+<p>La versió més usada actualment del protocol IP és la IPv4, definida en l’<acronym title="Request for Comments">RFC</acronym> 791 del 1981. Actualment ja disposa d’un successor, la IPv6, l’ús de la qual es va estenent progressivament.</p>
+<p>Totes les versions del protocol IP permeten l’enviament de paquets entre equips sense establir cap mena de connexió. Això vol dir que l’ordinador amfitrió origen envia dades al destinatari sense esperar cap mena de notificació que les dades s’han rebut correctament.</p>
+<div class="iocimportant">
+<div class="ioccontent">
+<p>Avui dia, el TCP/IP és el conjunt de protocols escollit per a la immensa majoria de les xarxes actuals i, per descomptat, per a qualsevol sistema que es vulgui connectar a Internet.</p>
+</div>
+</div>
+<p>Tot i que per enviar dades entre dos ordinadors amfitrions ja n’hi ha prou amb el protocol IP, no ofereix cap mena de garantia que s’enviïn correctament les dades o, ni tan sols, que arribin a la destinació. De fet, no ens garanteix que les dades, si arriben a la destinació, estiguin intactes, ja que el control d’errors només es fa sobre les capçaleres, no sobre les dades que transmet. Així doncs, tot i que es pot fer servir IP directament, per a aplicacions que requereixen fiabilitat fan servir al protocol de la capa de transport TCP.</p>
+</div>
+<div style="overflow: hidden; position: absolute; top: -5000px; height: 1px;">
+<p>La versió més usada actualment del protocol IP és la IPv4, definida en l’<acronym title="Request for Comments">RFC</acronym> 791 del 1981. Actualment ja disposa d’un successor, la IPv6, l’ús de la qual es va estenent progressivament.</p>
+<p>Totes les versions del protocol IP permeten l’enviament de paquets entre equips sense establir cap mena de connexió. Això vol dir que l’ordinador amfitrió origen envia dades al destinatari sense esperar cap mena de notificació que les dades s’han rebut correctament.</p>
+<div class="iocimportant">
+<div class="ioccontent">
+<p>Avui dia, el TCP/IP és el conjunt de protocols escollit per a la immensa majoria de les xarxes actuals i, per descomptat, per a qualsevol sistema que es vulgui connectar a Internet.</p>
+</div>
+</div>
+<p>Tot i que per enviar dades entre dos ordinadors amfitrions ja n’hi ha prou amb el protocol IP, no ofereix cap mena de garantia que s’enviïn correctament les dades o, ni tan sols, que arribin a la destinació. De fet, no ens garanteix que les dades, si arriben a la destinació, estiguin intactes, ja que el control d’errors només es fa sobre les capçaleres, no sobre les dades que transmet. Així doncs, tot i que es pot fer servir IP directament, per a aplicacions que requereixen fiabilitat fan servir al protocol de la capa de transport TCP.</p>
+</div>
+<p>La versió més usada actualment del protocol IP és la IPv4, definida en l’RFC 791 del 1981. Actualment ja disposa d’un successor, la IPv6, l’ús de la qual es va estenent progressivament.<br /><br />Totes les versions del protocol IP permeten l’enviament de paquets entre equips sense establir cap mena de connexió. Això vol dir que l’ordinador amfitrió origen envia dades al destinatari sense esperar cap mena de notificació que les dades s’han rebut correctament.<br /><br />Tot i que per enviar dades entre dos ordinadors amfitrions ja n’hi ha prou amb el protocol IP, no ofereix cap mena de garantia que s’enviïn correctament les dades o, ni tan sols, que arribin a la destinació. De fet, no ens garanteix que les dades, si arriben a la destinació, estiguen intactes, ja que el control d’errors només es fa sobre les capçaleres, no sobre les dades que transmet. Així doncs, tot i que es pot fer servir IP directament, per a aplicacions que requereixen fiabilitat fan servir al protocol de la capa de transport TCP.</p>
+<h3>2.1. Configuració d'un node IP</h3>
+<p>En primer lloc, caldrà configurar els protocols TCP/IP locals que solen incloure en el nucli de qualsevol sistema operatiu modern.</p>
+<p>A l'hora de configurar l'equip, caldrà disposaran er de la següent informació:</p>
+<ul>
+<li>L'<strong>adreça IP</strong>, ja sigui de la versió 4 o de la nova versió 6.</li>
+<li>La <strong>màscara de subxarxa</strong>, que serveix per identificar la xarxa o subxarxa.</li>
+</ul>
+<p>Si la comunicació s'estableix amb equips d'altres subxarxes o amb Internet, es necessitarà a més:</p>
+<ul>
+<li>L'adreça IP de la <strong>porta d'enllaç (<em>gateway</em>)</strong> o passarel·la per omissió que correspon al router i amb el qual es redirigeix el tràfic a Internet o a altres subxarxes.</li>
+<li>Les adreces IP dels s<strong>ervidors DNS.</strong></li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id167">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta167_151" class="block iDevice_content">
+<p>El protocol IP té les següents funcions:</p>
+<ul>
+<li>Triar el camí més adequat per a enviar els paquets.</li>
+<li>Implementa un servei d'enviament amb les característiques següents:
+<ul>
+<li><strong>No orientat a la connexió</strong>. Cada paquet pot seguir un camí distint. Per la qual cosa poden arribar desordenats.</li>
+<li><strong>No fiable</strong>. Els paquets poden perdre's, danyar-se o arribar amb retard.</li>
+</ul>
+</li>
+<li>Proporciona un mecanisme d'adreçament lògic (adreces IP).</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id168">
+<div class="iDevice emphasis0">
+<div id="ta168_85" class="block iDevice_content">
+<h3>Adreçament IP</h3>
+<p>L’adreça IP és un nombre de 32 bits que identifica cada una de les màquines que estan connectades a Internet o a qualsevol xarxa, i també la xarxa a la qual estan connectades. Una part de l’adreça IP, segons la seua màscara de xarxa, serveix per identificar la xarxa, sent el tros restant de la direcció IP la que identifica la màquina.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 449px;">
+<div class="figcaption header"><strong>IP dividida en xarxa i ordinador </strong></div>
+<img src="ic10m5u3_26.png" alt="IP dividida en xarxa i ordinador " width="449" height="112" />
+<div class="figcaption"><a href="http://ioc.xtec.cat/" target="_blank" class="author">IOC</a>. <a href="http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M05/web/html/WebContent/u3/a4/continguts.html" target="_blank" class="title"><em>IP dividida en xarxa i ordinador </em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Per poder separar el camp que identifica la xarxa del camp que identifica la màquina, s’ha d’aplicar <strong>una màscara de xarxa</strong>. És a dir, al aplicar la operació lògica AND entre la màscara de xarxa i l’adreça IP s’obté la xarxa.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id169">
+<div class="iDevice emphasis0">
+<div id="ta169_85" class="block iDevice_content">
+<h3>Classes d'adreça IPv4</h3>
+<p>Hi ha tres classes principals d’adreces IP:</p>
+<ul>
+<li>Adreça de classe A: el primer octet identifica la xarxa.</li>
+<li>Adreça de classe B: els dos primers octets identifiquen la xarxa.</li>
+<li>Adreça de classe C: els tres primers octets identifiquen la xarxa.</li>
+</ul>
+<p>A més de dues classes addicionals que es tracten per separat:</p>
+<ul>
+<li>Adreça de classe D: Es tracta d’un conjunt d’adreces reservades per multidifusió.</li>
+<li>Adreça de classe E: Es tracta d’una classe reservada.</li>
+</ul>
+<table class="exe-table" style="width: 100%;">
+<thead>
+<tr>
+<th>Classe</th>
+<th>Interval d'adreces</th>
+<th>Núm. màxim de xarxes</th>
+<th>Núm. màxim de nodes</th>
+<th>Màscara estàndard</th>
+<th>Adreça de difusió</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>A</strong></td>
+<td>
+<p style="text-align: center;">1.0.0.0<br />-<br />126.0.0.0</p>
+</td>
+<td style="text-align: center;">126</td>
+<td style="text-align: center;">16.777.214</td>
+<td style="text-align: center;">255.0.0.0</td>
+<td style="text-align: center;">x.255.255.255</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>B</strong></td>
+<td>
+<p style="text-align: center;">128.0.0.0<br />-<br />191.255.0.0</p>
+</td>
+<td style="text-align: center;">16.384</td>
+<td style="text-align: center;">65.534</td>
+<td style="height: 51px; width: 16.074%; text-align: center;">255.255.0.0</td>
+<td style="height: 51px; width: 14.8713%; text-align: center;">x.x.255.255</td>
+</tr>
+<tr style="height: 51px;">
+<td style="text-align: center;"><strong>C</strong></td>
+<td>
+<p style="text-align: center;">192.0.0.0<br />-<br />223.255.255.0</p>
+</td>
+<td style="text-align: center;">2.097.152</td>
+<td style="text-align: center;">254</td>
+<td style="text-align: center;">255.255.255.0</td>
+<td style="text-align: center;">x.x.x.255</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>D</strong></td>
+<td>
+<p style="text-align: center;">224.0.0.0<br />-<br />239.255.255.0</p>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>E</strong></td>
+<td>
+<p style="text-align: center;">240.0.0.0<br />-<br />255.255.255.255</p>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id170">
+<div class="iDevice emphasis0">
+<div id="ta170_85" class="block iDevice_content">
+<h3>Adreçament sense classe (CIDR)</h3>
+<p>Amb la ràpida expansió d’Internet va quedar clar que l'adreçament basat en classes no era suficient, és per això que l’any 1993 es va proposar la CIDR (<em>classless inter-domain routing</em>) que vol dir encaminament entre dominis sense classe. Gràcies a aquest sistema es millora el mètode amb el que s’interpreten les adreces IP a més de com s’encaminen els paquets.</p>
+<p>En lloc de parlar de classes es fa servir el nombre de bits a 1 de la màscara de xarxa per tal d’indicar la xarxa. Les classes A, B i C tindrien una màscara de xarxa amb 8, 16 i 24 bits a 1 respectivament. Per exemple, per tal de definir la xarxa que va del 192.168.0.0 a la 192.168.255.255 (seria una classe B) indiquem la IP i amb un barra els 16 bits a 1 de la màscara de xarxa. Per tant la notació seria: 192.168.0.0/16</p>
+<p>Per poder fer ús de CIDR, els encaminadors de la xarxa han de ser capaços d’interpretar adreces IP que no pertanyen a cap de les classes convencionals (A, B o C).</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id171">
+<div class="iDevice emphasis0">
+<div id="ta171_85" class="block iDevice_content">
+<h3>Adreces reservades i/o especials</h3>
+<div style="overflow: hidden; position: absolute; top: -5000px; height: 1px;">
+<ul>
+<li class="level1">
+<div class="li">Quan l’identificador d’equip és 0, es fa referència a la xarxa a la qual està connectat.</div>
+</li>
+<li class="level1">
+<div class="li">Quan l’identificador d’equip són tot 1 vol dir totes les màquines; això seria una adreça de difusió (<em>broadcast</em>).</div>
+</li>
+<li class="level1">
+<div class="li">Quan tota l’adreça són 0 indica totes les IPs de la màquina.</div>
+</li>
+<li class="level1">
+<div class="li">Adreça de <em>loopback</em>. La xarxa 127.0.0.0/8 indica que el paquet es que a la mateixa màquina i retorna internament, es refereix sempre al equip local.</div>
+</li>
+<li class="level1">
+<div class="li">Adreces privades. Són adreces que només es poden utilitzar dins d’una organització privada no encaminables. Els blocs d’adreces privades són els següents:</div>
+<ul>
+<li class="level2">
+<div class="li"><code>10.0.0.0/8</code>: és una classe A que permet 2<sup>24</sup> hosts a la xarxa. Per la grandària que té se sol dividir en subxarxes.</div>
+</li>
+<li class="level2">
+<div class="li"><code>172.16.0.0/12</code>: és una xarxa que admet fins a 2<sup>20</sup> equips connectats a la xarxa</div>
+</li>
+<li class="level2">
+<div class="li"><code>192.168.0.0/16</code>: és una classe C que permet fins a 2<sup>16</sup> equips. Encara que sigui la més petita de les tres és la més comuna.</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>Quan l’identificador d’equip és 0, es fa referència a la xarxa a la qual està connectat. Per exemple: 10.0.0.0/8</li>
+<li>Quan l’identificador d’equip són tot 1 vol dir totes les màquines; això seria una adreça de difusió (<em>broadcast)</em>. Per exemple: 10.255.255.255/8</li>
+<li>Quan tota l’adreça són 0 indica totes les IPs de la màquina. Per exemple: 0.0.0.0/0</li>
+<li>Adreça de <em>loopback</em>. La xarxa 127.0.0.0/8 indica que el paquet es que a la mateixa màquina i retorna internament, es refereix sempre al equip local.</li>
+<li>Adreces d'enllaç local: L'objectiu de la xarxa 169.254.0.0/16 és proveir d'una adreça IP als nodes sense necessitat de tenir disponible un servidor DCHP. Aquestes adreces no són encaminables.</li>
+<li>Adreces privades. Són adreces que només es poden utilitzar dins d’una organització privada no encaminables. Els blocs d’adreces privades són els següents:
+<ul>
+<li>10.0.0.0/8: és una classe A que permet 2<sup>24</sup> hosts a la xarxa. Per la grandària que té se sol dividir en subxarxes.</li>
+<li>172.16.0.0/12: és una xarxa que admet fins a 2<sup>20</sup> equips connectats a la xarxa</li>
+<li>192.168.0.0/16: és una classe C que permet fins a 254 equips. Encara que sigui la més menuda de les tres és la més comuna.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id172">
+<div class="iDevice emphasis0">
+<div id="ta172_86" class="block iDevice_content">
+<h4>Mètodes de transmissió</h4>
+<p>Les mètodes de transmissió poden ser els següents.</p>
+<ul>
+<li>Unidifusió (<em>Unicast</em>). El destinatari és un dispostiu.</li>
+<li>Multidifusió (<em>Multicast</em>). Els destinataris són un grup de dipositius.</li>
+<li>Difusió (<em>Broadcast</em>). Els destinataris són tots els dispositus de la xarxa.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id173">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Configurar targeta de xarxa usant el terminal</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta173_148" class="block iDevice_content">
+<p><strong>1. Identificar la interfície de xarxa</strong></p>
+<p>En els sistemes basats en Linux les interfícies de xarxa (NIC) tenen un nom lògic. Històricament s'empra la nomenclatura eth0, eth1 o wlan01, etc. Actualment els nous sistemes identifiquen les interfícies segons la posició que ocupen al bus del sistema (<em>Predictable Interface Names</em>). Així és més senzill identificar-les. </p>
+<p>Usarem <code>ifconfig -a</code> per llistar totes les interfícies de xarxa.</p>
+<p><strong>2. Configurar la interfície amb assignació de direcció dinàmica IP (Cliente DHCP)</strong></p>
+<p>Per a configurar una interfície cal editar l'arxiu <code>/etc/network/interfaces</code> amb un editor de texts com <code>nano</code>. En l'exemple assumim que volem configurar l'interfície <code>enp2s0</code>.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>auto enp2s0
+iface enp2s0 inet dhcp</code></pre>
+</div>
+</div>
+<p>Afegint la configuració com es mostra més amunt pots activar manualment mitjançant l'ordre <code>ifup</code> que inicialitza el procés DHCP.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>sudo ifup enp2s0</code></pre>
+</div>
+</div>
+<p>Per a desactivar la interfície, pots usar l'ordre <code>ifdown</code>, això iniciarà la desactivació del procés DHCP i apagarà la interfície.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>sudo ifdown en2s0</code></pre>
+</div>
+</div>
+<p>Més informació en <a href="https://help.ubuntu.com/16.04/serverguide/network-configuration.html#ip-addressing">Configuració de xarxa</a>, de Ubuntu Server Guide</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id174">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Qüestionari</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta174_106_2" class="block iDevice_content">
+<ol>
+<li>Quins són els paràmetres mínims que s'han de configurar en un node perquè puga connectar-se a una xarxa basada en TCP/IP.</li>
+<li>Quines són les funcions del protocol IP?</li>
+<li>Perquè és va implementar l'adreçament sense classes (CDIR)? Raona la resposta.</li>
+<li>Explica què són les adreces de <span>retrobucle (</span><em>loopback</em>) i d'enllaç local (<em>link-local</em>)?</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_arquitectura_de_xarxa_tcpip.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_el_protocol_tcp.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

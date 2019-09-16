@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pràctica 1: Instal·lació i configuració d'un servei DHCP | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-59"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servei DHCP</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_evoluci_del_protocol_dhcp.html" class="no-ch">1.1. Evolució del protocol DHCP</a></li>
+      <li><a href="12_un_servei_clientservidor.html" class="no-ch">1.2. Un servei client/servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="no-ch">2. Configuració dels equips de la xarxa</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervals_exclusions_concessions_i_reserves.html" class="no-ch">4. Intervals, exclusions, concessions i reserves</a></li>
+   <li class="current-page-parent"><a href="5__opcions_addicionals_del_protocol.html" class="current-page-parent daddy">5.  Opcions addicionals del protocol.</a>
+   <ul>
+      <li id="active"><a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="active no-ch">Pràctica 1: Instal·lació i configuració d'un servei DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemes_del_servei.html" class="no-ch">6. Problemes del servei</a></li>
+   <li><a href="installaci_dun_servidor__dhcp.html" class="no-ch">Instal·lació d'un servidor  DHCP</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="5__opcions_addicionals_del_protocol.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_problemes_del_servei.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Pràctica 1: Instal·lació i configuració d'un servei DHCP</h1></div>
+<div class="iDevice_wrapper objectivesIdevice em_iDevice" id="id25">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Objectius</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta25_91_2" class="block iDevice_content">
+<ul>
+<li>Instal·lar un servei de configuració dinàmica dels paràmetres de xarxa.</li>
+<li>Presentar el servei per assignar la configuració bàsica als sistemes d'una xarxa local.</li>
+<li>Realitzar assignacions dinàmiques i estàtiques.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id27">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Recursos necessaris</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta27_93_2" class="block iDevice_content">
+<p>Per a poder realitzar la pràctica necessitaràs:</p>
+<ul>
+<li>Un ordinador amb connexió a Internet o una maquina virtual amb Ubuntu Server.</li>
+<li>El programari ISC DHCP.</li>
+<li>La guia d'instal·lació:
+<ul>
+<li><a href="https://help.ubuntu.com/16.04/serverguide/dhcp.html">https://help.ubuntu.com/16.04/serverguide/dhcp.html.ca</a></li>
+<li><a href="https://help.ubuntu.com/community/dhcp3-server">https://help.ubuntu.com/community/dhcp3-server</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id16">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Enunciat</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_148" class="block iDevice_content">
+<h2></h2>
+<p>Per a la xarxa interna de l'entorn de treball instal·la el servei DHCP i configura'l de forma que:</p>
+<ul>
+<li>assigne dinàmicament les 100 primeres adreces disponibles</li>
+<li>assigne la configuració addicional necessària perquè els clients DHCP puguen connectar-se a Internet</li>
+<li>els clients resolguen dinàmicament i amb dominis relatius per al domini de la xarxa.</li>
+<li>reserve la adreça IP 101 per a l'equip amb Windows XP.</li>
+</ul>
+<h3>Entregable</h3>
+<p>Guia d'instal·lació i configuració del servei DHCP en Ubuntu a partir de la Ubuntu Server Guide 16.04 (web) incloent:</p>
+<ul>
+<li>Arxius de configuració bàsics.
+<ul>
+<li>Limitació perquè el DCHP sols funcione en la xarxa interna.</li>
+<li>Canvis realitzats explicant els efectes.</li>
+</ul>
+</li>
+<li>Arxiu de concessions (<em>leases</em>)</li>
+<li>Registre del sistema on es demostre una concessió.</li>
+<li>Captura del comandament: sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf</li>
+<li>En Windows XP
+<ul>
+<li>Execució de ipconfig /release</li>
+<li>Execució de ipconfig /renew</li>
+<li>Comprovació de la configuració assignada al Windows XP.</li>
+<li>Captura amb wireshark del trànsit DHCP on es comprove tot el procés.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="5__opcions_addicionals_del_protocol.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_problemes_del_servei.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

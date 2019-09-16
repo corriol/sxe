@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. Comandaments | 3. Servei FTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-45"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. Servei FTP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Servei FTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_funcionament.html" class="no-ch">2. Funcionament</a></li>
+   <li><a href="3_gesti_dusuaris_i_permisos.html" class="no-ch">3. Gestió d'usuaris i permisos</a></li>
+   <li id="active"><a href="4_comandaments.html" class="active no-ch">4. Comandaments</a></li>
+   <li><a href="5_transferncia_en_mode_text_i_binari.html" class="no-ch">5. Transferència en mode text i binari.</a></li>
+   <li><a href="exercicis.html" class="no-ch">Exercicis</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="3_gesti_dusuaris_i_permisos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_transferncia_en_mode_text_i_binari.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4. Comandaments</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id4">
+<div class="iDevice emphasis0">
+<div id="ta4_86" class="block iDevice_content">
+<table class="exe-table">
+<tbody>
+<tr>
+<th>Comando y argumentos</th>
+<th>Acción que realiza</th>
+</tr>
+<tr>
+<td><b>open</b> <i>servidor</i></td>
+<td>Inicia una conexión con un servidor FTP.</td>
+</tr>
+<tr>
+<td><b>close</b> o <b>disconnect</b></td>
+<td>Finaliza una conexión FTP sin cerrar el programa cliente.</td>
+</tr>
+<tr>
+<td><b>bye</b> o <b>quit</b></td>
+<td>Finaliza una conexión FTP y la sesión de trabajo con el programa cliente.</td>
+</tr>
+<tr>
+<td><b>cd</b> <i>directorio</i></td>
+<td>Cambia el directorio de trabajo en el servidor.</td>
+</tr>
+<tr>
+<td><b>delete</b> <i>archivo</i></td>
+<td>Borra un archivo en el servidor</td>
+</tr>
+<tr>
+<td><b>mdelete</b> <i>patrón</i></td>
+<td>Borra múltiples archivos basado en un patrón que se aplica al nombre.</td>
+</tr>
+<tr>
+<td><b>dir</b></td>
+<td>Muestra el contenido del directorio en el que estamos en el servidor.</td>
+</tr>
+<tr>
+<td><b>get</b> <i>archivo</i></td>
+<td>Obtiene un archivo</td>
+</tr>
+<tr>
+<td><b>noop</b> <i>No Operation</i></td>
+<td>Se le comunica al servidor que el cliente está en modo de no operación, el servidor usualmente responde con un «ZZZ» y refresca el contador de tiempo inactivo del usuario.</td>
+</tr>
+<tr>
+<td><b>mget</b> <i>archivos</i></td>
+<td>Obtiene múltiples archivos</td>
+</tr>
+<tr>
+<td><b>hash</b></td>
+<td>Activa la impresión de caracteres # a medida que se transfieren archivos, a modo de barra de progreso.</td>
+</tr>
+<tr>
+<td><b>lcd</b> <i>directorio</i></td>
+<td>Cambia el directorio de trabajo local.</td>
+</tr>
+<tr>
+<td><b>ls</b></td>
+<td>Muestra el contenido del directorio en el servidor.</td>
+</tr>
+<tr>
+<td><b>prompt</b></td>
+<td>Activa/desactiva la confirmación por parte del usuario de la ejecución de comandos. Por ejemplo al borrar múltiples archivos.</td>
+</tr>
+<tr>
+<td><b>put</b> <i>archivo</i></td>
+<td>Envía un archivo al directorio activo del servidor.</td>
+</tr>
+<tr>
+<td><b>mput</b> <i>archivos</i></td>
+<td>Envía múltiples archivos.</td>
+</tr>
+<tr>
+<td><b>pwd</b></td>
+<td>Muestra el directorio activo en el servidor.</td>
+</tr>
+<tr>
+<td><b>rename</b> <i>archivo</i></td>
+<td>Cambia el nombre a un archivo en el servidor.</td>
+</tr>
+<tr>
+<td><b>rmdir</b> <i>directorio</i></td>
+<td>Elimina un directorio en el servidor si ese directorio está vacío.</td>
+</tr>
+<tr>
+<td><b>status</b></td>
+<td>Muestra el estado actual de la conexión.</td>
+</tr>
+<tr>
+<td><b>bin</b> o <b>binary</b></td>
+<td>Activa el modo de transferencia binario.</td>
+</tr>
+<tr>
+<td><b>ascii</b></td>
+<td>Activa el modo de transferencia en modo texto ASCII.</td>
+</tr>
+<tr>
+<td><b>!</b></td>
+<td>Permite salir a línea de comandos temporalmente sin cortar la conexión. Para volver, teclear <b>exit</b> en la línea de comandos.</td>
+</tr>
+<tr>
+<td><b>?</b> <i>nombre de comando</i></td>
+<td>Muestra la información relativa al comando.</td>
+</tr>
+<tr>
+<td><b>?</b> o <b>help</b></td>
+<td>Muestra una lista de los comandos disponibles.</td>
+</tr>
+<tr>
+<td><b>append</b> <i>nombre del archivo</i></td>
+<td>Continua una descarga que se ha cortado previamente.</td>
+</tr>
+<tr>
+<td><b>bell</b></td>
+<td>Activa/desactiva la reproducción de un sonido cuando ha terminado cualquier proceso de transferencia de archivos.</td>
+</tr>
+<tr>
+<td><b>glob</b></td>
+<td>Activa/desactiva la visualización de nombres largos de nuestro PC.</td>
+</tr>
+<tr>
+<td><b>literal</b></td>
+<td>Con esta orden se pueden ejecutar comandos del servidor de forma remota. Para saber los disponibles se utiliza: <b>literal help</b>.</td>
+</tr>
+<tr>
+<td><b>mkdir</b></td>
+<td>Crea el directorio indicado de forma remota.</td>
+</tr>
+<tr>
+<td><b>quote</b></td>
+<td>Hace la misma función que <b>literal</b>.</td>
+</tr>
+<tr>
+<td><b>send</b> <i>nombre del archivo</i></td>
+<td>Envía el archivo indicado al directorio activo del servidor.</td>
+</tr>
+<tr>
+<td><b>user</b></td>
+<td>Para cambiar nuestro nombre de usuario y contraseña sin necesidad de salir de la sesión ftp.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="3_gesti_dusuaris_i_permisos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_transferncia_en_mode_text_i_binari.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

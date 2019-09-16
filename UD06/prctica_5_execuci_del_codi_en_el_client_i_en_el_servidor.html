@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pràctica 5: Execució del codi en el client i en el servidor </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-22"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poc_dhistria.html" class="no-ch">2.1. Un poc d'història</a></li>
+      <li><a href="22_caracterstiques_dhttp.html" class="no-ch">2.2. Característiques d'HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapes_duna_transacci_http.html" class="no-ch">3. Etapes d'una transacció HTTP</a></li>
+   <li><a href="4_lestandard_http10.html" class="daddy">4. L'estandard HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transaccions_http.html" class="no-ch">Pràctica 1: Transaccions HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="5_installaci_i_configuraci_dapache2.html" class="daddy">5. Instal·lació i configuració d'Apache2</a>
+   <ul class="other-section">
+      <li><a href="prctica_2_installaci_dapache2.html" class="no-ch">Pràctica 2: Instal·lació d'Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidors_virtuals.html" class="daddy">6. Servidors virtuals</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuraci_bsica.html" class="no-ch">Pràctica 3: Configuració bàsica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_accs_annim_i_autenticat_formes_dautenticaci.html" class="daddy">7. Accés anònim i autenticat. Formes d'autenticació.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_daccs_autoritzaci_i_autenticaci.html" class="no-ch">Pràctica 4: Control d'accés, autorització i autenticació</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="8_execuci_de_codi_scripts_de_servidor_i_de_client.html" class="current-page-parent daddy">8. Execució de codi. Scripts de servidor i de client.</a>
+   <ul>
+      <li id="active"><a href="prctica_5_execuci_del_codi_en_el_client_i_en_el_servidor.html" class="active no-ch">Pràctica 5: Execució del codi en el client i en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establiment_de_connexions_segures_.html" class="daddy">9. Establiment de connexions segures .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="8_execuci_de_codi_scripts_de_servidor_i_de_client.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="9_establiment_de_connexions_segures_.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Pràctica 5: Execució del codi en el client i en el servidor</h1></div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id18">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">06.05: Execució de codi. Client i Servidor</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_42_2" class="block iDevice_content">
+<h2>Objectiu</h2>
+<h2>Activitat</h2>
+<p>Crea la següent pàgina web i guarda-la amb el nom: default.php</p>
+<div class="highlighted-code language-php line-numbers">
+<div>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;Data&lt;/h1&gt;
+&lt;?php
+  echo "&lt;h2&gt;Servidor (php)&lt;/h2&gt;";
+  echo date("r") ;
+?&gt;
+&lt;script type="text/javascript"&gt;
+  var d = new Date();
+  document.write("&lt;h2&gt;Client (javascript)&lt;/h2&gt;"+ d.toString());
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<p>Accedeix a la pàgina mitjançant la URL: <code>http://www.00.aula.local/default.php</code></p>
+<p>Què ha passat? Per què?</p>
+<p>Instal·la l'intèrpret PHP i el mòdul de PHP per a Apache2:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>sudo apt install php libapache2-mod-php</code></pre>
+</div>
+</div>
+<p>Torna a accedir a la pàgina <code>http://www.00.aula.local/default.php</code>. Què ha canviat? Comprova la diferència amb l'execució anterior.<br /><br /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="8_execuci_de_codi_scripts_de_servidor_i_de_client.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="9_establiment_de_connexions_segures_.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

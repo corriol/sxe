@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu | 1. Interconnexió de xarxes </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-82"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1. Interconnexió de xarxes</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Interconnexió de xarxes</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="criteris_davaluaci.html" class="no-ch">Criteris d'avaluació</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_arquitectura_de_xarxa_tcpip.html" class="no-ch">1. Arquitectura de xarxa TCP/IP</a></li>
+   <li><a href="2_el_protocol_ip.html" class="no-ch">2. El protocol IP</a></li>
+   <li><a href="3_el_protocol_tcp.html" class="no-ch">3. El protocol TCP</a></li>
+   <li><a href="4_els_serveis_de_xarxa.html" class="no-ch">4. Els serveis de xarxa</a></li>
+   <li><a href="5_commandaments.html" class="no-ch">5. Commandaments</a></li>
+   <li><a href="6_elements_dinterconnexi.html" class="no-ch">6. Elements d'interconnexió</a></li>
+   <li class="current-page-parent"><a href="7_interconnexi_de_xarxes.html" class="current-page-parent daddy">7. Interconnexió de xarxes</a>
+   <ul>
+      <li><a href="71_encaminament.html" class="no-ch">7.1. Encaminament</a></li>
+      <li class="current-page-parent"><a href="72_tallafocs_firewall.html" class="current-page-parent daddy">7.2. Tallafocs (firewall)</a>
+      <ul>
+         <li id="active"><a href="prctica_2_installaci_i_configuraci_dun_tallafocs_restrictiu.html" class="active no-ch">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</a></li>
+      </ul>
+      </li>
+      <li><a href="73_traducci_dadreces_de_xarxa_nat.html" class="no-ch">7.3. Traducció d'adreces de xarxa (NAT)</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="72_tallafocs_firewall.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="73_traducci_dadreces_de_xarxa_nat.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Pràctica 2: Instal·lació i configuració d'un tallafocs restrictiu</h1></header>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id199">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Objectius</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta199_105_2" class="block iDevice_content">
+<p>L'objectiu de la pràctica següent és aprendre a configurar un tallafocs de forma que es puguen establir polítiques d'accéss i es permeta accedir a determinats serveis.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id200">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Recursos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta200_106_2" class="block iDevice_content">
+<p>Disposar d'un equip o màquina virtual amb sistema operatiu Ubuntu i amb connexió a internet.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id201">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Enunciat</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta201_105_2" class="block iDevice_content">
+<ul>
+<li>Cal que configures el tallafocs de forma restrictiva, excepte per a l'encaminament que estarà permés.</li>
+<li>A més a més el tallafocs haurà de permetre fer ping cap a l'exterior i consultes DNS.</li>
+<li>També permetrà l'accés a webmin.</li>
+</ul>
+<p><strong>Entregable</strong></p>
+<ol>
+<li>Fes una memòria de la pràctica explicant els passos realitzats, la configuració final i la comprovaciódel funcionament de tot el que demana l'enunciat.</li>
+<li>Inclou a la memòria l'execució i les diferències dels tres comandaments:<code> ufw status, ufw status verbose, ufw status numbered</code></li>
+<li>Inclou també totes les dificultats que has trobat així com la seua resolució.</li>
+</ol>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="72_tallafocs_firewall.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="73_traducci_dadreces_de_xarxa_nat.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

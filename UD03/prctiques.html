@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pràctiques | 3. El servei DHCP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-51"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. El servei DHCP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Servei DHCP</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_evoluci_del_protocol_dhcp.html" class="no-ch">1.1. Evolució del protocol DHCP</a></li>
+      <li><a href="12_un_servei_clientservidor.html" class="no-ch">1.2. Un servei client/servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="2_configuraci_dels_equips_de_la_xarxa.html" class="no-ch">2. Configuració dels equips de la xarxa</a></li>
+   <li><a href="3_el_model_funcional_dhcp.html" class="no-ch">3. El model funcional DHCP</a></li>
+   <li><a href="4_intervals_exclusions_concessions_i_reserves.html" class="no-ch">4. Intervals, exclusions, concessions i reserves</a></li>
+   <li><a href="5__opcions_addicionals_del_protocol.html" class="daddy">5.  Opcions addicionals del protocol.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servei_dhcp.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servei DHCP</a></li>
+   </ul>
+   </li>
+   <li><a href="6_problemes_del_servei.html" class="no-ch">6. Problemes del servei</a></li>
+   <li><a href="installaci_dun_servidor__dhcp.html" class="no-ch">Instal·lació d'un servidor  DHCP</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li id="active"><a href="prctiques.html" class="active no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="activitats.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Pràctiques</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id12">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Cas pràctic</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_147" class="block iDevice_content">
+<p>Donat el següent esquema i suposant que l'enrutador d'internet disposa d'un servei DHCP funcional, crea el fitxer de configuració de DHCP perquè hi haja:</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 600px;"><img src="esquema-dhcp.png" alt="Esquema de xarxa" width="600" height="427" />
+<div class="figcaption"><span class="license"><span class="tit">Llicència: </span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a></span></div>
+</div>
+<ol style="list-style-type: lower-alpha;">
+<li>20 adreces IP excloses.</li>
+<li>Una reserva per al commutador.</li>
+<li>La resta formaran part de l'interval d'assignació dinàmica.</li>
+<li>Una vegada creat el fitxer de configuració les adreces IP de l'esquema serà un dels escenaris possibles.</li>
+<li>El temps per defecte de connexió serà de 20 minuts i el màxim 50.</li>
+<li>Escriu el fitxer de configuració <code>interfaces</code> de l’enrutador d’Internet. Suposem que és un equip amb Ubuntu.</li>
+</ol>
+<div class="highlighted-code language-c">
+<div>
+<pre><code># Exemple bàsic de configuració dhcpd.conf 
+subnet 192.168.1.0 netmask 255.255.255.0 
+{ 
+   range 192.168.1.11 192.168.1.29; 
+   option domain-name-servers 192.168.1.1, 193.146.96.2, 193.146.96.3; 
+   option domain-name "uimagen.iaf"; 
+   option routers 192.168.1.1; 
+   option subnet-mask 255.255.255.0; 
+   option broadcast-address 192.168.1.255;
+   default-lease-time 86400; 
+   max-lease-time 172800; 
+   host apache 
+   { 
+      hardware ethernet 00:10:5a:f1:35:87; 
+      fixed-address 192.168.1.3; 
+   } 
+} </code></pre>
+</div>
+</div>
+<p><br /><br /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="activitats.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

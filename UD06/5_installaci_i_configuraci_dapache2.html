@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Instal·lació i configuració d'Apache2 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6. Servei HTTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_el_protocol_http.html" class="daddy">2. El protocol HTTP</a>
+   <ul class="other-section">
+      <li><a href="21_un_poc_dhistria.html" class="no-ch">2.1. Un poc d'història</a></li>
+      <li><a href="22_caracterstiques_dhttp.html" class="no-ch">2.2. Característiques d'HTTP</a></li>
+   </ul>
+   </li>
+   <li><a href="3_etapes_duna_transacci_http.html" class="no-ch">3. Etapes d'una transacció HTTP</a></li>
+   <li><a href="4_lestandard_http10.html" class="daddy">4. L'estandard HTTP/1.0</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_transaccions_http.html" class="no-ch">Pràctica 1: Transaccions HTTP</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_installaci_i_configuraci_dapache2.html" class="active daddy">5. Instal·lació i configuració d'Apache2</a>
+   <ul>
+      <li><a href="prctica_2_installaci_dapache2.html" class="no-ch">Pràctica 2: Instal·lació d'Apache2</a></li>
+   </ul>
+   </li>
+   <li><a href="6_servidors_virtuals.html" class="daddy">6. Servidors virtuals</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_configuraci_bsica.html" class="no-ch">Pràctica 3: Configuració bàsica</a></li>
+   </ul>
+   </li>
+   <li><a href="7_accs_annim_i_autenticat_formes_dautenticaci.html" class="daddy">7. Accés anònim i autenticat. Formes d'autenticació.</a>
+   <ul class="other-section">
+      <li><a href="prctica_4_control_daccs_autoritzaci_i_autenticaci.html" class="no-ch">Pràctica 4: Control d'accés, autorització i autenticació</a></li>
+   </ul>
+   </li>
+   <li><a href="8_execuci_de_codi_scripts_de_servidor_i_de_client.html" class="daddy">8. Execució de codi. Scripts de servidor i de client.</a>
+   <ul class="other-section">
+      <li><a href="prctica_5_execuci_del_codi_en_el_client_i_en_el_servidor.html" class="no-ch">Pràctica 5: Execució del codi en el client i en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="9_establiment_de_connexions_segures_.html" class="daddy">9. Establiment de connexions segures .</a>
+   <ul class="other-section">
+      <li><a href="prctica_6_assegurant_les_comunicacions.html" class="no-ch">Pràctica 6: Assegurant les comunicacions</a></li>
+   </ul>
+   </li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_transaccions_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_installaci_dapache2.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5. Instal·lació i configuració d'Apache2</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id21">
+<div class="iDevice emphasis0">
+<div id="ta21_85" class="block iDevice_content">
+<p>La informació la trobareu a <a href="https://help.ubuntu.com/16.04/serverguide/httpd.html.es" target="_blank" rel="noopener noreferrer">https://help.ubuntu.com/lts/serverguide/httpd.html</a></p>
+<h3>Directives importants</h3>
+<h4>Directiva &lt;Directory&gt;.</h4>
+<p>La directiva Directory permet configurar permisos en els diferents directoris del nostre espai web. Es tracta d'una directriu que es fa servir per definir característiques que només s'aplicaran al directori especificat i no a tot el servidor (per això s'ha de tancar).</p>
+<p>Aquests permisos serien els següents:</p>
+<p></p>
+<ul>
+<li><strong>Options</strong><br />
+<ul>
+<li><strong>Indexes</strong>. Si dins de la carpeta no hi ha cap arxiu igual que el que hem definit al paràmetre DirectoryIndex al navegador es mostrarà un índex amb tots els arxius de la carpeta actual.</li>
+<li><strong>FollowSymLinks</strong>. El servidor seguirà els enllaços simbòlics (lògics), és a dir, els àlies.</li>
+</ul>
+</li>
+<li><b>Require </b>all denied, Require not ip 192.168.1.50. Denega la petició a una carpeta, un arxiu o una adreça d’Internet.</li>
+<li><strong>Require</strong> all granted, Require ip 192.168.1.50. Permet la petició a una carpeta, un arxiu o una adreça d’Internet.</li>
+</ul>
+<h4><span style="font-size: 1em;">Directiva</span><span style="font-size: 1em;"> &lt;Files&gt;</span></h4>
+<p><span style="font-size: 1em;">La directiva Files permet configurar permisos en els diferents arxius del nostre espai web. Val a dir que el paràmetre Files ha d'estar inclòs dintre del paràmetre Directory.</span></p>
+<p><span style="font-size: 1em;">Aquests permisos serien els següents:</span></p>
+<ol>
+<li>require all denied, require not ip  192.168.1.50. Denega la petició a un arxiu o una adreça d’Internet.</li>
+<li>require all granted, require ip 192.168.1.50. Permet la petició a un arxiu o una adreça de Internet.</li>
+<li>A tall d'exemple, podríem trobar el següent:
+<ol>
+<li>Volem prohibir l'accés a arxius amb format JPG dintre de la carpeta <code>/var/www/serveisenxarxa/public_html</code>.</li>
+</ol>
+</li>
+</ol>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>&lt;directory "/var/www/serveisenxarxa/public_html"&gt;
+  &lt;files *.jpg&gt;
+     require all denied
+  &lt;/files&gt;
+  require all granted
+&lt;/directory&gt;</code></pre>
+</div>
+</div>
+<p></p>
+<h4><span style="font-size: 1em;">Directiva &lt;VirtualHost&gt;</span></h4>
+<p><span style="font-size: 1em;">La directiva virtualhost permet configurar més d’un lloc web en un mateix servidor, és a dir, una mateixa adreça d’Internet per a diferents noms de domini. Val a dir que, si volem utilitzar aquest paràmetre, cal haver configurat el servidor de noms de domini (DNS) perquè adreci els noms de domini cap al nostre servidor web Apache.</span></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_transaccions_http.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_installaci_dapache2.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1. Introducció | 1.8. Servei proxy-cau </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Vicent Jordà" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-53"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">1.8. Servei proxy-cau</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7. Servei proxy-cau</a></li>
+   <li id="active"><a href="1_introducci.html" class="active no-ch">1. Introducció</a></li>
+   <li><a href="2_installaci_i_configuraci.html" class="no-ch">2. Instal·lació i configuració</a></li>
+   <li><a href="3_autenticaci_registres_i_limitaci_de_trnsit_en_squid.html" class="daddy">3. Autenticació, registres i limitació de trànsit en SQUID</a>
+   <ul class="other-section">
+      <li><a href="prctica_1.html" class="no-ch">Pràctica 1</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_installaci_i_configuraci.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1. Introducció</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id105">
+<div class="iDevice emphasis0">
+<div id="ta105_86" class="block iDevice_content">
+<h2>1.1. Passarel·la a nivell d'aplicació</h2>
+<p>Recorda que una passarel·la (o porta d’enllaç) és el node que serveix d’enllaç entre dos xarxes, és a dir, aquell node que connecta i dirigeix el trànsit de dades entre dos o més xarxes. El seu propòsit és traduir la informació del protocol utilitzat en una xarxa inicial, al protocol usat en xarxa destí.</p>
+<p><strong>Una passarel·la a nivell d'aplicació</strong> és una passarel·la que actua en el nivell més alt de la pila de protocols IP, el d'aplicació dóna accés a serveis com HTTP o FTP que es troben en altres xarxes.</p>
+<p style="text-align: center;"><img src="img0.png" alt="Passarel·la a nivell d'aplicació" width="467" height="315" /></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id106">
+<div class="iDevice emphasis0">
+<div id="ta106_85" class="block iDevice_content">
+<p>Diferències entre els tallafocs i les passarel·les a nivell d'aplicació</p>
+<div class="exe-figure exe-image position-center license-copyright" style="width: 400px;"><img src="Static-Packet-Filter.jpg" alt="Filtre de paquets estàtic" width="400" height="208" />
+<div class="figcaption"><a href="http://itmcp.com/explain-types-of-firewall-architectures/" target="_blank" class="author" rel="noopener">ITMCP</a>. <span class="title"><em>Filtre de paquets estàtic</em></span> <span class="license"><span class="sep">(</span><span>Tots els drets reservats</span><span class="sep">)</span></span></div>
+</div>
+<div class="exe-figure exe-image position-center license-copyright" style="width: 500px;"><img src="Dynamic-Packet-Filter.jpg" alt="Firewall" width="500" height="239" />
+<div class="figcaption"><a href="http://itmcp.com/explain-types-of-firewall-architectures/" target="_blank" class="author" rel="noopener">ITMCP</a>. <span class="title"><em>Firewall</em></span> <span class="license"><span class="sep">(</span><span>Tots els drets reservats</span><span class="sep">)</span></span></div>
+</div>
+<div class="exe-figure exe-image position-center license-copyright" style="width: 500px;"><img src="Application-Level-Gateway-Firewall.jpg" alt="Passarel·la a nivell d'aplicació" width="500" height="356" />
+<div class="figcaption"><a href="http://itmcp.com/explain-types-of-firewall-architectures/" target="_blank" class="author" rel="noopener">ITMCP</a>. <span class="title"><em>Passarel·la a nivell d'aplicació</em></span> <span class="license"><span class="sep">(</span><span>Tots els drets reservats</span><span class="sep">)</span></span></div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id107">
+<div class="iDevice emphasis0">
+<div id="ta107_85" class="block iDevice_content">
+<h2>1.2. Servidor intermediari</h2>
+<p>Un servidor intermediari (<em>proxy</em>) és un programa o dispositiu que duu a terme tasques d’accés a Internet en el lloc d’un altre ordinador. És a dir, és un punt intermedi entre un ordinador connectat a internet i el servidor web al qual està accedint. La traducció de la paraula anglesa proxy és per poders, és a dir, es permet que sigui un servidor intermediari el que ens connecta a Internet en lloc del mateix usuari.</p>
+<p style="text-align: center;"><img src="smx_m07u3-45_1.png" alt="Esquema proxy" width="449" height="253" /></p>
+<p style="text-align: left;"></p>
+<h3>Funcions d'un servei proxy</h3>
+<p>Els servidors <em>proxy</em> tenen les següents funcions:</p>
+<ul>
+<li>Actuen de passarel·la a nivell d'aplicació ja que permeten l'accés web als nodes amb adreça IP privada que no estan connectades directament a internet.</li>
+<li>Controlen l'accés web aplicant un seguit de normes i regles, per exemple, segons la pàgina web sol·licitada, el dia o l'hora de la sol·licitud, etc.</li>
+<li>Registren el trànsit web des de la xarxa local cap a l'exterior.</li>
+<li>Controlen el contingut web visitat i descargat per a detectar la presència de possibles atacs mitjançant virus, cucs, troians, etc.</li>
+<li>Controlen la seguretat de la red local davant de possibles atacs o intrusions del sistema.</li>
+<li>Funcionen com una cau de pàgines web: emmagatzemen les pàgines web vistes pels usuaris, de forma que sí algú vol accedir a una pàgina prèviament sol·licitada i el proxy la té emmagatzemada no necessitarà eixir a internet sinó que podrà entrar la que té emmagatzemada.</li>
+</ul>
+<p></p>
+<h3 style="text-align: left;">Avantatges</h3>
+<p>En general, no només en informàtica, els proxys fan possible:</p>
+<ul>
+<li><strong>Control:</strong> només l'intermediari fa el treball real, per tant es poden limitar i restringir els drets dels usuaris, i donar permisos únicament al servidor intermediari. Es pot restringir l'accés en un horari determinat.</li>
+<li><strong>Estalvi:</strong> només un dels usuaris (el proxy) ha d'estar preparat per fer la feina real. Amb estar preparat vol dir que és l'únic que necessita els recursos necessaris per fer aquesta funcionalitat. Exemples de recursos necessaris per fer la funció poden ser la capacitat i lògica de l'adreça de xarxa externa (IP).</li>
+<li><strong>Velocitat i eficiència</strong>: si diversos clients van a demanar el mateix recurs, el proxy pot fer memòria cau: guardar la resposta d'una petició per donar-la directament quan un altre usuari la demani. Així no ha de tornar a contactar amb el destí, i acaba més ràpid.</li>
+<li><strong>Filtratge de serveis:</strong> el <em>proxy</em> pot negar-se a respondre algunes peticions si detecta que estan prohibides.</li>
+</ul>
+<h3>Desavantatges</h3>
+<p>En general, l'ús d'un intermediari pot provocar:</p>
+<ul>
+<li><strong>Anonimat</strong>: si tots els usuaris s'identifiquen com un de sol, és difícil que el recurs accedit pugui diferenciar-los. Però això pot ser dolent, per exemple quan cal fer necessàriament la identificació.</li>
+<li><strong>Abús</strong>: en estar disposat a rebre peticions de molts usuaris i respondre-les, és possible que faci algun treball que no toqui. Per tant, ha de controlar qui té accés i qui no als seus serveis, cosa que normalment és molt difícil.</li>
+<li><strong>Càrrega</strong>: un proxy ha de fer la feina de molts usuaris.</li>
+<li><strong>Intromissió</strong>: és un pas més entre origen i destí, i alguns usuaris poden no voler passar pel proxy. I menys si fa de memòria cau i guarda còpies de les dades.</li>
+<li><strong>Incoherència</strong>: si fa de memòria cau, és possible que s'equivoqui i doni una resposta antiga quan hi ha una més recent en el recurs de destinació. En realitat aquest problema no existeix amb els servidors intermediaris actuals, ja que es connecten amb el servidor remot per comprovar que la versió que té en memòria cau segueix sent la mateixa que l'existent al servidor remot.</li>
+<li><strong>Dificultat per a configurar alguns protocols</strong>: no tots els protocols són aptes per a ser configurats mitjançant un <em>proxy</em>, el que pot limitar la seua eficàcia.</li>
+</ul>
+<h3></h3>
+<h3>Servidor proxy obert</h3>
+<p>Un proxy obert és un servidor proxy de reenviament accessible per qualsevol usuari d'Internet. Un proxy obert anònim permet als usuaris amagar la seva adreça IP mentre navega per la Web o utilitza altres serveis d'Internet.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 280px;"><img src="280px-Proxy_concept_en.svg.png" alt="Com es pot veure en aquest diagrama, l'ordinador de la Alice li demana al proxy que li pregunti a l'ordinador d'en bob quina hora és. Aquest últim no en sap res de l'ordinador de la Alice, per a ell, qui ha fet la petició és el Proxy." width="280" height="210" />
+<div class="figcaption"><span class="title"><em>Com es pot veure en aquest diagrama, l'ordinador de la Alice li demana al proxy que li pregunti a l'ordinador d'en bob quina hora és. Aquest últim no en sap res de l'ordinador de la Alice, per a ell, qui ha fet la petició és el Proxy.</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=ca-ES" rel="license nofollow noopener noreferrer" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper activityIdevice em_iDevice" id="id108">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Qüestionari</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta108_105_2" class="block iDevice_content">
+<ol>
+<li>Defineix els següents conceptes:
+<ol>
+<li>Encaminadores</li>
+<li>Servidor intermediari (<em>Proxy</em>)</li>
+<li>Passarel·la</li>
+<li>Tallafocs (<em>firewall</em>)</li>
+</ol>
+</li>
+<li>Realitza un diagrama del funcionament més comú d'un servidor proxy. Explica els passos.</li>
+<li>Quins avantatges aporten els servidors proxy?</li>
+<li>Quins desavantatges aporten els servidors proxy?</li>
+<li>Explica cadascuna de les funcions proxy. Ajuda't amb un diagrama i algun exemple.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_installaci_i_configuraci.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

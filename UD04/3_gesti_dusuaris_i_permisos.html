@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Gestió d'usuaris i permisos | 3. Servei FTP </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-42"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">3. Servei FTP</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Servei FTP</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_funcionament.html" class="no-ch">2. Funcionament</a></li>
+   <li id="active"><a href="3_gesti_dusuaris_i_permisos.html" class="active no-ch">3. Gestió d'usuaris i permisos</a></li>
+   <li><a href="4_comandaments.html" class="no-ch">4. Comandaments</a></li>
+   <li><a href="5_transferncia_en_mode_text_i_binari.html" class="no-ch">5. Transferència en mode text i binari.</a></li>
+   <li><a href="exercicis.html" class="no-ch">Exercicis</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_funcionament.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_comandaments.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. Gestió d'usuaris i permisos</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id93">
+<div class="iDevice emphasis0">
+<div id="ta93_154" class="block iDevice_content">
+<p>En els serveis FTP podem distingir fins a tres tipus d'usuaris diferents:</p>
+<ul>
+<li><strong>Usuaris locals:</strong> s'empren les credencials dels usuaris del sistema per a accedir.</li>
+<li><strong>Usuaris genèrics</strong>: es connecta amb l'usuari <code>anonymous</code> [anònim] i una clau lliure (sol ser un compte de correu). Permet una connexió com a convidat, amb la que sols es pot accedir a una part del servei.</li>
+<li><strong>Usuaris virtual</strong>: no requereix un compte local del sistema. Es connecta i s'autentica en una base de dades específica que no té connexió amb la resta de serveis del sistema.</li>
+</ul>
+<h2>3.1. Accés anònim</h2>
+<p>Normalment, si bé, l’establiment de connexions amb servidors d’arxius comporta la necessitat de disposar d’un nom d’usuari i una contrasenya per autoritzar tant la connexió com l’accés a un compte dins del servidor, dins d’Internet hi ha servidors d’arxius que faciliten l’accés de forma anònima.</p>
+<p>Els servidors d’arxius anònims acostumen a ser grans “calaixos de sastre” que contenen arxius de programari -normalment, de domini públic o de lliure distribució-, arxius d’imatge, de so i/o de vídeo, etc.</p>
+<p>Per últim, tot i que gran part dels servidors d’arxius anònims acostumen a permetre, únicament, la lectura dels arxius emmagatzemats, també n’hi ha que faciliten la possibilitat de deixar arxius dins d’un directori d’entrada (<em>incoming</em>) que, de tant en tant, és revisat per l’administrador del servidor.</p>
+<h2>3.2. Permisos</h2>
+<div class="level2">
+<p>Atès que el protocol <acronym title="File Transfer Protocol">FTP</acronym> es va desenvolupar en l’entorn de GNU/Linux, hi ha la possibilitat d’atorgar diferents permisos d’execució, lectura i escriptura als arxius i, alhora, establir tres tipus d’usuaris (Propietari, Grup i Altres). Normalment, el Propietari és qui ha creat o ha pujat l’arxiu al servidor. El Grup es refereix a un grup d’usuaris al qual pot pertànyer el propietari i, per últim, els Altres són tots aquells usuaris anònims o que pertanyen al grup indicat.</p>
+<h2>3.3. Quotes</h2>
+<p>Un servidor de protocol de transferència d’arxius (FTP, file transfer protocol) no és més que un programa que es pot instal·lar i executar en qualsevol ordinador connectat a qualsevol tipus de xarxa per facilitar l’intercanvi de dades entre l’ordinador servidor i els ordinadors client. Ara bé, la utilització d’un ordinador comporta que hi hagi limitacions d’espai.</p>
+<p>En conseqüència, amb la finalitat de respectar l’espai per al programari present en l’ordinador i el dels arxius emmagatzemats, dins dels diferents comptes FTP existeix un paràmetre consistent en la quota o l’espai en disc disponible. Per tant, la grandària de tot allò que hi hagi emmagatzemat dins del servidor d’arxius per part d’un compte FTP no pot superar la quota establerta.</p>
+<p>Si no definíssim quotes d'espai en un servidor d'arxius, aquest quedaria saturat en un espai de temps breu.</p>
+<p>És a dir, podem disposar d’un servidor d’arxius amb diversos comptes definits amb diferents quotes d’espai cadascuna. Per exemple, si disposéssim de dos comptes FTP diferents, podríem establir una quota de 100 MB i una quota de 300 MB, respectivament. En aquest cas, podríem utilitzar ambdós comptes sempre que la grandària dels arxius emmagatzemats en el servidor mitjançant un dels comptes no excedís els 100 MB. En aquest cas, únicament podríem pujar aquests arxius mitjançant el compte amb una quota d’espai de 300 MB i emmagatzemant-los en el seu espai -amb la condició que no superéssim l’espai disponible de 300 Mb.</p>
+<h2>3.4. Límit de d'amplada de banda</h2>
+<p>El límit de l’amplada de banda és la màxima quantitat d’arxius que poden ser transferits entre l’ordinador servidor i els navegadors web dels visitants.</p>
+<p>La majoria dels llocs web disposen d’una determinada quantitat d’arxius que, en el moment de ser visitats mitjançant les diferents pàgines web, es descarreguen des del servidor temporalment a l’ordinador mentre l’usuari estigui visitant la pàgina web.</p>
+<p>Normalment, aquesta operació es realitza, per primera vegada, quan es visita la pàgina web, ja que és llavors quan els arxius queden emmagatzemats temporalment en els directoris del navegador web. És per aquest motiu que, en el cas d’un lloc web amb un gran nombre de visitants, hi ha una transferència massiva dels arxius temporals del lloc web i, en conseqüència, un alt consum de l’amplada de banda. De fet, això pot comportar que, en els moments de més audiència, l’accés al lloc web pot esdevenir impossible.</p>
+<p>En el cas del protocol de transferència d’arxius (FTP<em>, file transfer protocol</em>), la pujada d’arxius molt pesats mitjançant un client FTP pot comportar un alt consum de l’amplada de banda i, en conseqüència, limitar l’accés al lloc web .</p>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_funcionament.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_comandaments.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

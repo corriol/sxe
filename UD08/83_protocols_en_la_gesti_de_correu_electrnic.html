@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.3. Protocols en la gestió de correu electrònic | 8. Correu electrònic </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Vicent Jordà" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<header id="header" ><div id="headerContent">8. Correu electrònic</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8. Gestió de serveis de correu electrònic</a></li>
+   <li><a href="81_introducci.html" class="no-ch">8.1. Introducció</a></li>
+   <li><a href="82_funcionament_del_servei.html" class="no-ch">8.2. Funcionament del servei</a></li>
+   <li id="active"><a href="83_protocols_en_la_gesti_de_correu_electrnic.html" class="active no-ch">8.3. Protocols en la gestió de correu electrònic</a></li>
+   <li><a href="84_servidors_de_correu_electrnic.html" class="no-ch">8.4. Servidors de correu electrònic</a></li>
+   <li><a href="85_clients_de__correu_electrnic.html" class="no-ch">8.5. Clients de  correu electrònic</a></li>
+   <li><a href="86_seguretat_i_vulnerabilitats.html" class="no-ch">8.6. Seguretat i vulnerabilitats</a></li>
+   <li><a href="qestionari.html" class="no-ch">Qüestionari</a></li>
+   <li><a href="prctiques.html" class="no-ch">Pràctiques</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="82_funcionament_del_servei.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="84_servidors_de_correu_electrnic.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.3. Protocols en la gestió de correu electrònic</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id1">
+<div class="iDevice emphasis0">
+<div id="ta1_86" class="block iDevice_content">
+<p>A grans trets, per poder enviar o rebre un correu electrònic necessitem disposar d’un compte de correu en una màquina anomenada servidor de correu (MTA,<em>Mail Transfer Agent</em>). En conseqüència, és lògic que, amb la finalitat de realitzar aquesta acció, els usuaris han d'estar connectats a la xarxa de Internet.</p>
+<blockquote class="destacado">
+<p><strong>Client de correu electrònic</strong></p>
+<p>Són aplicacions que permeten relacionar els usuaris amb les seves bústies corresponents i els permet realitzar la descàrrega i gestió de missatges de correu utilitzant uns determinats protocols (POP3 i IMAP).</p>
+</blockquote>
+<p>Considerant que el correu electrònic es basa en l’arquitectura client-servidor on el servidor ofereix un recurs de qualsevol tipus a l’altre (el client) perquè aquest pugui obtenir un profit o avantatge, podem afirmar que és en l’equip servidor on s’allotjaran els diferents comptes d’usuari i mitjançant els clients de correu es gestionarà la descàrrega dels missatges.</p>
+<p>Arribats en aquest punt, és essencial destacar que tant el compte de correu electrònic com el mètode definit per l’establiment de les comunicacions entre l’emissor i el receptor de correu electrònic (E-mail, Electronic Mail) han de seguir unes normes específiques que es regeixen per unes normes anomenades protocols d’Internet.</p>
+<blockquote class="destacado">
+<p><strong>Protocols d'Internet</strong></p>
+<p>Conjunt de regles de comunicació de xarxa en la qual es basa Internet i que permeten la transmissió de dades entre ordinadors connectats en xarxa, així permeten la comunicació i transmissió de correu electrònic entre usuaris independentment del sistema operatiu i del client de correu que utilitzin.</p>
+</blockquote>
+<blockquote class="destacado">
+<p><strong>ISP, <em>Internet Service Provider</em></strong></p>
+<p>Els proveïdors de serveis d’Internet poden ser aquelles empreses adreçades a proporcionar l’accés a Internet afegint-hi serveis relacionats com, per exemple, correu electrònic, allotjament web, etc.</p>
+</blockquote>
+<p>Val a dir que, amb la intenció de llençar el client de correu electrònic, haurem de disposar d’informació sobre el proveïdor de serveis d’Internet (ISP, Internet Service Provider) per configurar correctament el client de correu electrònic.</p>
+<p>Per tant, amb la intenció d’aprofundir en la gestió del correu electrònic haurem de conèixer, principalment, quins són els protocols de correu electrònic existents i, alhora, els més utilitzats.</p>
+<h3>3.1. Protocol d'enviament de correu</h3>
+<h4>3.1.1. Protocol simple de transferència de correu (SMTP, <em>Simple Mail Transfer Protocol</em>)</h4>
+<p>Es tracta de l'estàndard d'Internet adreçat a l'intercanvi de correus electrònics. La seva funció és la transmissió del correu electrònic que surt de la màquina de l'usuari remetent fins al servidor que emmagatzema els missatges dels usuaris destinataris.</p>
+<p>Tècnicament, quan l'usuari remetent envia un missatge, aquest és adreçat al seu servidor de correu. A continuació, des del servidor s'enviarà el missatge al servidor de correu de l'usuari destinatari. I, finalment, l'usuari destinatari descarregarà el correu a la seva bústia a la màquina local. <span style="font-size: 1em;">Val a dir que és important que aquest protocol estigui dotat de certes eines d'autenticació per estalviar l'enviament i recepció de correu no desitjat o correu brossa (<em>spam</em>).</span></p>
+<h3>3.2. Protocols descàrrega de correu</h3>
+<h4>3.2.1. Protocol d'oficina de correus (POP, <em>Post Office Protocol</em>)</h4>
+<p>Aquest tipus de protocol fa referència al tipus de servidor que s'utilitzarà per rebre els correus electrònics. De fet, el protocol d'oficina de correus permet la gestió, accés i transferència de missatges de correu electrònic entre el servidor i el client de correus electrònics. De fet, a diferència del protocol simple de transferència de correu (SMTP, <em>Simple Mail Transfer Protocol</em>), el protocol d'oficina de correus (POP, <em>Post Office Protocol</em>) s'utilitza per a la descàrrega de correus electrònics. L'origen del protocol d'oficina de correus (POP, Post Office Protocol) és determinat per la necessitat de molts usuaris de consultar els seus correus electrònics mitjançant la connexió puntual a Internet per, en conseqüència, connectar amb el seu servidor de correu i descarregar els missatges. Un cop descarregat els missatges, el protocol d'oficina de correus (POP, <em>Post Office Protocol</em>) també facilita la desconnexió amb el servidor.</p>
+<h4>3.2.2.Protocol d'accés a missatges d'Internet (IMAP, <em>Internet Message Access Protocol</em>)</h4>
+<p>És mitjançant aquest protocol que els clients de correu electrònic poden accedir als missatges emmagatzemats en els servidors de correu des de qualsevol màquina amb accés a Internet.</p>
+<p>Normalment, el protocol d'accés a missatges d’Internet (IMAP, <em>Internet Message Access Protocol</em>) és utilitzat pels servidors i pels clients de correu electrònic via web. Aquests tipus de servidors i clients faciliten als usuaris la gestió de les seves bústies de correu electrònic des de qualsevol ordinador amb accés a Internet.</p>
+<p>Val a dir que el protocol d'accés a missatges d’Internet (IMAP, <em>Internet Message Access Protocol</em>) es diferencia del protocol d’oficina de correus (POP, <em>Post Office Protocol</em>) en el fet que els correus electrònics estan emmagatzemats en el servidor i es queden allí fins i tot si es descarreguen el cas més típic són els servidors de correu electrònic via web. Per contra, en el protocol d’oficina de correus (POP, Post Office Protocol) comporta que els correus electrònics es descarreguin en l’ordinador del client directament i no quedin emmagatzemats en el servidor.</p>
+<p>En conseqüència, a l’hora de configurar l’aplicació o el gestor de correu electrònic, haurem d’especificar tant el servidor SMTP com el servidor POP.</p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="82_funcionament_del_servei.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="84_servidors_de_correu_electrnic.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

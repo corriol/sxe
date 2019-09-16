@@ -1,0 +1,3216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<instance xmlns="http://www.exelearning.org/content/v0.3" reference="4" version="0.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.exelearning.org/content/v0.3 content.xsd" class="exe.engine.package.Package">
+ <dictionary>
+  <string role="key" value="_title"></string>
+  <unicode value="8. Correu electrònic"></unicode>
+  <string role="key" value="idevices"></string>
+  <list></list>
+  <string role="key" value="_addPagination"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_author"></string>
+  <unicode value="Vicent Jordà"></unicode>
+  <string role="key" value="_backgroundImg"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_contextMode"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_contextPlace"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_description"></string>
+  <unicode value="Unitat didàctica de correu electrònic"></unicode>
+  <string role="key" value="_docType"></string>
+  <unicode value="HTML5"></unicode>
+  <string role="key" value="_extraHeadContent"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_fieldValidationInfo"></string>
+  <dictionary>
+   <unicode role="key" value="all"></unicode>
+   <dictionary>
+    <unicode role="key" value="mandatory_fields"></unicode>
+    <list>
+     <unicode value="pp_title"></unicode>
+     <unicode value="pp_lang"></unicode>
+     <unicode value="pp_description"></unicode>
+     <unicode value="pp_author"></unicode>
+     <unicode value="pp_newlicense"></unicode>
+    </list>
+   </dictionary>
+   <unicode role="key" value="procomun"></unicode>
+   <dictionary>
+    <unicode role="key" value="mandatory_fields"></unicode>
+    <list>
+     <unicode value="pp_learningResourceType"></unicode>
+    </list>
+    <unicode role="key" value="values_from_list"></unicode>
+    <dictionary>
+     <unicode role="key" value="pp_learningResourceType"></unicode>
+     <list>
+      <unicode value="master class"></unicode>
+      <unicode value="closed exercise or problem"></unicode>
+      <unicode value="real project"></unicode>
+      <unicode value="didactic game"></unicode>
+      <unicode value="webquest"></unicode>
+      <unicode value="open problem"></unicode>
+      <unicode value="simulation"></unicode>
+      <unicode value="questionnaire"></unicode>
+      <unicode value="conceptual map"></unicode>
+     </list>
+    </dictionary>
+   </dictionary>
+  </dictionary>
+  <string role="key" value="_intendedEndUserRoleGroup"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_intendedEndUserRoleTutor"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_intendedEndUserRoleType"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_isChanged"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_isTemplate"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_lang"></string>
+  <unicode value="ca"></unicode>
+  <string role="key" value="_learningResourceType"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_levelNames"></string>
+  <list>
+   <unicode value="Topic"></unicode>
+   <unicode value="Section"></unicode>
+   <unicode value="Unit"></unicode>
+  </list>
+  <string role="key" value="_name"></string>
+  <unicode value="8._Gesti_de_serveis_de_correu_electrnic"></unicode>
+  <string role="key" value="_nextIdeviceId"></string>
+  <int value="15"></int>
+  <string role="key" value="_nextNodeId"></string>
+  <int value="11"></int>
+  <string role="key" value="_nodeIdDict"></string>
+  <dictionary>
+   <unicode role="key" value="0"></unicode>
+   <instance class="exe.engine.node.Node" reference="3">
+    <dictionary>
+     <string role="key" value="_title"></string>
+     <unicode value="8. Gestió de serveis de correu electrònic"></unicode>
+     <string role="key" value="idevices"></string>
+     <list>
+      <instance class="exe.engine.genericidevice.GenericIdevice" reference="1">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="Objectives"></unicode>
+        <string role="key" value="_author"></string>
+        <unicode value="University of Auckland"></unicode>
+        <string role="key" value="_purpose"></string>
+        <unicode value="Objectives describe the expected outcomes of the learning and should
+define what the learners will be able to do when they have completed the
+learning tasks."></unicode>
+        <string role="key" value="_tip"></string>
+        <unicode value=""></unicode>
+        <string role="key" value="class_"></string>
+        <unicode value="objectives"></unicode>
+        <string role="key" value="edit"></string>
+        <bool value="0"></bool>
+        <string role="key" value="emphasis"></string>
+        <int value="1"></int>
+        <string role="key" value="exe.engine.genericidevice.GenericIdevice.persistenceVersion"></string>
+        <int value="11"></int>
+        <string role="key" value="fields"></string>
+        <list>
+         <instance class="exe.engine.field.TextAreaField" reference="2">
+          <dictionary>
+           <string role="key" value="_id"></string>
+           <unicode value="42_2"></unicode>
+           <string role="key" value="_idevice"></string>
+           <reference key="1"></reference>
+           <string role="key" value="_instruc"></string>
+           <unicode value="Type the learning objectives for this resource."></unicode>
+           <string role="key" value="_name"></string>
+           <unicode value="Objectives"></unicode>
+           <string role="key" value="anchor_names"></string>
+           <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
+           <string role="key" value="content_w_resourcePaths"></string>
+           <unicode content="true" value="&lt;ul&gt;
+&lt;li&gt;Descriure els diferents protocols que intervenen en l'enviament i recollida del correu electrònic.&lt;/li&gt;
+&lt;li&gt;Instal·lar un servidor de correu electrònic.&lt;/li&gt;
+&lt;li&gt;Crear comptes d'usuari i verificar l'accés dels mateixos.&lt;/li&gt;
+&lt;li&gt;Definir alies per als comptes de correu.&lt;/li&gt;
+&lt;li&gt;Aplicar mètodes per impedir usos indeguts del servidor de correu electrònic.&lt;/li&gt;
+&lt;li&gt;Instal·lar serveis per a permetre la recollida remota de correu existent a les bústies d'usuari.&lt;/li&gt;
+&lt;li&gt;Utilitzar clients de correu electrònic per enviar i rebre correu.&lt;/li&gt;
+&lt;/ul&gt;"></unicode>
+           <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+           <int value="4"></int>
+           <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+           <int value="3"></int>
+           <string role="key" value="htmlTag"></string>
+           <string value="div"></string>
+           <string role="key" value="images"></string>
+           <instance class="exe.engine.galleryidevice.GalleryImages">
+            <dictionary>
+             <string role="key" value=".listitems"></string>
+             <list></list>
+             <string role="key" value="idevice"></string>
+             <reference key="2"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="intlinks_to_anchors"></string>
+           <dictionary></dictionary>
+           <string role="key" value="nextImageId"></string>
+           <int value="0"></int>
+           <string role="key" value="parentNode"></string>
+           <reference key="3"></reference>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="icon"></string>
+        <unicode value="objectives"></unicode>
+        <string role="key" value="id"></string>
+        <unicode value="7"></unicode>
+        <string role="key" value="lastIdevice"></string>
+        <bool value="0"></bool>
+        <string role="key" value="nextFieldId"></string>
+        <int value="3"></int>
+        <string role="key" value="originalicon"></string>
+        <unicode value="objectives"></unicode>
+        <string role="key" value="parentNode"></string>
+        <reference key="3"></reference>
+        <string role="key" value="systemResources"></string>
+        <list>
+         <string value="common.js"></string>
+        </list>
+        <string role="key" value="undo"></string>
+        <bool value="1"></bool>
+        <string role="key" value="userResources"></string>
+        <list></list>
+        <string role="key" value="version"></string>
+        <int value="0"></int>
+       </dictionary>
+      </instance>
+     </list>
+     <string role="key" value="_id"></string>
+     <unicode value="0"></unicode>
+     <string role="key" value="_package"></string>
+     <reference key="4"></reference>
+     <string role="key" value="anchor_fields"></string>
+     <list></list>
+     <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+     <int value="2"></int>
+     <string role="key" value="exportType"></string>
+     <string value="website"></string>
+     <string role="key" value="last_full_node_path"></string>
+     <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic"></string>
+     <string role="key" value="parent"></string>
+     <none></none>
+     <string role="key" value="top_anchors_linked_from_fields"></string>
+     <list></list>
+     <string role="key" value="children"></string>
+     <list>
+      <instance class="exe.engine.node.Node" reference="7">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="8.1. Introducció"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="5">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="6">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="86"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="5"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;h2&gt;1. Un poc d'història&lt;/h2&gt;
+&lt;p&gt;Fou durant una profunda reforma del servei de correus britànic encetada per James Chalmers i Rowland Hill, a mitjan segle XIX, quan es va emetre el primer segell postal. De fet, fins al moment de l’emissió dels segells era el destinatari qui pagava l’enviament en funció dels quilòmetres recorreguts en detriment del pes. De fet, va ser Hill qui va proposar que el pagament es realitzés en funció del pes.&lt;/p&gt;
+&lt;p&gt;Si bé, la implantació dels segells va tenir lloc a mitjan segle XIX, es considera que el format carta va sorgir amb la invenció de l’escriptura. De fet, la carta més antiga que es coneix és un papir escrit l’any 2200 a. C. per part del Faraó Pepi II. Ara bé, és inevitable afirmar que la utilització de la carta i els segells, a títol privat, va quedar desbancada progressivament amb l’aparició del correu electrònic i, posteriorment, els servidors web de correu electrònic gratuïts davant de la facilitat i la immediatesa a l’hora d’enviar i rebre les missives.&lt;/p&gt;
+&lt;div class=&quot;exe-figure exe-image position-center license-custom&quot; style=&quot;width: 509px;&quot;&gt;
+&lt;div class=&quot;figcaption header&quot;&gt;&lt;strong&gt;Pedestal de Pepi II&lt;/strong&gt;&lt;/div&gt;
+&lt;img src=&quot;resources/Headrest_Pepi_II.jpg&quot; alt=&quot;Headrest Pepi II&quot; width=&quot;509&quot; height=&quot;115&quot; /&gt;
+&lt;div class=&quot;figcaption&quot;&gt;&lt;a href=&quot;https://commons.wikimedia.org/wiki/User:Iry-Hor&quot; target=&quot;_blank&quot; class=&quot;author&quot;&gt;Iry-Hor&lt;/a&gt;. &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Headrest_Pepi_II.jpg&quot; target=&quot;_blank&quot; class=&quot;title&quot;&gt;&lt;em&gt;Pedestal de Pepi II&lt;/em&gt;&lt;/a&gt; &lt;span class=&quot;license&quot;&gt;&lt;span class=&quot;sep&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;custom-license&quot;&gt;By Iry-Hor (Own work) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&lt;/span&gt;&lt;span class=&quot;sep&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;En l'actualitat, moltes són les empreses de serveis que, sota la justificació de protegir el medi ambient, opten per l'enviament de documents de caràcter oficial (factures, informes, avisos, etc.) per correu electrònic en lloc de fer-ho mitjançant el correu ordinari.&lt;/p&gt;
+&lt;h2&gt;2. El correu electrònic&lt;/h2&gt;
+&lt;p&gt;A grans trets, és inevitable destacar que el sorgiment dels servidors web de correu electrònic gratuïts (&lt;strong&gt;webmail&lt;/strong&gt;) va comportar facilitar l’accés als comptes de correu electrònic i les comunicacions per Internet. Ara bé, l’element fonamental d’aquestes comunicacions per la xarxa és el correu electrònic, que va sorgir com a eina de comunicació interna entre diferents organismes oficials nord-americans.&lt;/p&gt;
+&lt;p&gt;De fet, fou l'any 1971 quan l'enginyer elèctric Ray Tomlinson va realitzar el primer intercanvi de correus electrònics entre dos ordinadors mitjançant dos programes (de transmissió i recepció) que havia creat uns anys enrere. Val a dir que Tomlinson formava part de l’empresa Bolt Beranek and Newman, que havia estat contractada pel Departament de Defensa dels Estats Units per a la creació d'una xarxa de comunicació entre ordinadors per l'Agència d’Investigació de Projectes Avançats (ARPA, &lt;em&gt;Advanced Research Projects Agency&lt;/em&gt;). La xarxa de comunicació entre ordinadors es va anomenar ARPANET i és considerada per molts com l'origen de l'actual xarxa d'Internet.&lt;/p&gt;
+&lt;div class=&quot;exe-figure exe-image position-center&quot; style=&quot;width: 500px;&quot;&gt;
+&lt;div class=&quot;figcaption header&quot;&gt;&lt;strong&gt;Ray Tomlinson, el pare del correu electrònic&lt;/strong&gt;&lt;/div&gt;
+&lt;img src=&quot;resources/ray-tomlinson-inventor-del-email-fallece-a-los-74-anos.jpg&quot; alt=&quot;Ray Tomlinson&quot; width=&quot;500&quot; height=&quot;281&quot; /&gt;
+&lt;div class=&quot;figcaption&quot;&gt;&lt;a href=&quot;https://www.elconfidencial.com/tecnologia/2016-03-06/el-inventor-del-email-ray-tomlinson-fallece-a-los-74-anos_1164057/&quot; target=&quot;_blank&quot; class=&quot;title&quot;&gt;&lt;em&gt;Ray Tomlinson&lt;/em&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La intenció de Tomlinson era facilitar la comunicació entre dos ordinadors connectats a la xarxa ARPANET, ja que, fins al moment, aquesta comunicació entre usuaris es basava a col·locar en un directori predeterminat l'arxiu que contenia el missatge que es volia transmetre. Posteriorment, quan l'usuari volia conèixer si tenia correu, accedia a aquest directori i en mirava el contingut. Per tant, la creació de Tomlinson no sols va facilitar la comunicació entre dos ordinadors, sinó que va provocar que aflorés una nova qüestió consistent en la necessitat d'identificar les màquines emissores i receptores.&lt;/p&gt;
+&lt;p&gt;En conseqüència, amb la intenció de definir la separació entre el nom de l'usuari i la màquina des d'on s'enviava o rebia el correu electrònic, Tomlinson va optar pel símbol arrova (@), això és, un caràcter que, per exemple, no aparegués en els noms propis de les persones.&lt;/p&gt;
+&lt;blockquote class=&quot;destacado&quot;&gt;
+&lt;p&gt;L'esquema de les adreces de correu electrònic és &lt;code&gt;usuari@servidor&lt;/code&gt;, per exemple, &lt;code&gt;serveisenxarxa@gmail.com&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Anys després, es va crear el protocol simple de transferència de correu (SMTP, &lt;em&gt;simple mail transfer protocol&lt;/em&gt;), això és, un protocol estàndard que s'utilitzava per intercanviar missatges entre servidors mitjançant connexions de punt a punt. De fet, aquells usuaris que volien consultar el correu electrònic havien d'accedir mitjançant el seu ordinador a un servidor al qual sol·licitaven la descàrrega dels missatges que haguessin rebut.&lt;/p&gt;
+&lt;p&gt;Posteriorment, fou durant els anys 80 del segle XX quan, davant del notable augment d'usuaris que disposaven d'accés a la xarxa d'Internet, va sorgir la necessitat de crear un protocol que facilités l'accés a Internet i, alhora, a serveis bàsics com el correu electrònic. De fet, fou així com va néixer el protocol de l'oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;) adreçat a la gestió dels correus electrònics (E-mail, &lt;em&gt;Electronic Mail&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Val a dir que aquest protocol va anar evolucionant fins al sorgiment de versions avançades i millorades com, per exemple, el POP2 i el POP3, que oferien una millor gestió dels missatges de correu electrònic.&lt;/p&gt;
+&lt;p&gt;Va ser així com, mitjançant els protocols SMTP i POP, va quedar resolta la transmissió de correus electrònics mitjançant la xarxa d'Internet, tot i que, amb aquests protocols només es podien enviar missatges en format de text ASCII. Val a dir que durant un temps es van utilitzar programes que facilitaven tant la codificació com la descodificació fins que, a principis dels anys 90, van sorgir les extensions de correu d'Internet de multipropòsit (MIME, &lt;em&gt;Multipurpose Internet Mail Extensions&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Per últim, és important destacar que, a mitjan anys 90 va sorgir el protocol d'accés als missatges d’Internet (IMAP, &lt;em&gt;Internet Message Access Protocol&lt;/em&gt;), que oferia moltes més funcionalitats que el protocol POP i, a més, permetia integrar el correu electrònic a un navegador web.&lt;/p&gt;
+&lt;p&gt;Actualment, el protocol simple de transferència de correu (SMTP, &lt;em&gt;Simple Mail Transfer Protocol&lt;/em&gt;) s'utilitza per l'enviament dels correus electrònics i, d'altra banda, el protocol de l'oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;) en la seva tercera versió (POP3) s'utilitza per a la recepció dels correus.&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list>
+                <instance class="exe.engine.galleryidevice.GalleryImage">
+                 <dictionary>
+                  <string role="key" value="_caption"></string>
+                  <instance class="exe.engine.field.TextField">
+                   <dictionary>
+                    <string role="key" value="_id"></string>
+                    <int value="1003"></int>
+                    <string role="key" value="_idevice"></string>
+                    <none></none>
+                    <string role="key" value="_instruc"></string>
+                    <string value=""></string>
+                    <string role="key" value="_name"></string>
+                    <string value=""></string>
+                    <string role="key" value="content"></string>
+                    <string value=""></string>
+                    <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                    <int value="4"></int>
+                   </dictionary>
+                  </instance>
+                  <string role="key" value="_id"></string>
+                  <unicode value="0_86.14"></unicode>
+                  <string role="key" value="_imageResource"></string>
+                  <instance class="exe.engine.resource.Resource" reference="8">
+                   <dictionary>
+                    <string role="key" value="_idevice"></string>
+                    <reference key="5"></reference>
+                    <string role="key" value="_package"></string>
+                    <reference key="4"></reference>
+                    <string role="key" value="_storageName"></string>
+                    <string value="Headrest_Pepi_II.jpg"></string>
+                    <string role="key" value="_userName"></string>
+                    <string value="/tmp/tmppgIX_u/Headrest_Pepi_II.jpg"></string>
+                    <string role="key" value="checksum"></string>
+                    <string value="5d0bb04f42751dc17734a277e4a740eb"></string>
+                    <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                    <int value="2"></int>
+                    <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                    <int value="2"></int>
+                    <string role="key" value="warningMsg"></string>
+                    <string value=""></string>
+                   </dictionary>
+                  </instance>
+                  <string role="key" value="_parent"></string>
+                  <reference key="6"></reference>
+                  <string role="key" value="_thumbnailResource"></string>
+                  <none></none>
+                  <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                  <int value="3"></int>
+                  <string role="key" value="makeThumbnail"></string>
+                  <bool value="0"></bool>
+                 </dictionary>
+                </instance>
+                <instance class="exe.engine.galleryidevice.GalleryImage">
+                 <dictionary>
+                  <string role="key" value="_caption"></string>
+                  <instance class="exe.engine.field.TextField">
+                   <dictionary>
+                    <string role="key" value="_id"></string>
+                    <int value="1005"></int>
+                    <string role="key" value="_idevice"></string>
+                    <none></none>
+                    <string role="key" value="_instruc"></string>
+                    <string value=""></string>
+                    <string role="key" value="_name"></string>
+                    <string value=""></string>
+                    <string role="key" value="content"></string>
+                    <string value=""></string>
+                    <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                    <int value="4"></int>
+                   </dictionary>
+                  </instance>
+                  <string role="key" value="_id"></string>
+                  <unicode value="0_86.15"></unicode>
+                  <string role="key" value="_imageResource"></string>
+                  <instance class="exe.engine.resource.Resource" reference="9">
+                   <dictionary>
+                    <string role="key" value="_idevice"></string>
+                    <reference key="5"></reference>
+                    <string role="key" value="_package"></string>
+                    <reference key="4"></reference>
+                    <string role="key" value="_storageName"></string>
+                    <string value="ray-tomlinson-inventor-del-email-fallece-a-los-74-anos.jpg"></string>
+                    <string role="key" value="_userName"></string>
+                    <string value="/tmp/tmppgIX_u/ray-tomlinson-inventor-del-email-fallece-a-los-74-anos.jpg"></string>
+                    <string role="key" value="checksum"></string>
+                    <string value="765f7cf94d12e480a540110806e31342"></string>
+                    <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                    <int value="2"></int>
+                    <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                    <int value="2"></int>
+                    <string role="key" value="warningMsg"></string>
+                    <string value=""></string>
+                   </dictionary>
+                  </instance>
+                  <string role="key" value="_parent"></string>
+                  <reference key="6"></reference>
+                  <string role="key" value="_thumbnailResource"></string>
+                  <none></none>
+                  <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                  <int value="3"></int>
+                  <string role="key" value="makeThumbnail"></string>
+                  <bool value="0"></bool>
+                 </dictionary>
+                </instance>
+               </list>
+               <string role="key" value="idevice"></string>
+               <reference key="6"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="16"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="7"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="0"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="7"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list>
+            <reference key="8"></reference>
+            <instance class="exe.engine.resource.Resource" reference="51">
+             <dictionary>
+              <string role="key" value="_idevice"></string>
+              <reference key="5"></reference>
+              <string role="key" value="_package"></string>
+              <reference key="4"></reference>
+              <string role="key" value="_storageName"></string>
+              <string value="Headrest_Pepi_II.jpg"></string>
+              <string role="key" value="_userName"></string>
+              <string value="/tmp/tmppgIX_u/Headrest_Pepi_II.jpg"></string>
+              <string role="key" value="checksum"></string>
+              <string value="5d0bb04f42751dc17734a277e4a740eb"></string>
+              <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="warningMsg"></string>
+              <string value=""></string>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.resource.Resource" reference="52">
+             <dictionary>
+              <string role="key" value="_idevice"></string>
+              <reference key="5"></reference>
+              <string role="key" value="_package"></string>
+              <reference key="4"></reference>
+              <string role="key" value="_storageName"></string>
+              <string value="Headrest_Pepi_II.jpg"></string>
+              <string role="key" value="_userName"></string>
+              <string value="/tmp/tmppgIX_u/Headrest_Pepi_II.jpg"></string>
+              <string role="key" value="checksum"></string>
+              <string value="5d0bb04f42751dc17734a277e4a740eb"></string>
+              <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="warningMsg"></string>
+              <string value=""></string>
+             </dictionary>
+            </instance>
+            <reference key="9"></reference>
+            <instance class="exe.engine.resource.Resource" reference="53">
+             <dictionary>
+              <string role="key" value="_idevice"></string>
+              <reference key="5"></reference>
+              <string role="key" value="_package"></string>
+              <reference key="4"></reference>
+              <string role="key" value="_storageName"></string>
+              <string value="ray-tomlinson-inventor-del-email-fallece-a-los-74-anos.jpg"></string>
+              <string role="key" value="_userName"></string>
+              <string value="/tmp/tmppgIX_u/ray-tomlinson-inventor-del-email-fallece-a-los-74-anos.jpg"></string>
+              <string role="key" value="checksum"></string>
+              <string value="765f7cf94d12e480a540110806e31342"></string>
+              <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="warningMsg"></string>
+              <string value=""></string>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.resource.Resource" reference="54">
+             <dictionary>
+              <string role="key" value="_idevice"></string>
+              <reference key="5"></reference>
+              <string role="key" value="_package"></string>
+              <reference key="4"></reference>
+              <string role="key" value="_storageName"></string>
+              <string value="ray-tomlinson-inventor-del-email-fallece-a-los-74-anos.jpg"></string>
+              <string role="key" value="_userName"></string>
+              <string value="/tmp/tmppgIX_u/ray-tomlinson-inventor-del-email-fallece-a-los-74-anos.jpg"></string>
+              <string role="key" value="checksum"></string>
+              <string value="765f7cf94d12e480a540110806e31342"></string>
+              <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="warningMsg"></string>
+              <string value=""></string>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="1"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:8.1.%20Introducci%C3%B3"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="12">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="8.2. Funcionament del servei"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="10">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="11">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="86"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="10"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;p&gt;L'enviament i la recepció de correus electrònics comporta la intervenció de més d'un protocol d'aplicació i, en conseqüència, de més d'un tipus de servidor. Aquesta separació en funció de diferents protocols es basa en el fet que la comunicació via correu electrònic entre dos usuaris no és un procés client-servidor síncron. És a dir, quan un usuari envia un correu electrònic no té la certesa que el destinatari estigui connectat i, en conseqüència, el missatge haurà de ser emmagatzemat per poder ser llegit més endavant.&lt;/p&gt;
+&lt;p&gt;Dins d'aquesta comunicació asíncrona intervenen algunes funcionalitats ben diferenciades com són l'agent de transferència de correu (MTA,&lt;em&gt; Mail Transfer Agent&lt;/em&gt;), l'agent de lliurament de correu (MDA, &lt;em&gt;Mail Delivery Agent&lt;/em&gt;) i l'agent d'usuari de correu (MUA, &lt;em&gt;Mail User Agent&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Els &lt;strong&gt;agents de transferència de correu&lt;/strong&gt; (MTA, &lt;em&gt;Mail transfer Agent&lt;/em&gt;) utilitzen el protocol simple de transferència de fitxers (SMTP, &lt;em&gt;Simple Mail transfer Protocol&lt;/em&gt;) per comunicar-se amb altres agents de transferència de correu i amb els clients de correu electrònic. Val a dir que els agents de transferència de correu s'anomenen “servidors de correu”, atès que s'encarreguen de rebre el correu i lliurar-lo on correspongui.&lt;/p&gt;
+&lt;p&gt;D'altra banda, els&lt;strong&gt; agents de lliurament de correu&lt;/strong&gt; són els “servidors de recollida de correu”, és a dir, la seva missió és copiar els missatges del servidor de correu a la bústia de correu de l'usuari. Considerant que aquests agents permetran als clients de correu la recol·lecció dels missatges emmagatzemats en bústies remotes, és possible afirmar que els protocols POP i IMAP són agents MDA.&lt;/p&gt;
+&lt;p&gt;Per últim, els &lt;strong&gt;agents d'usuari de correu&lt;/strong&gt; són programes que executen l'usuari per la lectura del correu entrant, o bé, enviar missatges de correu electrònic. Els agents d'usuari de correu (MUA) es comuniquen amb els agents de transferència de correu (MTA) mitjançant el protocol simple de transferència de correu. Aquests programes són els anomenats clients de correu i posseeixen una interfície que faciliten a l'usuari l'edició, recepció i enviament de correus electrònics. A mode d'exemple, podríem destacar clients de correu com l'Outlook, Pegasus, Thunderbird, Eudora, etc.&lt;/p&gt;
+&lt;p&gt;Tal com mostra la figura següent tots aquests elements tenen força rellevància dins del procés bàsic d'enviament d'un correu electrònic.&lt;/p&gt;
+&lt;figure class=&quot;exe-figure exe-image position-center license-CC-BY-SA&quot; style=&quot;width: 500px;&quot;&gt;
+&lt;div class=&quot;figcaption header&quot;&gt;&lt;strong&gt;Esquema del procés de transmissió de correu electrònic&lt;/strong&gt;&lt;/div&gt;
+&lt;img src=&quot;resources/smxm7uf1ud2_im46.png&quot; alt=&quot;Esquema del procés de transmissió de correu electrònic&quot; title=&quot;Esquema del procés de transmissió de correu electrònic&quot; width=&quot;500&quot; height=&quot;377&quot; /&gt;
+&lt;figcaption class=&quot;figcaption&quot;&gt;&lt;a href=&quot;http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M07/web/html/WebContent/u2/a2/continguts.html&quot; target=&quot;_blank&quot; class=&quot;title&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;em&gt;Esquema del procés de transmissió de correu electrònic&lt;/em&gt;&lt;/a&gt; &lt;span class=&quot;license&quot;&gt;&lt;span class=&quot;sep&quot;&gt;(&lt;/span&gt;&lt;a href=&quot;http://creativecommons.org/licenses/?lang=ca-ES&quot; rel=&quot;license nofollow noopener noreferrer&quot; target=&quot;_blank&quot; title=&quot;Creative Commons BY-SA&quot;&gt;CC BY-SA&lt;/a&gt;&lt;span class=&quot;sep&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;En aquest cas, l'usuari &lt;code&gt;bernat@tardor&lt;/code&gt; vol enviar un correu electrònic a l'usuari &lt;code&gt;mar@estiu&lt;/code&gt;. Per fer-ho, l'usuari redacta un missatge amb el seu agent d'usuari de correu (MUA) i l'envia.&lt;/p&gt;
+&lt;p&gt;Un cop l'agent de transferència de correu (MTA) de tardor rep el missatge, determina el punt d'entrega. Com que no es tracta d'un compte d'un usuari local (tenen dominis diferents), certifica que &lt;code&gt;bernat@tardor&lt;/code&gt; té permís per utilitzar aquest agent de transferència de correu (MTA) per enviar correus a d'altres servidors -això és rellevant, per exemple, per evitar que s'utilitzi un agent de transferència de correu (MTA) de forma indiscriminada per enviar correu com si es tractés de correu brossa.&lt;/p&gt;
+&lt;p&gt;Definitivament, el correu anirà adreçat a un altre servidor i, a més, el client que l'envia té permís per utilitzar l'agent de transferència de correu (MTA). Per tant, el servidor de tardor utilitza el protocol SMTP per entregar el correu a l'agent de transferència de correu (MTA) d'estiu. Quan el servidor d'estiu hagi rebut el missatge, determinarà el punt d'entrega que, en aquest cas, és en un compte local. Per tant, s'adreçarà a la bústia corresponent i finalitzarà l'entrega deixant-hi el correu.&lt;/p&gt;
+&lt;p&gt;Per últim, en un altre extrem de la xarxa, l'usuari &lt;code&gt;mar@estiu&lt;/code&gt; utilitza el seu agent d'usuari de correu (MUA) per comprovar si té algun correu nou. En aquest cas utilitzarà el protocol POP3 de recollida de correu. Val a dir que el servidor POP3 d'estiu comprova que l'usuari sí que tingui correu (el que li va enviar &lt;code&gt;bernat@tardor&lt;/code&gt;) i l'entrega al seu agent d'usuari de correu (MUA). És, arribats en aquest punt, quan finalitza la recollida.&lt;/p&gt;
+&lt;h3&gt;Els comptes de correu electrònic&lt;/h3&gt;
+&lt;p&gt;El concepte correu electrònic (E-mail, &lt;em&gt;Electronic mail&lt;/em&gt;) fa referència al sistema que permet redactar, enviar i rebre missatges mitjançant sistemes de comunicació electrònica. En conseqüència, considerant que la xarxa d'Internet és la xarxa de comunicacions universal arreu del món, és lògic que els sistemes de correu electrònic utilitzin Internet. És més, el correu electrònic ha esdevingut tant un element imprescindible en el nostre dia a dia com un dels elements més rellevants de l'evolució tecnològica recent.&lt;/p&gt;
+&lt;p&gt;La majoria dels correus electrònics es transmeten mitjançant servidors que treballen amb el protocol simple de transferència de correus (SMTP,&lt;em&gt;Simple Mail Transfer Protocol&lt;/em&gt;) i tant pot ser de caràcter privat, empresarial o institucional.&lt;/p&gt;
+&lt;p&gt;De fet, els comptes de correu electrònic més populars pertanyen a llocs web de caràcter privat (pertanyen a empreses) que ofereixen un espai en el seus servidors perquè qualsevol qui ho desitgi pugui accedir-hi, crear un compte de correu electrònic i deixar-hi els missatges rebuts. Aquestes companyies (Microsoft, Google, Yahoo) que ofereixen capacitat de disc dels seus servidors i, alhora, gestionen l'enviament i la recepció dels correus electrònics sense cap despesa per part de l'usuari amortitzen la despesa provocada per proporcionar aquest servei mitjançant la incorporació de publicitat.&lt;/p&gt;
+&lt;p&gt;De fet, són molts els comptes de correu electrònic que, en funció del títol (o assumpte) del correu electrònic rebut, els apareix publicitat relacionada. Per exemple, si estem intercanviant-nos correus electrònics per parlar d'una acampada que realitzarem a finals d'any, la publicitat que sorgirà dins del compte de correu electrònic estarà relacionada, per exemple, amb materials per fer muntanya, tendes de campanya, fogonets, etc.&lt;/p&gt;
+&lt;p&gt;Aquestes accions publicitàries de les companyies que ofereixen comptes de correu electrònic (i la seva gestió) busquen fidelitzar possibles empreses interessades a incorporar publicitat en aquell lloc web (dins dels diferents comptes) davant d'una concreció dels usuaris a qui s'adreci mitjançant l'anàlisi de l'assumpte del correu electrònic enviat o rebut.&lt;/p&gt;
+&lt;h3&gt;Instal·lació d'un servei de correu electrònic&lt;/h3&gt;
+&lt;p&gt;L'estructura d'un compte de correu electrònic és determinada per una adreça composta per dues parts fonamentals, això és, l'usuari i el domini amb el símbol arrova entremig. Per tant, l'adreça de correu electrònic té la forma &lt;code&gt;usuari@domini.exemple&lt;/code&gt;. La part corresponent a l'usuari correspon al nom d'usuari que s'utilitzarà per validar-se en una màquina remota. D'altra banda, el domini correspon a l'adreça electrònica de l'ordinador o conjunt d'ordinadors que s'encarregaran de distribuir el correu als usuaris. Per exemple, l'adreça &lt;code&gt;alumne@cicles.cat&lt;/code&gt; representa l'adreça electrònica d'un usuari alumne que es connecta a una màquina el domini de la qual és &lt;code&gt;cicles.cat&lt;/code&gt; i es llegeix com a alumne en &lt;code&gt;cicles.cat&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A títol pràctic, quan un usuari envia un missatge de correu electrònic, aquest queda emmagatzemat en el servidor de correu de la bústia del destinatari. Per tant, quan el destinatari vulgui consultar el seu correu electrònic es connectarà al seu servidor de correu i podrà consultar els missatges mitjançant web o baixar-los a la seva màquina mitjançant un programa de correu. Òbviament, en un servei de correu no és necessari que l'emissor i el receptor coincideixin ni en l'espai ni en el temps.&lt;/p&gt;
+&lt;p&gt;Arribats en aquest punt, ja podem començar a treballar amb servidor de correu electrònic, és a dir, un sistema de correu que, principalment, gestionarà els protocols d'oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;) i el protocol simple de transferència de correus (SMTP, &lt;em&gt;Simple Mail Transfer Protocol&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list>
+                <instance class="exe.engine.galleryidevice.GalleryImage">
+                 <dictionary>
+                  <string role="key" value="_caption"></string>
+                  <instance class="exe.engine.field.TextField">
+                   <dictionary>
+                    <string role="key" value="_id"></string>
+                    <int value="1004"></int>
+                    <string role="key" value="_idevice"></string>
+                    <none></none>
+                    <string role="key" value="_instruc"></string>
+                    <string value=""></string>
+                    <string role="key" value="_name"></string>
+                    <string value=""></string>
+                    <string role="key" value="content"></string>
+                    <string value=""></string>
+                    <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                    <int value="4"></int>
+                   </dictionary>
+                  </instance>
+                  <string role="key" value="_id"></string>
+                  <unicode value="2_86.17"></unicode>
+                  <string role="key" value="_imageResource"></string>
+                  <instance class="exe.engine.resource.Resource" reference="13">
+                   <dictionary>
+                    <string role="key" value="_idevice"></string>
+                    <reference key="10"></reference>
+                    <string role="key" value="_package"></string>
+                    <reference key="4"></reference>
+                    <string role="key" value="_storageName"></string>
+                    <string value="smxm7uf1ud2_im46.png"></string>
+                    <string role="key" value="_userName"></string>
+                    <string value="/tmp/tmppgIX_u/smxm7uf1ud2_im46.png"></string>
+                    <string role="key" value="checksum"></string>
+                    <string value="1304bb34142a5b06069716da52c7543f"></string>
+                    <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                    <int value="2"></int>
+                    <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                    <int value="2"></int>
+                    <string role="key" value="warningMsg"></string>
+                    <string value=""></string>
+                   </dictionary>
+                  </instance>
+                  <string role="key" value="_parent"></string>
+                  <reference key="11"></reference>
+                  <string role="key" value="_thumbnailResource"></string>
+                  <none></none>
+                  <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                  <int value="3"></int>
+                  <string role="key" value="makeThumbnail"></string>
+                  <bool value="0"></bool>
+                 </dictionary>
+                </instance>
+               </list>
+               <string role="key" value="idevice"></string>
+               <reference key="11"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="18"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="12"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="2"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="12"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list>
+            <reference key="13"></reference>
+            <instance class="exe.engine.resource.Resource" reference="49">
+             <dictionary>
+              <string role="key" value="_idevice"></string>
+              <reference key="10"></reference>
+              <string role="key" value="_package"></string>
+              <reference key="4"></reference>
+              <string role="key" value="_storageName"></string>
+              <string value="smxm7uf1ud2_im46.png"></string>
+              <string role="key" value="_userName"></string>
+              <string value="/tmp/tmppgIX_u/smxm7uf1ud2_im46.png"></string>
+              <string role="key" value="checksum"></string>
+              <string value="1304bb34142a5b06069716da52c7543f"></string>
+              <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="warningMsg"></string>
+              <string value=""></string>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.resource.Resource" reference="50">
+             <dictionary>
+              <string role="key" value="_idevice"></string>
+              <reference key="10"></reference>
+              <string role="key" value="_package"></string>
+              <reference key="4"></reference>
+              <string role="key" value="_storageName"></string>
+              <string value="smxm7uf1ud2_im46.png"></string>
+              <string role="key" value="_userName"></string>
+              <string value="/tmp/tmppgIX_u/smxm7uf1ud2_im46.png"></string>
+              <string role="key" value="checksum"></string>
+              <string value="1304bb34142a5b06069716da52c7543f"></string>
+              <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="warningMsg"></string>
+              <string value=""></string>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="4"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:8.2.%20Funcionament%20del%20servei"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="16">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="8.3. Protocols en la gestió de correu electrònic"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="14">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="15">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="86"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="14"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;p&gt;A grans trets, per poder enviar o rebre un correu electrònic necessitem disposar d’un compte de correu en una màquina anomenada servidor de correu (MTA,&lt;em&gt;Mail Transfer Agent&lt;/em&gt;). En conseqüència, és lògic que, amb la finalitat de realitzar aquesta acció, els usuaris han d'estar connectats a la xarxa de Internet.&lt;/p&gt;
+&lt;blockquote class=&quot;destacado&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Client de correu electrònic&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Són aplicacions que permeten relacionar els usuaris amb les seves bústies corresponents i els permet realitzar la descàrrega i gestió de missatges de correu utilitzant uns determinats protocols (POP3 i IMAP).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Considerant que el correu electrònic es basa en l’arquitectura client-servidor on el servidor ofereix un recurs de qualsevol tipus a l’altre (el client) perquè aquest pugui obtenir un profit o avantatge, podem afirmar que és en l’equip servidor on s’allotjaran els diferents comptes d’usuari i mitjançant els clients de correu es gestionarà la descàrrega dels missatges.&lt;/p&gt;
+&lt;p&gt;Arribats en aquest punt, és essencial destacar que tant el compte de correu electrònic com el mètode definit per l’establiment de les comunicacions entre l’emissor i el receptor de correu electrònic (E-mail, Electronic Mail) han de seguir unes normes específiques que es regeixen per unes normes anomenades protocols d’Internet.&lt;/p&gt;
+&lt;blockquote class=&quot;destacado&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Protocols d'Internet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Conjunt de regles de comunicació de xarxa en la qual es basa Internet i que permeten la transmissió de dades entre ordinadors connectats en xarxa, així permeten la comunicació i transmissió de correu electrònic entre usuaris independentment del sistema operatiu i del client de correu que utilitzin.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;destacado&quot;&gt;
+&lt;p&gt;&lt;strong&gt;ISP, &lt;em&gt;Internet Service Provider&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Els proveïdors de serveis d’Internet poden ser aquelles empreses adreçades a proporcionar l’accés a Internet afegint-hi serveis relacionats com, per exemple, correu electrònic, allotjament web, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Val a dir que, amb la intenció de llençar el client de correu electrònic, haurem de disposar d’informació sobre el proveïdor de serveis d’Internet (ISP, Internet Service Provider) per configurar correctament el client de correu electrònic.&lt;/p&gt;
+&lt;p&gt;Per tant, amb la intenció d’aprofundir en la gestió del correu electrònic haurem de conèixer, principalment, quins són els protocols de correu electrònic existents i, alhora, els més utilitzats.&lt;/p&gt;
+&lt;h3&gt;3.1. Protocol d'enviament de correu&lt;/h3&gt;
+&lt;h4&gt;3.1.1. Protocol simple de transferència de correu (SMTP, &lt;em&gt;Simple Mail Transfer Protocol&lt;/em&gt;)&lt;/h4&gt;
+&lt;p&gt;Es tracta de l'estàndard d'Internet adreçat a l'intercanvi de correus electrònics. La seva funció és la transmissió del correu electrònic que surt de la màquina de l'usuari remetent fins al servidor que emmagatzema els missatges dels usuaris destinataris.&lt;/p&gt;
+&lt;p&gt;Tècnicament, quan l'usuari remetent envia un missatge, aquest és adreçat al seu servidor de correu. A continuació, des del servidor s'enviarà el missatge al servidor de correu de l'usuari destinatari. I, finalment, l'usuari destinatari descarregarà el correu a la seva bústia a la màquina local. &lt;span style=&quot;font-size: 1em;&quot;&gt;Val a dir que és important que aquest protocol estigui dotat de certes eines d'autenticació per estalviar l'enviament i recepció de correu no desitjat o correu brossa (&lt;em&gt;spam&lt;/em&gt;).&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;3.2. Protocols descàrrega de correu&lt;/h3&gt;
+&lt;h4&gt;3.2.1. Protocol d'oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;)&lt;/h4&gt;
+&lt;p&gt;Aquest tipus de protocol fa referència al tipus de servidor que s'utilitzarà per rebre els correus electrònics. De fet, el protocol d'oficina de correus permet la gestió, accés i transferència de missatges de correu electrònic entre el servidor i el client de correus electrònics. De fet, a diferència del protocol simple de transferència de correu (SMTP, &lt;em&gt;Simple Mail Transfer Protocol&lt;/em&gt;), el protocol d'oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;) s'utilitza per a la descàrrega de correus electrònics. L'origen del protocol d'oficina de correus (POP, Post Office Protocol) és determinat per la necessitat de molts usuaris de consultar els seus correus electrònics mitjançant la connexió puntual a Internet per, en conseqüència, connectar amb el seu servidor de correu i descarregar els missatges. Un cop descarregat els missatges, el protocol d'oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;) també facilita la desconnexió amb el servidor.&lt;/p&gt;
+&lt;h4&gt;3.2.2.Protocol d'accés a missatges d'Internet (IMAP, &lt;em&gt;Internet Message Access Protocol&lt;/em&gt;)&lt;/h4&gt;
+&lt;p&gt;És mitjançant aquest protocol que els clients de correu electrònic poden accedir als missatges emmagatzemats en els servidors de correu des de qualsevol màquina amb accés a Internet.&lt;/p&gt;
+&lt;p&gt;Normalment, el protocol d'accés a missatges d’Internet (IMAP, &lt;em&gt;Internet Message Access Protocol&lt;/em&gt;) és utilitzat pels servidors i pels clients de correu electrònic via web. Aquests tipus de servidors i clients faciliten als usuaris la gestió de les seves bústies de correu electrònic des de qualsevol ordinador amb accés a Internet.&lt;/p&gt;
+&lt;p&gt;Val a dir que el protocol d'accés a missatges d’Internet (IMAP, &lt;em&gt;Internet Message Access Protocol&lt;/em&gt;) es diferencia del protocol d’oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;) en el fet que els correus electrònics estan emmagatzemats en el servidor i es queden allí fins i tot si es descarreguen el cas més típic són els servidors de correu electrònic via web. Per contra, en el protocol d’oficina de correus (POP, Post Office Protocol) comporta que els correus electrònics es descarreguin en l’ordinador del client directament i no quedin emmagatzemats en el servidor.&lt;/p&gt;
+&lt;p&gt;En conseqüència, a l’hora de configurar l’aplicació o el gestor de correu electrònic, haurem d’especificar tant el servidor SMTP com el servidor POP.&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="15"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="16"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="1"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="16"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="3"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:8.3.%20Protocols%20en%20la%20gesti%C3%B3%20de%20correu%20electr%C3%B2nic"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="19">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="8.4. Servidors de correu electrònic"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="17">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="18">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="85"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="17"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;p&gt;Com s'ha explicat anteriorment per a disposar d'un servei complet de correu electrònic és necessària la cooperació de diversos protocols, un d'enviament de correu (SMTP) i altre de descàrrega de correu (IMAP o POP3).&lt;/p&gt;
+&lt;p&gt;En els sistemes &lt;strong&gt;Linux&lt;/strong&gt; tenim diverses opcions, alguns exemples significatius són&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Postfix o Sendmail per a l'enviament (SMTP)&lt;/li&gt;
+&lt;li&gt;Dovecot  o Courier per a la descàrrega (IMAP o POP3).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En entorns &lt;strong&gt;Windows&lt;/strong&gt; és Microsoft Exchange l'opció més triada.&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="18"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="19"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="10"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="20">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="21">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="85"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="20"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;h2&gt;1. Instal·lació d'un servidor de correu electrònic en Ubuntu.&lt;/h2&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="21"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="19"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="11"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="22">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="23">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="86"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="22"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;h3&gt;1.1. Instal·lació d'un MTA: Postfix&lt;/h3&gt;
+&lt;h4&gt;1.1.1. Postfix&lt;/h4&gt;
+&lt;p&gt;&lt;span id=&quot;result_box&quot; class=&quot;&quot; lang=&quot;ca&quot; tabindex=&quot;-1&quot;&gt;&lt;span&gt;&lt;em&gt;Postfix&lt;/em&gt; és l'agent de transferència de correu predeterminat (MTA) a l'Ubuntu.&lt;/span&gt; &lt;span&gt;Intenta ser ràpid i fàcil d'administrar i protegir.&lt;/span&gt; &lt;span class=&quot;&quot;&gt;És compatible amb el &lt;em&gt;sendmail&lt;/em&gt; MTA.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;1.1.2. Configuració dels registres MX&lt;/h4&gt;
+&lt;p&gt;En aquesta configuració suposo que el vostre domini és yourdomain.com i té una configuració de registre MX vàlida com mail.yourdomain.com. Recordeu substituir yourdomain.com amb el vostre domini real en els codis d'exemple d'aquest mode. També suposo que saps què és un registre MX. Per descobrir registres MX, escriviu en un terminal:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;dig mx yourdomain.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;1.1.3. Instal·lació&lt;/h4&gt;
+&lt;p&gt;Per instal·lar &lt;em&gt;postfix&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install postfix
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Instal·leu el paquet &lt;code&gt;mailx&lt;/code&gt; per utilitzar-lo com a programa d'utilitat de correu d'ordres. L'ordre de correu s'instal·la amb aquest paquet. &lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install mailutils
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;1.1.4. Proveu la configuració predeterminada&lt;/h4&gt;
+&lt;p&gt;Afegiu un usuari abans de començar.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo useradd -m -s /bin/bash fmaster
+sudo passwd fmaster&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Proveu la vostra instal·lació predeterminada mitjançant el següent segment de codi.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;telnet localhost 25
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;(si això no funciona, comproveu si el postfix s'està executant)&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo service postfix status
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Si no s'està executant, inicieu-lo&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo service postfix start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Postfix indicarà com a continuació al terminal perquè pugui utilitzar per escriure ordres SMTP.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;S'està provant 127.0.0.1 ...
+Connectat a localhost.
+El caràcter d'escapament és &quot;^]&quot;.
+220 localhost.localdomain Postfix d'ESMTP (Ubuntu)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Escriviu el següent segment de codi a l'indicador de Postfix.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;ehlo localhost
+mail from: root@localhost
+rcpt to: fmaster@localhost
+data
+Subject: El meu primer correu a Postfix
+
+Hola,
+Estàs allà?
+Salutacions,
+Administrador
+. (Escriviu el. [punt] en una nova línia i premeu Retorn)
+quit&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Consulteu la bústia de correu de fmaster&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;su - fmaster
+mail&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Quan escriviu el comandament de correu, una sortida com la següent es mostrarà al vostre terminal.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Versió per correu electrònic 8.1.2 01/15/2001. Escriu? per ajuda.
+&quot;/var/mail/fmaster&quot;: 2 missatges 2 nous
+&amp;gt; N 1 root @ localhost Dl Mar 6 12:49 13/479 Només una prova
+  N 2 root @ localhost dl. Mar 6 12:51 15/487 El meu primer correu
+&amp;amp;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Observareu que els correus es indexen per números i podeu escriure el número del correu que voleu llegir. Per exemple, escriviu &quot;2&quot; per llegir el segon correu. El tipus &quot;q&quot; per sortir. El correu electrònic s'escriurà en un fitxer anomenat &lt;code&gt;mbox&lt;/code&gt; al directori personal de l'usuari. Segons el nostre exemple, serà &lt;code&gt;/home/fmaster/mbox&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Tots els missatges en un tipus &lt;code&gt;mbox&lt;/code&gt; de bústia de correu estan concatenats i emmagatzemats en un únic fitxer. El començament de cada missatge està indicat per una línia els primers cinc caràcters són &quot;From&quot; i una línia en blanc s'afegeix al final de cada missatge.&lt;/p&gt;
+&lt;h4&gt;1.1.5. Configuració del suport Postfix per a les bústies d'estil de Maildir&lt;/h4&gt;
+&lt;p&gt;Maildir és un format per una cua de correu electrònic que no requereix bloqueig de fitxers per mantenir la integritat del missatge, ja que els missatges es mantenen en fitxers separats amb noms únics. Un &lt;em&gt;Maildir&lt;/em&gt; és un directori (sovint anomenat Maildir) amb tres subdirectoris anomenats tmp, new i cur. Els subdirectoris haurien de residir en el mateix sistema de fitxers.&lt;/p&gt;
+&lt;p&gt;Una altra raó per utilitzar el format Maildir és que els servidors Courier IMAP / POP3 només funcionen amb el format Maildir de les bústies.&lt;/p&gt;
+&lt;p&gt;Indiqueu a Postfix per utilitzar &lt;code&gt;Maildir&lt;/code&gt; en lloc de &lt;code&gt;mbox&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo postconf -e &quot;home_mailbox = Maildir/&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Assegureu-vos que no s'utilitza Procmail: (per si es va configurar durant l'execució de &lt;code&gt;dpkg-reconfigure&lt;/code&gt;, per error) &lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo postconf -e &quot;mailbox_command =&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Reinicia Postfix per fer efectes els canvis.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo service postfix restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Torneu a provar la configuració.&lt;/p&gt;
+&lt;p&gt;Consulteu la bústia de correu de &lt;code&gt;fmaster&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;su - fmaster
+MAIL=/home/fmaster/Maildir
+mail&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;1.1.6. Qüestions de seguretat&lt;/h4&gt;
+&lt;p&gt;Cal afegir les vostres xarxes al paràmetre &lt;code&gt;mynetworks&lt;/code&gt; perquè funcione l'autenticació des de l'exterior:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;mynetworks = 192.168.189.0/24, 10.0.216.0/24, 127.0.0.0/8&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="23"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="19"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="4"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="24">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="25">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="85"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="24"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;h3&gt;1.2. Instal·lació d'un MDA: Dovecot&lt;/h3&gt;
+&lt;p&gt;Dovecot és un agent de lliurament de missatges (&lt;em&gt;Message Delivery Agent&lt;/em&gt;), escrit principalment amb la seguretat en ment. Suporta els principals formats de bústia: mbox o Maildir. Aquesta secció explica com configurar-la com un servidor imap o pop3.&lt;/p&gt;
+&lt;h4&gt;1.2.1. Instal·lació&lt;/h4&gt;
+&lt;p&gt;Per a instal·lar dovecot, executa el següent comandament en el terminal:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install dovecot-imapd dovecot-pop3d&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;1.2.2. Configuració&lt;/h4&gt;
+&lt;p&gt;Per configurar  dovecot, podeu editar el fitxer /etc/dovecot/dovecot.conf. Podeu triar el protocol que feu servir. Pot ser pop3, pop3s (pop3 &lt;em&gt;secure&lt;/em&gt;), imap i imaps (imap &lt;em&gt;secure&lt;/em&gt;). Per obtenir més informació, consulteu els articles de Wikipedia sobre POP3 i IMAP.&lt;/p&gt;
+&lt;p&gt;IMAPS i POP3S són més segurs que els simples IMAP i POP3 perquè utilitzen el xifrat SSL per connectar-se. Un cop seleccionat el protocol, modifiqueu la següent línia al fitxer &lt;code&gt;/etc/dovecot/dovecot.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;protocols = pop3 pop3s imap imaps&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;A continuació, trieu la bústia que voleu utilitzar. Dovecot admet els formats &lt;em&gt;maildir&lt;/em&gt; i &lt;em&gt;mbox&lt;/em&gt;. Aquests són els formats de bústia més utilitzats. Tots dos tenen els seus propis beneficis i es discuteixen al lloc web &lt;em&gt;Dovecot&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Un cop hagueu escollit el vostre tipus de bústia, editeu el fitxer&lt;code&gt; /etc/dovecot/conf.d/10-mail.conf&lt;/code&gt; i canvieu la següent línia:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;mail_location = maildir:~/Maildir # (for maildir)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;o&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;mail_location = mbox:~/mail:INBOX=/var/spool/mail/%u # (for mbox)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Heu de configurar el vostre agent de transport de correu (MTA) per transferir el correu entrant a aquest tipus de bústia si és diferent del que heu configurat.&lt;/p&gt;
+&lt;p&gt;Ara permetrem l'autenticació amb text pla des de fora per a simplificar el sistema:&lt;/p&gt;
+&lt;p&gt;Obri  /etc/dovecot/conf.d/10-auth.conf i edita les línies següents perquè queden així:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-c&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;disable_plaintext_auth = no
+auth_mechanisms = plain login
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Un cop hagueu configurat dovecot, reinicieu el servei per comprovar la configuració&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sudo service dovecot restart&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Si heu activat &lt;code&gt;imap&lt;/code&gt; o &lt;code&gt;pop3&lt;/code&gt;, també podeu intentar iniciar sessió amb les ordres &lt;code&gt;telnet localhost pop3&lt;/code&gt; o &lt;code&gt;telnet localhost imap2&lt;/code&gt;. Si veieu alguna cosa així com la següent, la instal·lació ha tingut èxit:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;bhuvan@rainbow:~$ telnet localhost pop3
+Trying 127.0.0.1...
+Connected to localhost.localdomain.
+Escape character is '^]'.
++OK Dovecot ready.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;1.2.3. Configuració de seguretat&lt;/h4&gt;
+&lt;p&gt;Cal modificar l'arxiu &lt;code&gt;/etc/dovecot/dovecot.conf&lt;/code&gt; i afegir a &lt;code&gt;login_trusted_networks&lt;/code&gt; les vostres adreces de xarxa perquè funcione la autenticació.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-clike&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;login_trusted_networks = 192.168.1.0/30&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;Podeu provar si funciona seguint en següent tutorial (les versions insegures del protocols sols funcionen des del servidor local): &lt;a href=&quot;https://notes.sagredo.eu/en/qmail-notes-185/testing-dovecot-90.html&quot;&gt;https://notes.sagredo.eu/en/qmail-notes-185/testing-dovecot-90.html&lt;/a&gt;&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="25"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="19"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="6"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="26">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="27">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="86"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="26"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;h2&gt;Recursos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.ubuntu.com/community/Postfix#Postfix_Basic_Setup&quot;&gt;How To Install and Configure Postfix on Ubuntu 16.04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.ubuntu.com/community/PostfixBasicSetupHowto&quot; target=&quot;_blank&quot; title=&quot;Postfix Basic Setup Howto&quot; rel=&quot;noopener&quot;&gt;Postfix Basic Setup Howto &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.ubuntu.com/community/Dovecot&quot;&gt;Dovecot &lt;/a&gt;en Ubuntu Documentation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.ubuntu.com/lts/serverguide/dovecot-server.html&quot;&gt;https://help.ubuntu.com/lts/serverguide/dovecot-server.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="27"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="19"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="5"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="6"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:8.4.%20Servidors%20de%20correu%20electr%C3%B2nic"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="30">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="8.5. Clients de  correu electrònic"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="28">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="29">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="86"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="28"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;p&gt;El POP3 és la versió millorada del gestor del protocol d'oficina de correus (POP, &lt;em&gt;Post Office Protocol&lt;/em&gt;) consistent en el client de correu electrònic que proporcionen els proveïdors de serveis d'Internet (ISP, &lt;em&gt;Internet Service Provider&lt;/em&gt;), que exigeix disposar d'un gestor de correus electrònics correctament configurat que permeti la descàrrega dels missatges a l'ordinador i, alhora, gestionar-los sense obligatorietat de connexió a Internet.&lt;/p&gt;
+&lt;p&gt;El client POP és el programa que utilitza l'ordinador per comunicar-se amb el programa servidor, que funciona sota protocol POP3.&lt;/p&gt;
+&lt;p&gt;A grans trets, el protocol POP3 s'encarrega de realitzar les tasques necessàries perquè els missatges es distribueixen per Internet. A més, també recull tots els missatges adreçats a la seva màquina. Per fer-ho, el gestor de correu POP3 es connectarà al servidor remot contractat i descarregarà els correus directament al nostre ordinador per poder llegir-los, editar-los, imprimir-los i, en cas necessari, redactar les respostes per a la propera vegada que ens connectem a Internet.&lt;/p&gt;
+&lt;p&gt;Ara bé, a mode d'inconvenient podríem destacar que, tot i haver llegit el correu en d'altres ordinadors, quan arribi al nostre ordinador, aquest missatge es descarregarà (de nou) amb la categoria “No llegit”. En conseqüència, hi haurà un consum de recursos i espai innecessari.&lt;/p&gt;
+&lt;p&gt;Des del punt de vista del programari, alguns dels gestors de correu POP3 més rellevants són l'MS Outlook 2007 i l'Outlook Express per Windows i el Qualcomm Eudora, l'Evolution per Linux. Per últim, podríem destacar el programari Mozilla Thunderbird, que pot treballar en tots els sistemes operatius presents al mercat, actualment.&lt;/p&gt;
+&lt;p&gt;Des del punt de vista del sistema operatiu Windows, fins al sorgiment de la versió Windows XP, tots els sistemes operatius d'aquest proveïdor portaven integrat l'Outlook Express -el nou Windows Vista porta incorporat una versió renovada anomenada Windows Mail. Independentment a aquests gestors, la suite ofimàtica Microsoft Office conté el gestor de correu Outlook. En el cas de Linux tenim, entre altres, els clients de correu Evolution, amb versió per Windows, Kmail i Mozilla Thunderbird.&lt;/p&gt;
+&lt;p&gt;Per últim, cal destacar que, tot i que molts usuaris disposem d'un gestor de correu que utilitza el protocol POP3 (Microsoft Outlook, Mozilla Thunderbird, etc.), l'emmagatzematge de missatges en carpetes, el filtratge del correu no desitjat o la creixent necessitat d'accedir a consultar el correu electrònic des de qualsevol lloc, augmenta la necessitat d'utilitzar un protocol d'accés als missatges d'Internet (IMAP,&lt;em&gt; Internet Message Access Protocol&lt;/em&gt;).&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="29"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="30"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="3"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="30"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="5"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:8.5.%20Clients%20de%20%20correu%20electr%C3%B2nic"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="33">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="8.6. Seguretat i vulnerabilitats "></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="31">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="32">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="86"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="31"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;p&gt;En el procés de transmissió de correu electrònic entre els usuaris no hi ha cap garantia que aquest es realitze amb èxit, ja que pot ocórrer que el destinatari no siga el que preteníem, que abans d'arribar al destí sigui llegit per altres usuaris, que durant el procés de transmissió viatgi també algun tipus de virus, etc.&lt;/p&gt;
+&lt;p&gt;Arran d'aquestes necessitats, han sorgit sistemes que permeten xifrar, desxifrar, crear signatures digitals, etc. de forma ràpida, senzilla i segura. Un d'aquests sistemes és PGP (&lt;em&gt;Pretty Good Privacy&lt;/em&gt;), que permet la confidencialitat, autenticació i integració del correu electrònic. És un programa gratuït independent del client de correu que s'utilitzi i compta amb versions per a Windows, Linux i Mac Os.&lt;/p&gt;
+&lt;h3&gt;1. Correu brossa&lt;/h3&gt;
+&lt;p&gt;Uns altres dels problemes que ens trobem en l'ús diari del correu electrònic és el correu brossa (&lt;em&gt;spam&lt;/em&gt;), que és aquell correu electrònic normalment de publicitat, que arriba al nostre correu sense haver-lo sol·licitat.&lt;/p&gt;
+&lt;p&gt;Per tant, a l'hora d'escollir un client de correu o un altre ens haurem d'assabentar quins tipus de filtre contra el correu brossa posseeixen, quin grau de confidencialitat, etc. Avui dia, la majoria de clients de correu tenen con aquestes opcions per garantir la seguretat i confidencialitat del correu electrònic dels seus usuaris.&lt;/p&gt;
+&lt;h3&gt;2. Phishing&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Phishing&lt;/em&gt;, conegut com suplantació d'identitat o simplement suplantador, és un terme informàtic que denomina un model d'abús informàtic i que es comet mitjançant l'ús d'un tipus d'enginyeria social, caracteritzat per intentar adquirir informació confidencial de forma fraudulenta (com pot ser una contrasenya, informació detallada sobre targetes de crèdit o una altra informació bancària). El cibercriminal, conegut com &lt;em&gt;phisher&lt;/em&gt;, es fa passar per una persona o empresa de confiança en una aparent comunicació oficial electrònica, comunament un correu electrònic, o algun sistema de missatgeria instantània o fins i tot utilitzant també cridades telefòniques.&lt;/p&gt;
+&lt;h2&gt;3. Bulos (Hoax) i cadenes&lt;/h2&gt;
+&lt;p&gt;És un missatge de correu electrònic amb contingut fals o enganyós i atraient. Normalment és distribuït en cadena pels seus successius receptors a causa del seu contingut impactant que sembla provenir d'una font seriosa i fiable, o perquè el mateix missatge demana ser reenviat.&lt;/p&gt;
+&lt;p&gt;Les persones que creen falses notícies solen tenir com a objectiu captar indirectament adreces de correu electrònic (per enviar correu massiu, virus, missatges amb suplantació d'identitat, o més rumors a gran escala), o també enganyar al destinatari perquè reveli la seva contrasenya o accepti un arxiu de &lt;em&gt;malware&lt;/em&gt;, o també d'alguna manera confondre o manipular a l'opinió pública de la societat.&lt;/p&gt;
+&lt;p&gt;Bàsicament, els rumors poden ser alertes sobre virus incurables, fal·làcies sobre persones, institucions o empreses, missatges de temàtica religiosa; cadenes de solidaritat, cadenes de la sort;  mètodes per fer-se milionari,  regals de grans companyies,  llegendes urbanes;  i altres cadenas.&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="32"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="33"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="8"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="33"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="8"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:8.6.%20Seguretat%20i%20vulnerabilitats%20"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="36">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="Qüestionari"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.genericidevice.GenericIdevice" reference="34">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Activity"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="An activity can be defined as a task or set of tasks a learner must
+complete. Provide a clear statement of the task and consider any conditions
+that may help or hinder the learner in the performance of the task."></unicode>
+           <string role="key" value="_tip"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="class_"></string>
+           <unicode value="activity"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.genericidevice.GenericIdevice.persistenceVersion"></string>
+           <int value="11"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="35">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="41_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="34"></reference>
+              <string role="key" value="_instruc"></string>
+              <unicode value="Describe the tasks the learners should complete."></unicode>
+              <string role="key" value="_name"></string>
+              <unicode value="Activity"></unicode>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;p&gt;Respon les següents qüestions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Explica quina funció tenen els distints agents que participen en el servei de correu electrònic.&lt;/li&gt;
+&lt;li&gt;Explica les funcions dels diferents protocols.&lt;/li&gt;
+&lt;li&gt;Explica quin és el format de les adreces de correu electrònic.&lt;/li&gt;
+&lt;li&gt;Què és un àlies? Quines diferències hi ha respecte a les adreces de correu?&lt;/li&gt;
+&lt;li&gt;Quines són les vulnerabilitats del correu electrònic?&lt;/li&gt;
+&lt;li&gt;Quina relació tenen els registres MX del DNS amb el servei de correu electrònic? Explica-ho. &lt;/li&gt;
+&lt;/ol&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="35"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="36"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value="activity"></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="14"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <unicode value="activity"></unicode>
+           <string role="key" value="parentNode"></string>
+           <reference key="36"></reference>
+           <string role="key" value="systemResources"></string>
+           <list>
+            <string value="common.js"></string>
+           </list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="10"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:Q%C3%BCestionari"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="39">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="Pràctiques"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.genericidevice.GenericIdevice" reference="37">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Activitat: instal·lació d'un sistema complet de correu"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="An activity can be defined as a task or set of tasks a learner must
+complete. Provide a clear statement of the task and consider any conditions
+that may help or hinder the learner in the performance of the task."></unicode>
+           <string role="key" value="_tip"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="class_"></string>
+           <unicode value="activity"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.genericidevice.GenericIdevice.persistenceVersion"></string>
+           <int value="11"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="38">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="43_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="37"></reference>
+              <string role="key" value="_instruc"></string>
+              <unicode value="Describe the tasks the learners should complete."></unicode>
+              <string role="key" value="_name"></string>
+              <unicode value="Activity"></unicode>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;p&gt;Documenta tot el procés d'instal·lació que hem dut a terme a classe seguint els apunts del llibre digital tractar de seguir els mateixos passos i ajustant-los al teu cas.&lt;/p&gt;
+&lt;p&gt;Crea també un nou compte de correu i un àlies.&lt;/p&gt;
+&lt;p&gt;Explica com s'ha de configurar Mozilla Thunderbird per  a poder rebre i enviar correu des del nou compte.&lt;/p&gt;
+&lt;p&gt;Investiga com pots configurar el compte de Gmail per a rebre el correu en Thunderbird.&lt;/p&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="38"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="39"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value="activity"></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="9"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <unicode value="activity"></unicode>
+           <string role="key" value="parentNode"></string>
+           <reference key="39"></reference>
+           <string role="key" value="systemResources"></string>
+           <list>
+            <string value="common.js"></string>
+           </list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="7"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:Pr%C3%A0ctiques"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="42">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="Bibliografia"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="40">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Free Text"></unicode>
+           <string role="key" value="_author"></string>
+           <unicode value="University of Auckland"></unicode>
+           <string role="key" value="_purpose"></string>
+           <unicode value="The majority of a learning resource will be 
+establishing context, delivering instructions and providing general information.
+This provides the framework within which the learning activities are built and 
+delivered."></unicode>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="childs"></string>
+           <list></list>
+           <string role="key" value="content"></string>
+           <instance class="exe.engine.field.TextAreaField" reference="41">
+            <dictionary>
+             <string role="key" value="_id"></string>
+             <int value="85"></int>
+             <string role="key" value="_idevice"></string>
+             <reference key="40"></reference>
+             <string role="key" value="_instruc"></string>
+             <unicode value="Use this field to enter text. This 
+iDevice has no emphasis applied although limited formatting can be applied to 
+text through the text editing buttons associated with the field."></unicode>
+             <string role="key" value="_name"></string>
+             <unicode value="Free Text"></unicode>
+             <string role="key" value="anchor_names"></string>
+             <list></list>
+             <string role="key" value="anchors_linked_from_fields"></string>
+             <dictionary></dictionary>
+             <string role="key" value="content_w_resourcePaths"></string>
+             <unicode content="true" value="&lt;ul&gt;
+&lt;li&gt;Oriol Torres Carrió. &lt;em&gt;Gestió de serveis de correu electrònic&lt;/em&gt; [en línia]. Institut Obert de Catalunya, 2017  [data de consulta: 05 de febrer de 2018].  Disponible en &amp;lt;&lt;a href=&quot;http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M07/web/html/WebContent/u2/a2/continguts.html&quot;&gt;http://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M07/web/html/WebContent/u2/a2/continguts.html&lt;/a&gt;&amp;gt;&lt;/li&gt;
+&lt;li&gt;Col·laboradors de Wikipedia. &lt;em&gt;Phishing&lt;/em&gt; [en línea]. Wikipedia, La enciclopedia libre, 2018 [fecha de consulta: 8 de febrero del 2018]. Disponible en &amp;lt;&lt;a href=&quot;https://es.wikipedia.org/w/index.php?title=Phishing&amp;amp;oldid=105413649&quot;&gt;https://es.wikipedia.org/w/index.php?title=Phishing&amp;amp;oldid=105413649&lt;/a&gt;&amp;gt;.&lt;/li&gt;
+&lt;li&gt;Col·laboradors de la Viquipèdia. &lt;em&gt;Correu brossa&lt;/em&gt; [en línia]. Viquipèdia, l'Enciclopèdia Lliure, 2017 [data de consulta: 19 de novembre del 2017]. Disponible en &amp;lt;&lt;a href=&quot;https://ca.wikipedia.org/w/index.php?title=Correu_brossa&amp;amp;oldid=19200000&quot; target=&quot;_blank&quot;&gt;https://ca.wikipedia.org/w/index.php?title=Correu_brossa&amp;amp;oldid=19200000&lt;/a&gt;&amp;gt;.&lt;/li&gt;
+&lt;li&gt;Col·laboradors de la Viquipèdia. &lt;em&gt;Falsa alarma (hoax)&lt;/em&gt; [en línia]. Viquipèdia, l'Enciclopèdia Lliure, 2017 [data de consulta: 20 de novembre del 2017]. Disponible en &amp;lt;&lt;a href=&quot;https://ca.wikipedia.org/w/index.php?title=Falsa_alarma&amp;amp;oldid=19209826&quot;&gt;https://ca.wikipedia.org/w/index.php?title=Falsa_alarma&amp;amp;oldid=19209826&lt;/a&gt;&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;"></unicode>
+             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+             <int value="4"></int>
+             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+             <int value="2"></int>
+             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+             <int value="3"></int>
+             <string role="key" value="htmlTag"></string>
+             <string value="div"></string>
+             <string role="key" value="images"></string>
+             <instance class="exe.engine.galleryidevice.GalleryImages">
+              <dictionary>
+               <string role="key" value=".listitems"></string>
+               <list></list>
+               <string role="key" value="idevice"></string>
+               <reference key="41"></reference>
+              </dictionary>
+             </instance>
+             <string role="key" value="intlinks_to_anchors"></string>
+             <dictionary></dictionary>
+             <string role="key" value="nextImageId"></string>
+             <int value="0"></int>
+             <string role="key" value="parentNode"></string>
+             <reference key="42"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
+           <int value="7"></int>
+           <string role="key" value="icon"></string>
+           <string value=""></string>
+           <string role="key" value="id"></string>
+           <unicode value="13"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parent"></string>
+           <none></none>
+           <string role="key" value="parentNode"></string>
+           <reference key="42"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="type"></string>
+           <none></none>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="9"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:8.%20Gesti%C3%B3%20de%20serveis%20de%20correu%20electr%C3%B2nic:Bibliografia"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+     </list>
+    </dictionary>
+   </instance>
+   <unicode role="key" value="1"></unicode>
+   <reference key="7"></reference>
+   <unicode role="key" value="10"></unicode>
+   <reference key="36"></reference>
+   <unicode role="key" value="3"></unicode>
+   <reference key="16"></reference>
+   <unicode role="key" value="4"></unicode>
+   <reference key="12"></reference>
+   <unicode role="key" value="5"></unicode>
+   <reference key="30"></reference>
+   <unicode role="key" value="6"></unicode>
+   <reference key="19"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="39"></reference>
+   <unicode role="key" value="8"></unicode>
+   <reference key="33"></reference>
+   <unicode role="key" value="9"></unicode>
+   <reference key="42"></reference>
+  </dictionary>
+  <string role="key" value="_objectives"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_preknowledge"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_templateFile"></string>
+  <string value=""></string>
+  <string role="key" value="backgroundImgTile"></string>
+  <bool value="0"></bool>
+  <string role="key" value="compatibleWithVersion9"></string>
+  <bool value="0"></bool>
+  <string role="key" value="currentNode"></string>
+  <reference key="3"></reference>
+  <string role="key" value="dublinCore"></string>
+  <instance class="exe.engine.package.DublinCore">
+   <dictionary>
+    <string role="key" value="contributors"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="coverage"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="creator"></string>
+    <unicode value="Vicent Jordà"></unicode>
+    <string role="key" value="date"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="description"></string>
+    <unicode value="Unitat didàctica de correu electrònic"></unicode>
+    <string role="key" value="format"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="identifier"></string>
+    <unicode value="0c41d793-2e2d-4295-af35-eae38e16321d"></unicode>
+    <string role="key" value="language"></string>
+    <unicode value="ca"></unicode>
+    <string role="key" value="publisher"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="relation"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="rights"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="source"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="subject"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="title"></string>
+    <unicode value="8. Correu electrònic"></unicode>
+    <string role="key" value="type"></string>
+    <unicode value=""></unicode>
+   </dictionary>
+  </instance>
+  <string role="key" value="exe.engine.package.Package.persistenceVersion"></string>
+  <int value="16"></int>
+  <string role="key" value="exportMetadataType"></string>
+  <string value="LOMES"></string>
+  <string role="key" value="exportSource"></string>
+  <bool value="1"></bool>
+  <string role="key" value="footer"></string>
+  <string value=""></string>
+  <string role="key" value="isLoading"></string>
+  <bool value="0"></bool>
+  <string role="key" value="license"></string>
+  <unicode value="creative commons: attribution - share alike 4.0"></unicode>
+  <string role="key" value="lom"></string>
+  <instance class="exe.engine.lom.lomsubs.lomSub">
+   <dictionary>
+    <string role="key" value="__index__"></string>
+    <dictionary></dictionary>
+    <string role="key" value="__oldchild__"></string>
+    <none></none>
+    <string role="key" value="annotation"></string>
+    <list></list>
+    <string role="key" value="classification"></string>
+    <list></list>
+    <string role="key" value="educational"></string>
+    <list>
+     <instance class="exe.engine.lom.lomsubs.educationalSub">
+      <dictionary>
+       <string role="key" value="cognitiveProcess"></string>
+       <list></list>
+       <string role="key" value="context"></string>
+       <list></list>
+       <string role="key" value="description"></string>
+       <list></list>
+       <string role="key" value="difficulty"></string>
+       <none></none>
+       <string role="key" value="intendedEndUserRole"></string>
+       <list></list>
+       <string role="key" value="interactivityLevel"></string>
+       <none></none>
+       <string role="key" value="interactivityType"></string>
+       <none></none>
+       <string role="key" value="language"></string>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="ca"></string>
+         </dictionary>
+        </instance>
+       </list>
+       <string role="key" value="learningResourceType"></string>
+       <list></list>
+       <string role="key" value="semanticDensity"></string>
+       <none></none>
+       <string role="key" value="typicalAgeRange"></string>
+       <list></list>
+       <string role="key" value="typicalLearningTime"></string>
+       <none></none>
+      </dictionary>
+     </instance>
+    </list>
+    <string role="key" value="general"></string>
+    <instance class="exe.engine.lom.lomsubs.generalSub">
+     <dictionary>
+      <string role="key" value="aggregationLevel"></string>
+      <instance class="exe.engine.lom.lomsubs.aggregationLevelSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOMv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="aggregationLevel"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.aggregationLevelValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="2"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="coverage"></string>
+      <list></list>
+      <string role="key" value="description"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.descriptionSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="string"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.LangStringSub">
+           <dictionary>
+            <string role="key" value="language"></string>
+            <string value="ca"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="Unitat did\xc3\xa0ctica de correu electr\xc3\xb2nic"></string>
+           </dictionary>
+          </instance>
+         </list>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.identifierSub">
+        <dictionary>
+         <string role="key" value="catalog"></string>
+         <instance class="exe.engine.lom.lomsubs.catalogSub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="catalog"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="El meu catàleg"></unicode>
+          </dictionary>
+         </instance>
+         <string role="key" value="entry"></string>
+         <instance class="exe.engine.lom.lomsubs.entrySub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="entry"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="0c41d793-2e2d-4295-af35-eae38e16321d"></unicode>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="keyword"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="valueOf_"></string>
+         <string value="ca"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="structure"></string>
+      <none></none>
+      <string role="key" value="title"></string>
+      <instance class="exe.engine.lom.lomsubs.titleSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="string"></string>
+        <list>
+         <instance class="exe.engine.lom.lomsubs.LangStringSub">
+          <dictionary>
+           <string role="key" value="language"></string>
+           <string value="ca"></string>
+           <string role="key" value="valueOf_"></string>
+           <string value="8. Correu electr\xc3\xb2nic"></string>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="uniqueElementName"></string>
+        <none></none>
+       </dictionary>
+      </instance>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="general"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="lifeCycle"></string>
+    <instance class="exe.engine.lom.lomsubs.lifeCycleSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <instance class="exe.engine.lom.lomsubs.dateSub" reference="43">
+          <dictionary>
+           <string role="key" value="dateTime"></string>
+           <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
+            <dictionary>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="dateTime"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="2019-02-12T16:31:17.00+01:00"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="description"></string>
+           <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list>
+              <instance class="exe.engine.lom.lomsubs.LangStringSub">
+               <dictionary>
+                <string role="key" value="language"></string>
+                <string value="ca"></string>
+                <string role="key" value="valueOf_"></string>
+                <string value="Data de creaci\xc3\xb3 de les metadades"></string>
+               </dictionary>
+              </instance>
+             </list>
+            </dictionary>
+           </instance>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="uniqueElementName"></string>
+           <none></none>
+           <string role="key" value="valueOf_"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+         <string role="key" value="entity"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.entitySub" reference="44">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="BEGIN:VCARD VERSION:3.0 FN:Vicent Jord\xc3\xa0 EMAIL;TYPE=INTERNET: ORG: END:VCARD"></string>
+           </dictionary>
+          </instance>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub" reference="45">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list></list>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="source"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="LOMv1.0"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="author"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="status"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <none></none>
+      <string role="key" value="version"></string>
+      <none></none>
+     </dictionary>
+    </instance>
+    <string role="key" value="metaMetadata"></string>
+    <instance class="exe.engine.lom.lomsubs.metaMetadataSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeMetaSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <reference key="43"></reference>
+         <string role="key" value="entity"></string>
+         <list>
+          <reference key="44"></reference>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <reference key="45"></reference>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="creator"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="valueOf_"></string>
+        <string value="ca"></string>
+       </dictionary>
+      </instance>
+      <string role="key" value="metadataSchema"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.metadataSchemaSub">
+        <dictionary>
+         <string role="key" value="valueOf_"></string>
+         <string value="LOMv1.0"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="metaMetadata"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="relation"></string>
+    <list></list>
+    <string role="key" value="rights"></string>
+    <instance class="exe.engine.lom.lomsubs.rightsSub">
+     <dictionary>
+      <string role="key" value="access"></string>
+      <none></none>
+      <string role="key" value="copyrightAndOtherRestrictions"></string>
+      <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOMv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="copyrightAndOtherRestrictions"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="yes"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="cost"></string>
+      <none></none>
+      <string role="key" value="description"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <none></none>
+     </dictionary>
+    </instance>
+    <string role="key" value="technical"></string>
+    <none></none>
+   </dictionary>
+  </instance>
+  <string role="key" value="lomEs"></string>
+  <instance class="exe.engine.lom.lomsubs.lomSub">
+   <dictionary>
+    <string role="key" value="__index__"></string>
+    <dictionary></dictionary>
+    <string role="key" value="__oldchild__"></string>
+    <none></none>
+    <string role="key" value="annotation"></string>
+    <list></list>
+    <string role="key" value="classification"></string>
+    <list></list>
+    <string role="key" value="educational"></string>
+    <list>
+     <instance class="exe.engine.lom.lomsubs.educationalSub">
+      <dictionary>
+       <string role="key" value="cognitiveProcess"></string>
+       <list></list>
+       <string role="key" value="context"></string>
+       <list></list>
+       <string role="key" value="description"></string>
+       <list></list>
+       <string role="key" value="difficulty"></string>
+       <none></none>
+       <string role="key" value="intendedEndUserRole"></string>
+       <list></list>
+       <string role="key" value="interactivityLevel"></string>
+       <none></none>
+       <string role="key" value="interactivityType"></string>
+       <none></none>
+       <string role="key" value="language"></string>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="ca"></string>
+         </dictionary>
+        </instance>
+       </list>
+       <string role="key" value="learningResourceType"></string>
+       <list></list>
+       <string role="key" value="semanticDensity"></string>
+       <none></none>
+       <string role="key" value="typicalAgeRange"></string>
+       <list></list>
+       <string role="key" value="typicalLearningTime"></string>
+       <none></none>
+      </dictionary>
+     </instance>
+    </list>
+    <string role="key" value="general"></string>
+    <instance class="exe.engine.lom.lomsubs.generalSub">
+     <dictionary>
+      <string role="key" value="aggregationLevel"></string>
+      <instance class="exe.engine.lom.lomsubs.aggregationLevelSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOM-ESv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="aggregationLevel"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.aggregationLevelValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="2"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="coverage"></string>
+      <list></list>
+      <string role="key" value="description"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.descriptionSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="string"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.LangStringSub">
+           <dictionary>
+            <string role="key" value="language"></string>
+            <string value="ca"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="Unitat did\xc3\xa0ctica de correu electr\xc3\xb2nic"></string>
+           </dictionary>
+          </instance>
+         </list>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.identifierSub">
+        <dictionary>
+         <string role="key" value="catalog"></string>
+         <instance class="exe.engine.lom.lomsubs.catalogSub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="catalog"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="El meu catàleg"></unicode>
+          </dictionary>
+         </instance>
+         <string role="key" value="entry"></string>
+         <instance class="exe.engine.lom.lomsubs.entrySub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="entry"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="0c41d793-2e2d-4295-af35-eae38e16321d"></unicode>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="keyword"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="valueOf_"></string>
+         <string value="ca"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="structure"></string>
+      <none></none>
+      <string role="key" value="title"></string>
+      <instance class="exe.engine.lom.lomsubs.titleSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="string"></string>
+        <list>
+         <instance class="exe.engine.lom.lomsubs.LangStringSub">
+          <dictionary>
+           <string role="key" value="language"></string>
+           <string value="ca"></string>
+           <string role="key" value="valueOf_"></string>
+           <string value="8. Correu electr\xc3\xb2nic"></string>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="uniqueElementName"></string>
+        <none></none>
+       </dictionary>
+      </instance>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="general"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="lifeCycle"></string>
+    <instance class="exe.engine.lom.lomsubs.lifeCycleSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <instance class="exe.engine.lom.lomsubs.dateSub" reference="46">
+          <dictionary>
+           <string role="key" value="dateTime"></string>
+           <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
+            <dictionary>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="dateTime"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="2019-02-12T16:31:17.00+01:00"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="description"></string>
+           <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list>
+              <instance class="exe.engine.lom.lomsubs.LangStringSub">
+               <dictionary>
+                <string role="key" value="language"></string>
+                <string value="ca"></string>
+                <string role="key" value="valueOf_"></string>
+                <string value="Data de creaci\xc3\xb3 de les metadades"></string>
+               </dictionary>
+              </instance>
+             </list>
+            </dictionary>
+           </instance>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="uniqueElementName"></string>
+           <none></none>
+           <string role="key" value="valueOf_"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+         <string role="key" value="entity"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.entitySub" reference="47">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="BEGIN:VCARD VERSION:3.0 FN:Vicent Jord\xc3\xa0 EMAIL;TYPE=INTERNET: ORG: END:VCARD"></string>
+           </dictionary>
+          </instance>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub" reference="48">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list></list>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="source"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="LOM-ESv1.0"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="author"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="status"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <none></none>
+      <string role="key" value="version"></string>
+      <none></none>
+     </dictionary>
+    </instance>
+    <string role="key" value="metaMetadata"></string>
+    <instance class="exe.engine.lom.lomsubs.metaMetadataSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeMetaSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <reference key="46"></reference>
+         <string role="key" value="entity"></string>
+         <list>
+          <reference key="47"></reference>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <reference key="48"></reference>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="creator"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="valueOf_"></string>
+        <string value="ca"></string>
+       </dictionary>
+      </instance>
+      <string role="key" value="metadataSchema"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.metadataSchemaSub">
+        <dictionary>
+         <string role="key" value="valueOf_"></string>
+         <string value="LOM-ESv1.0"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="metaMetadata"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="relation"></string>
+    <list></list>
+    <string role="key" value="rights"></string>
+    <instance class="exe.engine.lom.lomsubs.rightsSub">
+     <dictionary>
+      <string role="key" value="access"></string>
+      <instance class="exe.engine.lom.lomsubs.accessSub">
+       <dictionary>
+        <string role="key" value="accessType"></string>
+        <instance class="exe.engine.lom.lomsubs.accessTypeSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOM-ESv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="accessType"></string>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.accessTypeValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="universal"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+        <string role="key" value="description"></string>
+        <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list>
+           <instance class="exe.engine.lom.lomsubs.LangStringSub">
+            <dictionary>
+             <string role="key" value="language"></string>
+             <string value="ca"></string>
+             <string role="key" value="valueOf_"></string>
+             <unicode value="Per defecte"></unicode>
+            </dictionary>
+           </instance>
+          </list>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="access"></string>
+       </dictionary>
+      </instance>
+      <string role="key" value="copyrightAndOtherRestrictions"></string>
+      <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOM-ESv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="copyrightAndOtherRestrictions"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="creative commons: attribution - share alike"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="cost"></string>
+      <none></none>
+      <string role="key" value="description"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="rights"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="technical"></string>
+    <none></none>
+   </dictionary>
+  </instance>
+  <string role="key" value="mxmlforcemediaonly"></string>
+  <bool value="0"></bool>
+  <string role="key" value="mxmlheight"></string>
+  <string value=""></string>
+  <string role="key" value="mxmlprofilelist"></string>
+  <string value=""></string>
+  <string role="key" value="mxmlwidth"></string>
+  <string value=""></string>
+  <string role="key" value="resources"></string>
+  <dictionary>
+   <string role="key" value="1304bb34142a5b06069716da52c7543f"></string>
+   <list>
+    <reference key="13"></reference>
+    <reference key="49"></reference>
+    <reference key="50"></reference>
+   </list>
+   <string role="key" value="5d0bb04f42751dc17734a277e4a740eb"></string>
+   <list>
+    <reference key="8"></reference>
+    <reference key="51"></reference>
+    <reference key="52"></reference>
+   </list>
+   <string role="key" value="765f7cf94d12e480a540110806e31342"></string>
+   <list>
+    <reference key="9"></reference>
+    <reference key="53"></reference>
+    <reference key="54"></reference>
+   </list>
+  </dictionary>
+  <string role="key" value="root"></string>
+  <reference key="3"></reference>
+  <string role="key" value="scolinks"></string>
+  <bool value="0"></bool>
+  <string role="key" value="scowsinglepage"></string>
+  <bool value="0"></bool>
+  <string role="key" value="scowwebsite"></string>
+  <bool value="0"></bool>
+  <string role="key" value="style"></string>
+  <unicode value="Todo-FP"></unicode>
+  <string role="key" value="sugaractivityname"></string>
+  <string value=""></string>
+  <string role="key" value="sugarservicename"></string>
+  <string value=""></string>
+  <string role="key" value="tempFile"></string>
+  <bool value="0"></bool>
+ </dictionary>
+</instance>

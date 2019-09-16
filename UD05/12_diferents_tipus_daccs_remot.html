@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. Diferents tipus d'accés remot </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Serveis de control i accés remot</a></li>
+   <li class="current-page-parent"><a href="1_introducci.html" class="current-page-parent daddy">1. Introducció</a>
+   <ul>
+      <li><a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="no-ch">1.1. Usos més freqüents de l'accés remot a ordinadors</a></li>
+      <li id="active"><a href="12_diferents_tipus_daccs_remot.html" class="active no-ch">1.2. Diferents tipus d'accés remot</a></li>
+   </ul>
+   </li>
+   <li><a href="2_accs_remot_amb_lnia_dordres.html" class="daddy">2. Accés remot amb línia d'ordres</a>
+   <ul class="other-section">
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introducci_a_la_criptografia.html" class="no-ch">2.2. Introducció a la criptografia</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_installaci_del_servei_telnet.html" class="no-ch">Pràctica 1: Instal·lació del servei Telnet</a></li>
+      <li><a href="prctica_2_installaci_del_servei_ssh.html" class="no-ch">Pràctica 2: Instal·lació del servei SSH</a></li>
+   </ul>
+   </li>
+   <li><a href="3_accs_remot_amb_interfcie_grfica.html" class="daddy">3. Accés remot amb interfície gràfica</a>
+   <ul class="other-section">
+      <li><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="no-ch">Pràctica 3: Accés remot amb terminal gràfic</a></li>
+   </ul>
+   </li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="2_accs_remot_amb_lnia_dordres.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.2. Diferents tipus d'accés remot</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id2">
+<div class="iDevice emphasis0">
+<div id="ta2_85" class="block iDevice_content">
+<p>Les tasques d’accés i administració remots es poden dur a terme amb mitjans diferents, però sempre estaran condicionats per la xarxa que connecta l’equip que cal administrar amb l’estació on està l’administrador.</p>
+<p>La xarxa imposarà condicions de:</p>
+<ul>
+<li><strong>Capacitat</strong>: si la connexió no té una amplada de banda suficient no serà pràctic treballar amb una interfície gràfica remota. Com més augmenti el retard en la xarxa més frustrant serà el treball interactiu.</li>
+<li><strong>Seguretat</strong>: és obvi que la comunicació entre l’administrador i l’equip remot no ha de ser interceptada per altres usuaris de la xarxa.</li>
+</ul>
+<p>Els diferents mitjans d’administració remota es poden classificar en tres categories bàsiques:</p>
+<ul>
+<li>Sessió de treball a la consola</li>
+<li>Sessió de treball amb interfície gràfica</li>
+<li>Client o eina d’administració local</li>
+</ul>
+<p>Cada categoria té els seus punts forts i febles. Una <strong>sessió de treball a la consola mitjançant SSH</strong>, o l’obsolet i insegur Telnet, no exigeix grans capacitats a la xarxa. És el mètode més lleuger i fins i tot es pot utilitzar amb comoditat per administrar màquines molt distants o amb xarxes de capacitat escassa. A més, és relativament senzill automatitzar tasques mitjançant guions de programació per repetir les mateixes operacions en un conjunt de màquines.</p>
+<p>L’<strong>administració remota amb interfície gràfica</strong> permet obrir a l’estació local finestres d’aplicacions que s’executen en el servidor remot. Fins i tot permet veure l’escriptori complet de l’estació remota. Tot i que pot ser un mètode de treball còmode, requereix capacitats de la xarxa que normalment només es troben disponibles dins d’una LAN. <br /><br />Emprar una <strong>eina d’administració local</strong> feta a mida, com un assistent per configurar una impressora remota, o genèrica, com un navegador web, intenta conjugar punts forts de les dues tècniques anteriors. En aquest cas l’administrador dialoga amb una aplicació local o una pàgina web i no necessita recordar ordres. A més, donat que la representació gràfica es produeix localment no s’exigeix gran capacitat a la xarxa. El problema de les eines específiques és que es tracta d’un programari que cal instal·lar a cada estació que l’administrador vulgui emprar. Sovint aquesta eina només està disponible per a un sistema operatiu o per a una versió determinada d’aquest. Aquest problema s’obvia amb les interfícies web, ja que un navegador web és un programari comú que es troba en tots els equips. En la taula.1 podeu veure un resum dels principals avantatges i inconvenients.</p>
+<table class="exe-table">
+<tbody>
+<tr>
+<td><strong>Mètode d'administració</strong></td>
+<td><strong class=" exe-table-minimalist">Avantatges</strong></td>
+<td><strong>Inconvenients</strong></td>
+</tr>
+<tr>
+<td>Treball a la línia d’ordres</td>
+<td>
+<p>Requisits mínims per a la xarxa. És flexible i es pot automatitzar.</p>
+</td>
+<td>Cal conèixer la sintaxi i recordar les ordres</td>
+</tr>
+<tr>
+<td>Interfície gràfica</td>
+<td>Visual i flexible. No cal recordar ordres.</td>
+<td>Imposa requisits de capacitat a la xarxa</td>
+</tr>
+<tr>
+<td>Client local</td>
+<td>Visual i flexible. No cal recordar ordres. No consumeix gaires recursos a la xarxa. Si no es tracta d’una interfície web, cal instal·lar programari.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>En l'actualitat algunes de les ferramentes d'administració remota més utilitzades són:</p>
+<ul>
+<li>En mode text (línia d'ordres): telnet, Secure Shell (SSH).</li>
+<li>En mode gràfic (interfície gràfica): VNC, Terminal Server.</li>
+<li>Client local (interfícies web): La majoria de dispositius disposen d'un servidor web lleuger que permet la seua configuració. També hi ha aplicacions com Webmin per a servidor basats en Linux.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="2_accs_remot_amb_lnia_dordres.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

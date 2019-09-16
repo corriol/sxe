@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Accés remot amb interfície gràfica </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="en" />
+<meta name="generator" content="eXeLearning 2.2ppa1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Serveis de control i accés remot</a></li>
+   <li><a href="1_introducci.html" class="daddy">1. Introducció</a>
+   <ul class="other-section">
+      <li><a href="11_usos_ms_freqents_de_laccs_remot_a_ordinadors.html" class="no-ch">1.1. Usos més freqüents de l'accés remot a ordinadors</a></li>
+      <li><a href="12_diferents_tipus_daccs_remot.html" class="no-ch">1.2. Diferents tipus d'accés remot</a></li>
+   </ul>
+   </li>
+   <li><a href="2_accs_remot_amb_lnia_dordres.html" class="daddy">2. Accés remot amb línia d'ordres</a>
+   <ul class="other-section">
+      <li><a href="21_telnet.html" class="no-ch">2.1. Telnet</a></li>
+      <li><a href="22_introducci_a_la_criptografia.html" class="no-ch">2.2. Introducció a la criptografia</a></li>
+      <li><a href="23_secure_shell_ssh.html" class="no-ch">2.3. Secure SHell (SSH)</a></li>
+      <li><a href="prctica_1_installaci_del_servei_telnet.html" class="no-ch">Pràctica 1: Instal·lació del servei Telnet</a></li>
+      <li><a href="prctica_2_installaci_del_servei_ssh.html" class="no-ch">Pràctica 2: Instal·lació del servei SSH</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="3_accs_remot_amb_interfcie_grfica.html" class="active daddy">3. Accés remot amb interfície gràfica</a>
+   <ul>
+      <li><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="no-ch">Pràctica 3: Accés remot amb terminal gràfic</a></li>
+   </ul>
+   </li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_installaci_del_servei_ssh.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3. Accés remot amb interfície gràfica</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id8">
+<div class="iDevice emphasis0">
+<div id="ta8_154" class="block iDevice_content">
+<p>Si la xarxa de comunicacions té una amplada de banda suficient i un retard raonable, es poden fer servir eines que permeten treballar amb aplicacions que s’executen en un equip remot però mostren la seva interfície gràfica en un terminal local.</p>
+<p>És possible que tot l’escriptori visualitzat es correspongui amb l’escriptori d’un equip remot o combinar en el mateix escriptori aplicacions locals i remotes. En aquest últim cas, fins i tot les aplicacions remotes es poden estar executant en diferents equips.</p>
+<p>Hi ha diferents eines i protocols per dur a terme l’administració remota mitjançant una interfície gràfica. En tots els casos la seguretat ha de ser un punt fonamental que cal considerar, atès que per la mateixa funció de l’aplicació estarem transportant per la xarxa l’entrada/sortida amb l’equip remot.</p>
+<p>Algunes de les possibilitats per dur a terme l’administració mitjançant una interfície gràfica són:</p>
+<ul>
+<li>VNC</li>
+<li>FreeNX</li>
+<li>RDP</li>
+</ul>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_154" class="block iDevice_content">
+<h2>VNC (Virtual Network Computing)</h2>
+<p>VNC és un sistema per veure, i si s’escau també controlar, un escriptori remot. Originalment va ser desenvolupat per Olivetti i hi ha implementacions gratuïtes de les eines que permeten treballar amb VNC en sistemes operatius diferents.</p>
+<p>Aquesta aplicació permet accedir des d’un ordinador anomenat client a un altre ordinador anomenat servidor, separats físicament però, no obstant això, connectats mitjançant una xarxa. Un cop s’ha establert la comunicació, l’equip client pot utilitzar l’equip servidor sense cap limitació, llevat de les imposades per l’amplada de banda de la xarxa. El resultat és una visualització en pantalla de l’equip remot, de l’escriptori i de tots els seus programes. Per aconseguir això, cal instal·lar dos programes: un servidor VNC en la màquina a la qual vulguem accedir i un visualitzador VNC en la màquina client. Si utilitzem un visualitzador en un sistema operatiu donat i un servidor en un altre de diferent, executarem tot el sistema servidor en el client. D’aquesta manera, és possible executar un sistema Windows complet des d’un Macintosh o GNU / Linux, o fer qualsevol combinació que puguem imaginar. Com es pot veure en la figura 34, es pot executar un sistema GNU/Linux des d’un equip amb el sistema operatiu MacOS o Windows.</p>
+<h3>Funcionament del protocol VNC</h3>
+<p>El protocol de xarxa que es fa servir, RFB (r<em>emote framebuffer protocol</em>), també és lliure. Malgrat que les funcions inicials del protocol RFB es limitaven a transmetre els esdeveniments desencadenats per l’usuari en el teclat i el ratolí locals a l’estació remota, i a enviar en direcció contrària el contingut gràfic de la pantalla, les darreres versions han estat ampliades per suportar més funcionalitats, com per exemple la transferència de fitxers.</p>
+<p>La memòria d’imatge (<em>framebuffer</em>) és l’àrea de memòria que emmagatzema les dades que defineixen la imatge gràfica que apareix a la pantalla. Normalment totes les pantalles actuals estan basades en píxels, és a dir, mostren mapes de bits en comptes d’imatges vectorials.</p>
+<p>La memòria d’imatge conté la informació necessària per definir l’estat de cada píxel de la pantalla. La quantitat d’informació necessària dependrà de la resolució i la profunditat de color (la quantitat de bits necessaris per codificar el color, i potser la transparència, de cada píxel).</p>
+<p>Donat que VNC està basat en una memòria d’imatge, pot treballar amb qualsevol sistema de finestres, ja sigui X Window, Windows o un altre. En aquest sistema sempre s’anomena client l’estació en què es troba l’usuari (equip local) i es denomina servidor l’equip que defineix el contingut de la pantalla (equip remot). Aquesta nomenclatura és inversa a la que utilitza el sistema X Window.</p>
+<p>Tot el sistema està pensat per treballar amb clients lleugers de manera que el client es pugui implementar sense gaires recursos. De fet tot el protocol i el funcionament del sistema intenten ser molt senzills. El pilar fonamental són les actualitzacions gràfiques que el servidor envia cap al client, en forma de rectangles, per modificar les dades de la memòria d’imatge. Aquests missatges poden emprar diferents codificacions, però n’hi ha unes de bàsiques que tots els clients i servidors VNC han de conèixer.</p>
+<p>Una característica fonamental del sistema VNC és que el client no conserva cap estat. Així és possible tancar un client i tornar-lo a obrir, fins i tot en un altre equip, com si es tractés d’un monitor virtual.</p>
+<p>En els sistemes GNU/Linux és possible exportar mitjançant VNC l’escriptori actual o fins i tot un terminal de text, o bé crear un escriptori virtual nou. Els sistemes Windows no permeten la creació d’escriptoris virtuals nous, només permeten exportar en xarxa l’únic escriptori disponible. En el moment d’exportar un escriptori es poden definir dues contrasenyes diferents, una per a aquells usuaris que podran controlar de manera remota aquest escriptori i una altra per a aquells usuaris que només el podran veure, però no interactuar amb el teclat i el ratolí.</p>
+<p>El procés per fer servir VNC és molt simple:</p>
+<ol>
+<li>En l’estació remota cal executar un servidor VNC per exportar l’escriptori de treball o un de nou.</li>
+<li>En l’estació local es farà servir un client VNC per interactuar amb el servidor remot. Cal observar que RFB no és un protocol segur. En fer servir VNC en una xarxa que no sigui de confiança, caldrà combinar el seu ús amb SSH o una altra tecnologia per crear una VPN. </li>
+</ol>
+<p>La major part de servidors VNC inclou un petit servidor web que ofereix la descàrrega d’una miniaplicació Java que es pot fer servir com a client VNC. D’aquesta manera, en l’ordinador local només cal un navegador amb suport Java per poder accedir a l’escriptori remot.</p>
+<p>GPL: La llicència pública general (GPL, de l’anglès general public license) és un tipus de llicència per a programari que permet la còpia, distribució (comercial o no) i modificació del codi, sempre que qualsevol modificació es continuï distribuint amb la mateixa llicència GPL. La llicència GPL no permet la distribució de programes executables sense el codi font corresponent ni amb una oferta de com obtenir-lo gratuïtament.</p>
+<h3>VNC, moltes eines i diferents implementacions</h3>
+<p>Si el desenvolupament original de VNC té algun hereu oficial, aquest és RealVNC. Un producte desenvolupat per la companyia del mateix nom que està formada per alguns dels desenvolupadors originals. Les eines de RealVNC s’ofereixen amb llicències diferents: l’edició Free, sota llicència GPL i la resta, amb llicències privatives.</p>
+<p>Una altra implementació força estesa és TightVNC, programari lliure amb llicència GPL que, tot i que és plenament compatible amb les eines originals, introdueix algunes extensions al protocol RFB. Aquestes extensions només es podran emprar en fer servir TightVNC, tant en client com en el servidor. Entre les extensions introduïdes per TightVNC hi ha codificacions noves que redueixen la càrrega de la xarxa i la possibilitat de transmetre fitxers.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id10">
+<div class="iDevice emphasis0">
+<div id="ta10_154" class="block iDevice_content">
+<h2>RDP (Remote Desktop Protocol)</h2>
+<p><em>Remote Desktop Protoco</em>l (RDP) és un protocol propietari desenvolupat per Microsoft que permet la comunicació en l'execució d'una aplicació entre un terminal (mostrant la informació processada que rep del servidor) i un servidor Windows (rebent la informació donada per l'usuari al terminal mitjançant el ratolí o el teclat).</p>
+<p>La manera de funcionament del protocol és senzill. La informació gràfica que genera el servidor és convertida a un format propi RDP i enviada a través de la xarxa al terminal, que interpretarà la informació continguda en el paquet del protocol per reconstruir la imatge a mostrar a la pantalla del terminal. Pel que fa a la introducció d'ordres en el terminal per part de l'usuari, les tecles que premi el usuari en el teclat del terminal així com els moviments i pulsacions de ratolí són redirigits al servidor, permetent el protocol un xifrat dels mateixos per motius de seguretat. El protocol també permet que tota la informació que intercanviïn client i servidor sigui comprimida per a un millor rendiment en les xarxes menys veloços.</p>
+<p>Aquest servei utilitza per defecte el port TCP 3389 al servidor per rebre les peticiones.1 Un cop iniciada la sessió des d'un punt remot l'ordinador servidor mostrarà la pantalla de benvinguda de Windows, no es veurà el que l'usuari està realitzant de forma remota .</p>
+<p>Aquest servei té diferents tipus d'aplicacions: s'utilitza freqüentment per a l'accés remot a l'administració d'equips, però també és cada vegada més utilitzat en la gestió de serveis de terminal o clients lleugers (<em>thin clients</em>).</p>
+<h2>Característiques</h2>
+<ul>
+<li>Permet l'ús de colors de 8, 16, 24 i 32 bits.</li>
+<li>Xifrat de 128 bits utilitzant l'algoritme criptogràfic RC4. Els clients més antics poden utilitzar xifrats més febles.</li>
+<li>Permet seguretat a nivell de transport Transport Layer Security (TLS).</li>
+<li>El redireccionament de l'àudio permet a l'usuari executar un programa d'àudio en una finestra remota i escoltar el so a l'ordinador local.</li>
+<li>El redireccionament del sistema de fitxers permet als usuaris utilitzar els seus fitxers locals en una finestra remota.</li>
+<li>Permet a l'usuari utilitzar la impressora local en estar connectat al sistema remot.</li>
+<li>El redireccionament de ports permet utilitzar els ports sèrie i paral·lel directament.</li>
+<li>El porta-retalls pot compartir-se entre els ordinadors local i remot.</li>
+<li>Programes remots: Aplicacions amb fitxers del costat del client.</li>
+<li>Les aplicacions (<em>seamless windows</em>) remotes poden funcionar en una màquina client servida per una connexió remota.</li>
+<li>Suport de diversos monitors. La sessió pot mostrar-se en dos monitors.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_154" class="block iDevice_content">
+<h2>Team Viewer</h2>
+<p>TeamViewer és un programari que la seva funció és connectar-se remotament a un altre equip. Entre les seves funcions estan: compartir i controlar escriptoris, reunions en línia, videoconferències i transferències d'arxius entre ordinadors.</p>
+<h3>Característiques</h3>
+<p>TeamViewer està disponible per als sistemes operatius Microsoft Windows, Mac OS X, Linux, iOS, Android, Windows Phone 8, Windows 10 Mobile, BlackBerry i Windows RT. També és possible l'accés a un equip remot mitjançant un navegador web. Encara que el principal objectiu de l'aplicació és el control remot, també inclou funcions de treball en equip i presentació.</p>
+<p>TeamViewer pot ser utilitzat pels usuaris no comercials sense cap tipus de cost , tanmateix disposa de versions Bussines, Premium i Corporate.</p>
+<h3>Funcionament</h3>
+<p>El software es pot instal·lar amb un procediment d'instal·lació ordinari, tot i que la versió "Quick Support" s'executarà sense necessitat d'instal·lació. Per connectar-se a un altre equip, cal que TeamViewer s'executi en ambdues màquines.</p>
+<p>La instal·lació de TeamViewer, requereix accés d'administrador, però un cop instal·lat pot ser executat per qualsevol usuari.</p>
+<p>Quan el programari s'inicia a un ordinador, genera un ID i contrasenya (l'usuari en pot definir una pròpia si ho desitja). Per establir una connexió entre un equip local i un de remot, l'usuari de l'equip local s'ha de posar en contacte amb l'altre i introduir l'ID i contrasenya d'aquest, mentre que l'equip remot requereix l'ID i contrasenya del local, és a dir, a la inversa. </p>
+<p>Per començar una reunió en línia, el moderador proporciona l'ID de la reunió als participants, els quals s'afegeixen a la trobada a partir de la versió completa de TeamViewer o la versió per navegador mitjançant l'ID esmentada. També és possible programar una reunió anticipadament.</p>
+<h3>Seguretat</h3>
+<p>Les sessions de TeamViewer es codifiquen per mitjà de l'algorisme RSA (1024-bit) de xifratge de clau pública, i AES (256-bit). </p>
+<p>A la configuració predeterminada, el programari utilitza un dels servidors de TeamViewer.com per connectar l'equip local i el remot. No obstant, en el 70% dels casos després del d'accedir al protocol d'enllaç, s'estableix una connexió directa via UDP o TCP. La resta de connexions s'enruten a través del router de la xarxa de TeamViewer GmbH (túnnels TCP o HTTP).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id35">
+<div class="iDevice emphasis0">
+<div id="ta35_85" class="block iDevice_content">
+<h2>Escriptori remot de Chrome</h2>
+<p>Chrome Remote Desktop permet als usuaris accedir de manera remota un altre ordinador a través del navegador Chrome o Chromebook. Els ordinadors poden estar disponibles sobre una base ad hoc a curt termini per a escenaris com ara el suport a distància, o sobre una base més a llarg termini per a l'accés remot a les aplicacions i arxius. Totes les connexions estan totalment assegurats.</p>
+<p>Chrome Remote Desktop és totalment multiplataforma. Proporcionar assistència als usuaris de Windows, Mac i Linux remotes, o accedir al seu Windows (XP i superior) i Mac (OS 10.6 i 10 per sobre de) els escriptoris en qualsevol moment, tot això des del navegador Chrome en pràcticament qualsevol dispositiu, incloent els Chromebook.</p>
+<p>Font: <a href="https://alternativeto.net/software/chrome-remote-desktop/">https://alternativeto.net/software/chrome-remote-desktop/</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_2_installaci_del_servei_ssh.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="prctica_3_accs_remot_amb_terminal_grfic.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>
