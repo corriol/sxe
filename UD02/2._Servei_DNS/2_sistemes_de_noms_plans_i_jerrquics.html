@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Sistemes de noms plans i jeràrquics | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-41"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servei DNS</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li id="active"><a href="2_sistemes_de_noms_plans_i_jerrquics.html" class="active no-ch">2. Sistemes de noms plans i jeràrquics</a></li>
+   <li><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="daddy">3. Zones primàries i secundaries. Transferències de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servidor DNS de reenviament</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resoluci_de_noms.html" class="daddy">4. Resolució de noms</a>
+   <ul class="other-section">
+      <li><a href="41_consultes_recursives.html" class="no-ch">4.1. Consultes recursives</a></li>
+      <li><a href="42_consultes_iteratives.html" class="no-ch">4.2. Consultes iteratives</a></li>
+      <li><a href="43_resoluci_inversa.html" class="no-ch">4.3. Resolució inversa</a></li>
+      <li><a href="44_servidors_arrel.html" class="no-ch">4.4. Servidors arrel</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li><a href="5_tipus_de_registres.html" class="daddy">5. Tipus de registres</a>
+   <ul class="other-section">
+      <li><a href="51_registres_de_recurs.html" class="no-ch">5.1. Registres de recurs</a></li>
+      <li><a href="52_registre_soa.html" class="no-ch">5.2. Registre SOA</a></li>
+      <li><a href="53_registre_ns.html" class="no-ch">5.3. Registre NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_altres_registres.html" class="no-ch">5.6. Altres registres</a></li>
+      <li><a href="57_exemple_de_zona_directa_i_inversa.html" class="no-ch">5.7. Exemple de zona directa i inversa</a></li>
+      <li><a href="prctica_2_domini_local.html" class="no-ch">Pràctica 2: Domini local</a></li>
+      <li><a href="prctica_3_implementaci_dun_domini_local.html" class="no-ch">Pràctica 3: Implementació d'un domini local</a></li>
+      <li><a href="prctica_4_zona_de_resoluci_inversa.html" class="no-ch">Pràctica 4: Zona de resolució inversa</a></li>
+      <li><a href="prctica_5_configuraci_dun_servidor_secundari.html" class="no-ch">Pràctica 5: Configuració d'un servidor secundari</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evoluci_del_protocol_i_seguretat.html" class="no-ch">6. Evolució del protocol i seguretat</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2. Sistemes de noms plans i jeràrquics</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id77">
+<div class="iDevice emphasis0">
+<div id="ta77_154" class="block iDevice_content">
+<p>El problema d'identificar els equips es produeix des de bon principi de l'existència de les xarxes d'ordinadors i no és específic de les xarxes TCP/IP. Cal un mecanisme en "llenguatge humà" per identificar els equips de la xarxa. En especial els que proporcionen serveis als altres equips i usuaris. En la xarxa inicial ARPANET, els equips ja rebien un nom. Aquests noms es feien públics per mitjà d'un fitxer centralitzat que contenia els noms de tots els equips de la xarxa i la seva identificació. Aquest fitxer era el fitxer <code>hosts.txt</code> (en sistemes GNU/Linux, conegut com a <code>/etc/hosts</code>).</p>
+<p>Exemple de fitxer de noms pla per descriure els àlies d'una xarxa local a la llar:</p>
+<div class="highlighted-code language-clike line-numbers hightlight--">
+<div>
+<pre><code>[root@portatil ~]# cat /etc/hosts
+# Do not remove the following line, or various programs
+# that require network functionality will fail.
+127.0.0.1 localhost.localdomain localhost localhost
+::1 localhost6.localdomain6 localhost6
+192.168.1.1 router routerWF
+192.168.1.31 server1 escriptori pare
+192.168.1.32 estacio1 dormitori mare
+192.168.1.33 estacio2 nen jocs supercrac</code></pre>
+</div>
+</div>
+<div class="destacado">
+<p><strong>Posar noms als ordinadors de casa:</strong></p>
+<p>El fitxer anterior pertany al PC anomenat <strong>portatil</strong> i posa noms "casolans" als altres ordinadors de la família. Així per exemple l'equip 192.168.1.33 es pot anomenar de les quatre maneres diferents que s'indiquen.</p>
+</div>
+<p>En una xarxa petita es pot generar un fitxer amb el nom i identificador IP de tots els hosts, centralitzat en un servidor, i encarregar-se de distribuir còpies d'aquest fitxer a tots els equips de la xarxa. Però aquest model de coneixement no és escalable. Si la xarxa creix és impossible de mantenir. Utilitzar aquest model significaria que hi ha un equip que centralitza els noms de tots els hosts d'Internet en un sol fitxer! D'altra banda, també significaria que aquest fitxer s'ha de repartir entre tots els equips d'Internet perquè sàpiguen com es diuen els altres equips cada cop que hi ha una actualització. Evidentment cal una altra solució.</p>
+<div class="reflexiona">
+<p><strong>Problemes d'actualització d'una xarxa<br /></strong></p>
+<p>Imagineu els problemes que es presenten en voler fer arribar un mateix fitxer a tots els hosts. Hi haurà inconsistències amb equips que han rebut l'actualització i altres que no. El trànsit de copiar el fitxer en cada equip. Un nou equip a Internet vol dir escriure de nou el fitxer i tornar-lo enviar a tothom!</p>
+</div>
+<p>El 1983 sorgeix el <em>Domain Name System</em> (DNS) per aportar una solució escalable i pràctica. El DNS es basa en una base de dades de noms de domini <strong>jeràrquica</strong> i <strong>distribuïda:</strong></p>
+<ul>
+<li><strong>Jeràrquica</strong> perquè cada node depén d' un element pare (domini superior), excepte el node arrel. És a dir s'organitza en una estructura de dominis que es poden compondre de subdominis que també es poden dividir en subdominis i així fins a 127 nivells (originàriament). Aquests dominis són gestionats per servidors DNS responsables de cada <strong>zona</strong>.</li>
+<li><strong>Distribuïda</strong> perquè la informació no està tota junta en un sol repositori central, sinó que la informació es troba repartida per parts en els servidors DNS d'Internet. Cada servidor DNS autoritari conté la base de dades de la seva <strong>zona</strong>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice em_iDevice_orientacionesfpd" id="id78">
+<div class="iDevice emphasis_orientacionesfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_152" class="block iDevice_content">
+<p><strong>Arbres dels sistemes DNS i de fitxers</strong></p>
+<p>El sistema de noms de domini té una estructura similar a l'arbre que s'utilitza per representar un sistema de fitxers. La diferència rau en el fet que les rutes dels sistemes de fitxers s'indiquen des de l'arrel fins al node (per exemple,<code>/etc/bind/bind.conf</code>), i en canvi en el DNS les rutes s'indiquen del node inferior a l'arrel (<code>ns1.serveisenxarxa.org</code>).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id79">
+<div class="iDevice emphasis0">
+<div id="ta79_155" class="block iDevice_content">
+<h2>2.1. Elements de l'espai de noms de domini</h2>
+<p>El servei DNS permet identificar qualsevol equip en la xarxa i assegurar-se que no hi ha col·lisions, és a dir, noms duplicats. Es basa en una estructura jeràrquica de noms en forma d'arbre on l'arrel és el node o domini arrel (.) del qual deriven tots els altres nodes. Aquest es divideix en altres dominis com, per exemple, <code>.com</code>, .<code>edu</code>, .<code>org</code>, .<code>cat</code>, etc. Al seu torn, cada domini es pot dividir en altres subdominis i així successivament. Les rutes s'indiquen començant pel subdomini més avall en la l'arbre cap al node arrel (<code>www.serveisenxarxa.org</code>).</p>
+<p>Els nodes s'identifiquen per un text (el nom de domini) que no es pot repetir en el mateix nivell, però sí en altres llocs de l'arbre de l'espai de noms. El mateix passa amb els fitxers: no hi pot haver dos fitxers amb el mateix nom en el mateix directori, però sí en ubicacions diferents. Un <strong>domini</strong> és el node indicat i tota la resta de l'arbre que penja d'aquest node (penseu en l'exemple d'un directori: si es vol copiar un directori, s'entén que està format pel mateix directori i tots els subdirectoris que conté). S'entén per <strong>espai de noms</strong> el conjunt de tots els dominis que formen l'arbre DNS.</p>
+<div class="exe-block-info">
+<p><strong>Dominis d'alt nivell</strong></p>
+<p>Els següents són exemples de dominis d'alt nivell d'alguns països:</p>
+<ul>
+<li>FR: França.</li>
+<li>AD: Andorra.</li>
+<li>AQ: Antàrtida.</li>
+<li>GB: Gran Bretanya.</li>
+<li>UK: Regne Unit.</li>
+<li>DE: Alemanya.</li>
+<li>NL: Països Baixos.</li>
+<li>AR: Argentina.</li>
+<li>US: Estats Units.</li>
+</ul>
+</div>
+<p>L'estructura en arbre (jeràrquica) de l'espai de noms proporciona un mecanisme d'identificació únic d'un domini. No pot existir cap domini que tinga exactament el mateix nom absolut FQDN (F<em>ull Qualified Domain Name</em> o nom de domini complet). Els dominis es llegeixen des del node a l'arrel. Així un domini que corresponga al departament d'administració de l'organització <code>example.org</code> dins del domini org s'identifica, per exemple, com a <code>admin.example.org</code>. Si ens fixem en el domini anterior, veurem que acaba en punt, és una manera d'indicar el domini arrel. <strong>El domini arrel es defineix com un domini sense etiqueta</strong>, o millor amb la cadena buida com a etiqueta. Això provoca que els dominis que s'indiquin de manera absoluta acabin amb el caràcter punt.</p>
+<figure class="exe-figure exe-image position-center license-copyright" style="width: 408px;">
+<div class="figcaption header"><strong>Exemple de espai de noms de domini</strong></div>
+<img src="1.png" alt="Exemple de espai de noms de domini" title="Exemple de espai de noms de domini" width="408" height="299" />
+<figcaption class="figcaption"><a href="Exemple de espai de noms de domini" target="_blank" class="title" rel="noopener noreferrer"><em>Exemple de espai de noms de domini</em></a> <span class="license"><span class="sep">(</span><span>Tots els drets reservats</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p>
+<div class="exe-block-info">
+<p><strong>El punt final en els noms de domini</strong></p>
+<p>La majoria de vegades escrivim els dominis com si foren absoluts, però són relatius al node arrel perquè no posem el punt final. Un altre cop es pot fer l'analogia amb les rutes relatives i les rutes absolutes del sistema de fitxers.</p>
+<p></p>
+</div>
+<p>Un <strong>domini absolut</strong> o FQDN és el que inclou tots els nodes des del domini fins a l'arrel (inclosa en forma de punt final). Un <strong>domini relatiu</strong> no inclou l'arrel i pot ser relatiu al domini actual. Per exemple, dins del domini <code>serveisenxarxa.org</code> del domini moodle (de l'aula virtual) és un nom relatiu que fa referència al nom absolut <code>moodle.serveisenxarxa.org</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id81">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Cal que recordes</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_129" class="block iDevice_content">
+<p>El sistema de noms de domini d'Internet DNS utilitza els elements següents:</p>
+<ul>
+<li><strong>Espai de noms.</strong> El conjunt de tots els dominis que formen l'arbre de dominis.</li>
+<li><strong>Nom de domini</strong>. Text identificatiu d'un domini.</li>
+<li><strong>Domini absolut (FQDN)</strong>. Nom de domini absolut començant pel node i acabant en l'arrel (.).</li>
+<li><strong>Domini relatiu</strong>. Nom de domini sense qualificar.</li>
+<li><strong>Domini arrel</strong>. Domini del qual deriven tots els altres. S'indica amb un punt o amb la cadena buida.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id80">
+<div class="iDevice emphasis0">
+<div id="ta80_155" class="block iDevice_content">
+<h3>Els noms de domini d'Internet</h3>
+<p>A Internet els noms de dominis segueixen una estructura basada en els seus inicis, però que ha anat evolucionant. El node arrel es va dividir en un conjunt de subdominis anomenats TLD (<em>top level domains</em> o dominis d'alt nivell). Aquests dominis eren <code>com</code>, <code>edu</code>, <code>gov</code>, <code>mil</code>, <code>org</code>, <code>net</code> i <code>int</code>. Posteriorment se'n van afegir d'altres com <code>cat</code>, <code>name</code>, <code>biz</code>, <code>info</code>, <code>pro</code>, <code>aero</code>, <code>coop</code> i <code>museum</code>. Es volien organitzar els dominis per funcionalitat posant les empreses en els .com, les organitzacions en els .org, etc. Es va veure, però, la necessitat de poder agrupar els dominis de manera geogràfica (ccTLD, <em>country code top level domains</em>) i van sorgit els famosos identificadors de país. Per a cada país es va generar un TLD de dos caràcters utilitzant el ja existent estàndard internacional ISO 3166 (els famosos .es, .fr, etc.).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id82">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Cal que conegues</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta82_129" class="block iDevice_content">
+<p><strong>Caràcters en els noms de domini</strong></p>
+<p>L'estàndard DNS indica que els noms de domini han de ser de seixanta-quatre caràcters com a màxim, i només poden incloure caràcters llatins, dígits del 0 al 9 i el guió. Les majúscules i minúscules són indiferents. Hi ha mecanismes com l'IDNA (<em>an internationalized domain name</em> o noms de domini internacionalitzats) per permetre utilitzar altres alfabets en els noms de domini.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id83">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Per saber més</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta83_128" class="block iDevice_content">
+<p><strong>Origen dels noms de domini</strong></p>
+<p>Si ens fixem en els primers dominis d’alt nivell, estaven basats en una visió estatunidenca del món (de fet la xarxa ARPANET base de l’actual Internet era seva). En estendre Internet globalment i aparèixer dominis d’alt nivell geogràfics, moltes organitzacions es van registrar en més d’un domini (per exemple, empresa.com i empresa.cat).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice em_iDevice_activity" id="id3">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Qüestionari</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_101_2" class="block iDevice_content">
+<ol>
+<li>Quins avantatges té DNS respecte a l'utilització del fitxer hosts?</li>
+<li>Recorda el format de les URLs. Indica totes les parts que formen la URL. Posa diversos exemples amb diferents protocols.</li>
+<li>Què són els TLDs?</li>
+<li>Elabora una taula resum sobre els TLDs diferenciant els regionals i genèrics i incloent exemples aclaridors.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id4">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Cas pràctic: fitxer hosts</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_148" class="block iDevice_content">
+<p>El fitxer de hosts és un fitxer informàtic que fa servir un sistema operatiu per mapar noms d'ordinadors cap a adreces IP. Aquest mètode és un dels sistemes per dirigir-se per nom als ordinadors que hi ha a una xarxa informàtica. En alguns sistemes operatius, el fitxer de host es fa servir abans que els altres mètodes, tal com el servei de <em>Domain Name System</em> (DNS). Al contrari que les DNS, el fitxer de host és editable per l'administrador de l'ordinador. El fitxer de hosts és un fitxer de text pla i normalment es diu hosts.</p>
+<p>On es troba el fitxer de hosts en Ubuntu i en Windows?</p>
+<p>Modifica el fitxer hosts en les màquines virtuals de la següent forma:</p>
+<ul>
+<li><code>ubuntu-server-##</code><span style="font-size: 1em;"> -&gt; adreça IP</span></li>
+<li><code>winxp</code><span style="font-size: 1em;"> -&gt; adreça IP</span></li>
+</ul>
+<p>De forma que en fer <code>ping ubunt-server</code> responga el servidor, <code>winxp</code> el Windows XP, etc.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introducci.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

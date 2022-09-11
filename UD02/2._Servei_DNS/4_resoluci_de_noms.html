@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. Resolució de noms | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-42"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servei DNS</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_sistemes_de_noms_plans_i_jerrquics.html" class="no-ch">2. Sistemes de noms plans i jeràrquics</a></li>
+   <li><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="daddy">3. Zones primàries i secundaries. Transferències de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servidor DNS de reenviament</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="4_resoluci_de_noms.html" class="active daddy">4. Resolució de noms</a>
+   <ul>
+      <li><a href="41_consultes_recursives.html" class="no-ch">4.1. Consultes recursives</a></li>
+      <li><a href="42_consultes_iteratives.html" class="no-ch">4.2. Consultes iteratives</a></li>
+      <li><a href="43_resoluci_inversa.html" class="no-ch">4.3. Resolució inversa</a></li>
+      <li><a href="44_servidors_arrel.html" class="no-ch">4.4. Servidors arrel</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li><a href="5_tipus_de_registres.html" class="daddy">5. Tipus de registres</a>
+   <ul class="other-section">
+      <li><a href="51_registres_de_recurs.html" class="no-ch">5.1. Registres de recurs</a></li>
+      <li><a href="52_registre_soa.html" class="no-ch">5.2. Registre SOA</a></li>
+      <li><a href="53_registre_ns.html" class="no-ch">5.3. Registre NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_altres_registres.html" class="no-ch">5.6. Altres registres</a></li>
+      <li><a href="57_exemple_de_zona_directa_i_inversa.html" class="no-ch">5.7. Exemple de zona directa i inversa</a></li>
+      <li><a href="prctica_2_domini_local.html" class="no-ch">Pràctica 2: Domini local</a></li>
+      <li><a href="prctica_3_implementaci_dun_domini_local.html" class="no-ch">Pràctica 3: Implementació d'un domini local</a></li>
+      <li><a href="prctica_4_zona_de_resoluci_inversa.html" class="no-ch">Pràctica 4: Zona de resolució inversa</a></li>
+      <li><a href="prctica_5_configuraci_dun_servidor_secundari.html" class="no-ch">Pràctica 5: Configuració d'un servidor secundari</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evoluci_del_protocol_i_seguretat.html" class="no-ch">6. Evolució del protocol i seguretat</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_consultes_recursives.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4. Resolució de noms</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id27">
+<div class="iDevice emphasis0">
+<div id="ta27_85" class="block iDevice_content">
+<h1>4. Resolució de noms</h1>
+<p>Tot sovint en les aplicacions d'usuari i de sistema s'accedeix a recursos pel seu nom de domini. Per exemple, un client web requereix una determinada pàgina web, un navegador de fitxers vol accedir a unes carpetes d'una màquina remota que s'identifiquen pel nom de domini, el sistema ha de validar l'usuari contra un servidor LDAP remot, etc. En cada un d'aquests casos caldrà resoldre una pregunta del tipus <em>aquest domini a quina adreça IP correspon?</em> Aquesta pregunta no la responen les aplicacions individualment (el navegador web, el client d'autenticació...), sinó que utilitzen el <em>resolver</em> per fer-ho.</p>
+<p>El <em>resolver</em> és la part client de l'arquitectura client-servidor del DNS. Ell ha d'atendre les necessitats de les aplicacions, confeccionar una consulta o <em>query</em>, fer-la a un servidor DNS, obtenir la resposta i passar-la a l'aplicació pertinent.</p>
+<h2>La resolució</h2>
+<p>El mecanisme de resolució de noms DNS consta d'un client o <em>resolver</em> que realitzarà les consultes (o <em>querys</em>) a resoldre a uns servidors DNS.</p>
+<div class="exe-block-info">
+<p>Si el servidor disposa de la informació perquè forma part de la base de dades de la seva zona, emetrà una resposta <strong>autoritativa</strong>. Si disposa de la resposta perquè la té emmagatzemada temporalment (en un procés anomenat <em>cache</em>) també emetrà la resposta però aquest cop de manera <strong>no autoritativa</strong>. Si no té informació del domini buscat, el servidor pot fer a altres servidors la mateixa consulta en un procés que pot ser recursiu o iteratiu. Sempre existeix un camí per trobar el domini buscat, que és preguntar als nodes arrel (r<em>oot servers</em>) de l'espai de noms de domini. Partint dels nodes arrel i recorrent l'arbre cap avall, es pot arribar al domini buscat, si és que existeix.</p>
+</div>
+<p>Sempre hi ha un camí a un domini existent partint del node arrel. Quan un servidor és consultat sobre un domini que desconeix (no és de la seva zona ni té la resposta en la <em>cache</em>) pot escalar la pregunta a un servidor de l'arrel (<em>root name server</em>). Això significa que els servidors arrel són crucials per al funcionament del DNS.</p>
+<h4>Recursió i iteració</h4>
+<p>Quan el client o <em>resolver</em> emet una consulta al servidor DNS local (el servidor de noms que té configurat), aquest la pot tractar de manera recursiva o iterativa. De fet, el client <em>resolver</em> ja farà la consulta indicant si exigeix una resposta recursiva o iterativa. La diferència entre un mode i l'altre és com ha d'actuar el servidor DNS per obtenir la resposta quan no la té en la seva base de dades d'informació.</p>
+<p>En mode <strong>iteratiu</strong> el servidor retorna la millor resposta possible basada en la seva informació local, sense preguntar a ningú més. En el mode <strong>recursiu</strong> el servidor intenta trobar la resposta preguntant a tants altres servidors com calgui per tal d'obtenir-la.</p>
+<p>Un servidor pot emetre les respostes següents:</p>
+<ol>
+<li>Respon enviant la dada que li han sol·licitat (un nom de host, una adreça IP, la llista de servidors de noms, de servidors d'autenticació...).</li>
+<li>Ha localitzat el domini buscat, però no es disposa de la dada sol·licitada. Cal tenir en compte que es poden sol·licitar altres dades a part de l'adreça IP del domini (per exemple, quins servidors de correu té el domini).</li>
+<li>Finalment pot ser que el domini sol·licitat no existeixi.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_consultes_recursives.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

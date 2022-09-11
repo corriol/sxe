@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.7. Exemple de zona directa i inversa | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-75"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servei DNS</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_sistemes_de_noms_plans_i_jerrquics.html" class="no-ch">2. Sistemes de noms plans i jeràrquics</a></li>
+   <li><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="daddy">3. Zones primàries i secundaries. Transferències de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servidor DNS de reenviament</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resoluci_de_noms.html" class="daddy">4. Resolució de noms</a>
+   <ul class="other-section">
+      <li><a href="41_consultes_recursives.html" class="no-ch">4.1. Consultes recursives</a></li>
+      <li><a href="42_consultes_iteratives.html" class="no-ch">4.2. Consultes iteratives</a></li>
+      <li><a href="43_resoluci_inversa.html" class="no-ch">4.3. Resolució inversa</a></li>
+      <li><a href="44_servidors_arrel.html" class="no-ch">4.4. Servidors arrel</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_tipus_de_registres.html" class="current-page-parent daddy">5. Tipus de registres</a>
+   <ul>
+      <li><a href="51_registres_de_recurs.html" class="no-ch">5.1. Registres de recurs</a></li>
+      <li><a href="52_registre_soa.html" class="no-ch">5.2. Registre SOA</a></li>
+      <li><a href="53_registre_ns.html" class="no-ch">5.3. Registre NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_altres_registres.html" class="no-ch">5.6. Altres registres</a></li>
+      <li id="active"><a href="57_exemple_de_zona_directa_i_inversa.html" class="active no-ch">5.7. Exemple de zona directa i inversa</a></li>
+      <li><a href="prctica_2_domini_local.html" class="no-ch">Pràctica 2: Domini local</a></li>
+      <li><a href="prctica_3_implementaci_dun_domini_local.html" class="no-ch">Pràctica 3: Implementació d'un domini local</a></li>
+      <li><a href="prctica_4_zona_de_resoluci_inversa.html" class="no-ch">Pràctica 4: Zona de resolució inversa</a></li>
+      <li><a href="prctica_5_configuraci_dun_servidor_secundari.html" class="no-ch">Pràctica 5: Configuració d'un servidor secundari</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evoluci_del_protocol_i_seguretat.html" class="no-ch">6. Evolució del protocol i seguretat</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="56_altres_registres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_domini_local.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.7. Exemple de zona directa i inversa</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id112">
+<div class="iDevice emphasis0">
+<div id="ta112_86" class="block iDevice_content">
+<h3><code></code></h3>
+<p>Les dues llistes següents mostren exemples dels fitxers de configuració per a la resolució directa i la resolució inversa de la zona<span> </span><code>ioc.cat</code>. En el primer es defineixen dos servidors de nom, un encaminador, una impressora i dos nodes. El primer dels servidors de noms també fa les funcions de servidor de correu, web i FTP.</p>
+<div class="highlighted-code code-style-2 language-clike line-numbers">
+<div>
+<pre><code>;Exemple de fitxer de zona ioc.cat
+$TTL 3D
+ioc.cat.	IN	SOA	ns1.ioc.cat. admin.ioc.cat. {
+				23 ;serial
+				8H ;refresh
+				2H ;retry
+				4W ;expire
+				1D); minimum ttl
+	NS	ns1.ioc.cat.
+	NS	ns2.ioc.cat.
+	MX 10	correu.ioc.cat.
+ns1.ioc.cat.	A 192.168.0.5 ; servidor amb 2 ip
+				A 172.16.20.5
+ns2.ioc.cat. 	A 192.168.0.7; servidor dns slave
+router 		A 192.168.0.1; router. Nom relatiu
+correu 		CNAME ns1 ; alias correu
+www			CNAME ns1 ; alias web
+ftp 		CNAME ns1 ; alias ftp
+hp-7200c	A 192.168.0.2; impressora
+pc01		A 192.168.0.50
+pc02		A 192.168.0.51</code></pre>
+</div>
+</div>
+<p>En la llista següent es pot veure com es defineix una entrada PTR per a cada nom canònic definit en la resolució directa per a una subxarxa concreta. La subxarxa 192.168.0.0/24 utilitza el fitxer 0.168.192.in-addr.arpa.</p>
+<div class="highlighted-code code-style-2 language-clike line-numbers">
+<div>
+<pre><code>;Zona 0.168.192.in-addr.arpa.
+;Exemple de fitxer de zona inversa ioc.cat
+; correspon a la xarxa 192.168.0.0/24
+$TTL 3D
+ioc.cat.	IN	SOA	ns1.ioc.cat. admin.ioc.cat. {
+	23; serial
+	8H; refresh
+	2H; retry
+	4W; expire
+	1D) ; minimum ttl
+	NS	ns1.ioc.cat.
+5	IN	PTR	ns1.ioc.cat.
+7	IN	PTR	ns2.ioc.cat.
+1	IN	PTR	router.ioc.cat.
+2	IN	PTR	hp-7200c.ioc.cat.
+50	IN	PTR	pc01.ioc.cat.
+51	IN	PTR	pc02.ioc.cat.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="56_altres_registres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_2_domini_local.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

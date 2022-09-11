@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.6. Altres registres | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-70"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servei DNS</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_sistemes_de_noms_plans_i_jerrquics.html" class="no-ch">2. Sistemes de noms plans i jeràrquics</a></li>
+   <li><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="daddy">3. Zones primàries i secundaries. Transferències de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servidor DNS de reenviament</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resoluci_de_noms.html" class="daddy">4. Resolució de noms</a>
+   <ul class="other-section">
+      <li><a href="41_consultes_recursives.html" class="no-ch">4.1. Consultes recursives</a></li>
+      <li><a href="42_consultes_iteratives.html" class="no-ch">4.2. Consultes iteratives</a></li>
+      <li><a href="43_resoluci_inversa.html" class="no-ch">4.3. Resolució inversa</a></li>
+      <li><a href="44_servidors_arrel.html" class="no-ch">4.4. Servidors arrel</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_tipus_de_registres.html" class="current-page-parent daddy">5. Tipus de registres</a>
+   <ul>
+      <li><a href="51_registres_de_recurs.html" class="no-ch">5.1. Registres de recurs</a></li>
+      <li><a href="52_registre_soa.html" class="no-ch">5.2. Registre SOA</a></li>
+      <li><a href="53_registre_ns.html" class="no-ch">5.3. Registre NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li id="active"><a href="56_altres_registres.html" class="active no-ch">5.6. Altres registres</a></li>
+      <li><a href="57_exemple_de_zona_directa_i_inversa.html" class="no-ch">5.7. Exemple de zona directa i inversa</a></li>
+      <li><a href="prctica_2_domini_local.html" class="no-ch">Pràctica 2: Domini local</a></li>
+      <li><a href="prctica_3_implementaci_dun_domini_local.html" class="no-ch">Pràctica 3: Implementació d'un domini local</a></li>
+      <li><a href="prctica_4_zona_de_resoluci_inversa.html" class="no-ch">Pràctica 4: Zona de resolució inversa</a></li>
+      <li><a href="prctica_5_configuraci_dun_servidor_secundari.html" class="no-ch">Pràctica 5: Configuració d'un servidor secundari</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evoluci_del_protocol_i_seguretat.html" class="no-ch">6. Evolució del protocol i seguretat</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="55_registre_cname.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="57_exemple_de_zona_directa_i_inversa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.6. Altres registres</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id106">
+<div class="iDevice emphasis0">
+<div id="ta106_86" class="block iDevice_content">
+<h3>5.6.1. Registre MX</h3>
+<p>Un registre<span> </span><em>MX mail echanger</em><span> </span>(servidor de correu electrònic) defineix un servidor de correu. Es pot posar una entrada MX per a cada servidor de correu, però no és obligatori que n'hi hagi cap.</p>
+<p>Un registre MX consta dels camps:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>nomDomini. IN MX num mailServer.
+</code></pre>
+</div>
+</div>
+<p>Un exemple seria aquest:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>inf.ioc.cat. IN MX 10 ns1.inf.ioc.cat.</code></pre>
+</div>
+</div>
+<p><br />La descripció de cada camp és la següent:</p>
+<ul>
+<li>nomDomini. indica el nom del domini que s'està definint.</li>
+<li>IN indica que la classe és Internet.</li>
+<li>MX descriu que es tracta d'un registre de recurs on es defineix un servidor de correu per a aquest domini.</li>
+<li>num és un valor numèric que expressa el grau de preferència d'aquest servidor de correu respecte a altres servidors de correu del domini. El valor més baix és el que es prefereix més. Són valors arbitraris que defineix l'administrador de xarxes.</li>
+<li>mailServer. correspon al nom FQDN del servidor de correu que s'està definint.</li>
+</ul>
+<p>Podem observar la llista de servidors de correu de google fent:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>[root@localhost ~]# host google.com
+google.com has address 74.125.45.100
+google.com has address 74.125.127.100
+google.com has address 74.125.67.100
+google.com mail is handled by 10 google.com.s9b1.psmtp.com.
+google.com mail is handled by 100 smtp2.google.com.
+google.com mail is handled by 10 google.com.s9a2.psmtp.com.
+google.com mail is handled by 10 google.com.s9b2.psmtp.com.
+google.com mail is handled by 10 google.com.s9a1.psmtp.com.
+google.com mail is handled by 100 smtp1.google.com.</code></pre>
+</div>
+</div>
+<p>Les dues llistes següents mostren exemples dels fitxers de configuració per a la resolució directa i la resolució inversa de la zona<span> </span><code>ioc.cat</code>. En el primer es defineixen dos servidors de nom, un encaminador, una impressora i dos nodes. El primer dels servidors de noms també fa les funcions de servidor de correu, web i FTP.</p>
+<div class="highlighted-code language-clike line-numbers">
+<div>
+<pre><code>;Exemple de fitxer de zona ioc.cat
+$TTL 3D
+ioc.cat.	IN	SOA	ns1.ioc.cat. admin.ioc.cat. {
+				23 ;serial
+				8H ;refresh
+				2H ;retry
+				4W ;expire
+				1D); minimum ttl
+	NS	ns1.ioc.cat.
+	NS	ns2.ioc.cat.
+	MX 10	correu.ioc.cat.
+ns1.ioc.cat.	A 192.168.0.5 ; servidor amb 2 ip
+				A 172.16.20.5
+ns2.ioc.cat. 	A 192.168.0.7; servidor dns slave
+router 		A 192.168.0.1; router. Nom relatiu
+correu 		CNAME ns1 ; alias correu
+www			CNAME ns1 ; alias web
+ftp 		CNAME ns1 ; alias ftp
+hp-7200c	A 192.168.0.2; impressora
+pc01		A 192.168.0.50
+pc02		A 192.168.0.51</code></pre>
+</div>
+</div>
+<p>En la llista següent es pot veure com es defineix una entrada PTR per a cada nom canònic definit en la resolució directa per a una subxarxa concreta. La subxarxa 192.168.0.0/24 utilitza el fitxer 0.168.192.in-addr.arpa.</p>
+<div class="highlighted-code code-style-2 language-clike line-numbers">
+<div>
+<pre><code>;Zona 0.168.192.in-addr.arpa.
+;Exemple de fitxer de zona inversa ioc.cat
+; correspon a la xarxa 192.168.0.0/24
+$TTL 3D
+ioc.cat.	IN	SOA	ns1.ioc.cat. admin.ioc.cat. {
+	23; serial
+	8H; refresh
+	2H; retry
+	4W; expire
+	1D) ; minimum ttl
+	NS	ns1.ioc.cat.
+5	IN	PTR	ns1.ioc.cat.
+7	IN	PTR	ns2.ioc.cat.
+1	IN	PTR	router.ioc.cat.
+2	IN	PTR	hp-7200c.ioc.cat.
+50	IN	PTR	pc01.ioc.cat.
+51	IN	PTR	pc02.ioc.cat.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id107">
+<div class="iDevice emphasis0">
+<div id="ta107_86" class="block iDevice_content">
+<h3>5.6.2. Registre PTR</h3>
+<p>Un registre de recurs PTR o<span> </span><em>pointer</em><span> </span>(punter) associa una adreça IP al nom de host pertinent (resolució inversa). Cal una entrada PTR per a cada interfície de xarxa de la zona. Un registre PTR consta dels camps:</p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>ipInversa.in-addr.arpa. PTR hostCanonicalName.
+</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">Un exemple seria aquest:</span></p>
+<div class="highlighted-code language-c">
+<div>
+<pre><code>2.20.168.192.in-addr.apra. IN PTR mahatma.inf.ioc.cat.
+</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">La descripció de cada camp és la següent:</span></p>
+<ul>
+<li><code>ipInversa.in-addr.arpa.</code> indica l'adreça IP escrita en forma de dominiin-addr.arpa per poder fer la resolució inversa. Les adreces IP s'escriuen al revés quan formen part del domini in-addr.arpa. Així una IP 192.168.20.2 s'escriu 2.20.168.192.in-addr.arpa.</li>
+<li>IN indica que la classe és Internet.</li>
+<li>PTR descriu que es tracta d'un registre de recurs de definició de la resolució inversa d'una adreça IP.</li>
+<li>hostCanonicalName. és el nom de host FQDN assignat a l'adreça IP. El nom del host ha de ser per força el nom canònic. No hi pot haver dues definicions de la mateixa IP amb noms diferents (àlies), només de la IP al nom canònic.</li>
+</ul>
+<h4></h4>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id105">
+<div class="iDevice emphasis0">
+<div id="ta105_86" class="block iDevice_content">
+<h3>5.6.3. Altres registres</h3>
+<p>Hi ha altres tipus de registres de recurs que no són tan utilitzats i que es mencionen a continuació:</p>
+<ul>
+<li>HINFO: (Host Information) informació sobre el tipus d'ordinador.</li>
+<li>MB: (Mail Box) informació sobre una bústia de correu.</li>
+<li>MG: (Mailgroup) informació sobre un grup de correu.</li>
+<li>MR: nom nou d'una bústia de correu.</li>
+<li>WKS (Well Known Services) llista de serveis del host.</li>
+<li>TXT: (Text) text descriptiu.</li>
+<li>NULL: (Null) registre buit.</li>
+<li>AAAA () corresponent a una adreça de host usant Ipv6.</li>
+</ul>
+<h3>5.6.4. Abreviacions</h3>
+<p>L'estàndard DNS permet fer abreviacions en els fitxers de definició de zona per tal de facilitar-ne la sintaxi. Les més importants són:</p>
+<ul>
+<li>Es pot usar @ com a indicador del nom de domini quan és el mateix que el nom de domini origen (el que s'està definint).</li>
+<li>Si no s'indica un nom de domini en el primer camp i es deixa buit, s'entén el mateix nom que el definit en el registre anterior.</li>
+<li>Als noms de domini relatius (no acabats en punt) se'ls afegeix el nom de domini origen o nom de la zona que s'està definint.</li>
+</ul>
+<p>Un exemple amb abreviacions: zona inf.ioc.cat:</p>
+<div class="highlighted-code language-clike">
+<div>
+<pre><code>@	IN	SOA	ns1.inf.ioc.cat.	Admin.ns1.ioc.cat (1 3h 1h 1w 1h)
+				;utilitzat @ per referir-se al domini inf.ioc.cat
+	IN	NS	ns1 	;primera columna pren idem valor que l'anterior @
+	IN	NS	ns2 	;primera columna pren idem valor que l'anterior, @
+
+mahatma IN 	A	192.168.0.2
+
+ftp	IN	CNAME	mahatma ;als noms relatius s'afegeix inf.ioc.cat</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="55_registre_cname.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="57_exemple_de_zona_directa_i_inversa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Tipus de registres | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-44"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servei DNS</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_sistemes_de_noms_plans_i_jerrquics.html" class="no-ch">2. Sistemes de noms plans i jeràrquics</a></li>
+   <li><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="daddy">3. Zones primàries i secundaries. Transferències de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servidor DNS de reenviament</a></li>
+   </ul>
+   </li>
+   <li><a href="4_resoluci_de_noms.html" class="daddy">4. Resolució de noms</a>
+   <ul class="other-section">
+      <li><a href="41_consultes_recursives.html" class="no-ch">4.1. Consultes recursives</a></li>
+      <li><a href="42_consultes_iteratives.html" class="no-ch">4.2. Consultes iteratives</a></li>
+      <li><a href="43_resoluci_inversa.html" class="no-ch">4.3. Resolució inversa</a></li>
+      <li><a href="44_servidors_arrel.html" class="no-ch">4.4. Servidors arrel</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_tipus_de_registres.html" class="active daddy">5. Tipus de registres</a>
+   <ul>
+      <li><a href="51_registres_de_recurs.html" class="no-ch">5.1. Registres de recurs</a></li>
+      <li><a href="52_registre_soa.html" class="no-ch">5.2. Registre SOA</a></li>
+      <li><a href="53_registre_ns.html" class="no-ch">5.3. Registre NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_altres_registres.html" class="no-ch">5.6. Altres registres</a></li>
+      <li><a href="57_exemple_de_zona_directa_i_inversa.html" class="no-ch">5.7. Exemple de zona directa i inversa</a></li>
+      <li><a href="prctica_2_domini_local.html" class="no-ch">Pràctica 2: Domini local</a></li>
+      <li><a href="prctica_3_implementaci_dun_domini_local.html" class="no-ch">Pràctica 3: Implementació d'un domini local</a></li>
+      <li><a href="prctica_4_zona_de_resoluci_inversa.html" class="no-ch">Pràctica 4: Zona de resolució inversa</a></li>
+      <li><a href="prctica_5_configuraci_dun_servidor_secundari.html" class="no-ch">Pràctica 5: Configuració d'un servidor secundari</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evoluci_del_protocol_i_seguretat.html" class="no-ch">6. Evolució del protocol i seguretat</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="45_el_protocol_dns.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_registres_de_recurs.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5. Tipus de registres</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id88">
+<div class="iDevice emphasis0">
+<div id="ta88_155" class="block iDevice_content">
+<p>El sistema de noms de domini és una base de dades jeràrquica i distribuïda en què cada servidor de noms gestiona la informació corresponent a la zona de la qual és autoritari. Cada zona conté informació dels hosts que la formen. La informació de zona s'emmagatzema en forma de registre de recurs o <em>resource record</em> (RR). Hi ha la informació que permet identificar cada nom de domini amb l'adreça IP corresponent, anomenat <em>forward mapping</em> o resolució directa. També conté la informació per identificar cada adreça IP amb el nom de domini corresponent, anomenat r<em>everse mapping</em> o resolució inversa. La informació de zones conté altres informacions que permeten identificar els servidors DNS autoritaris per la zona, els servidors de correu, etc.</p>
+<h3>5.1. Base de dades de zona</h3>
+<p>La configuració d'una zona s'emmagatzema en un conjunt de fitxers anomenat fitxers de zona. L'especificació del DNS diu com han de ser aquests fitxers de zona i com s'hi han de descriure els registres de recurs (descripció de cada element que pertany a la zona).</p>
+<div class="exe-block-info">
+<p>El conjunt dels registres de recurs de totes les zones de l'espai de noms formen la base de dades distribuïda i jeràrquica del sistema DNS.</p>
+</div>
+<p>En qualsevol zona hi haurà almenys els fitxers de zona següents:</p>
+<ul>
+<li>Un fitxer amb les associacions dels noms de domini a adreces IP. Aquest fitxer defineix la resolució directa.</li>
+<li>Un fitxer per a cada subxarxa amb l'associació de cada adreça IP al seu nom de domini canònic. Defineix la resolució inversa.</li>
+<li>Un fitxer amb la definició de la resolució inversa del loopback.</li>
+<li>Un fitxer amb la descripció dels nodes arrel d'Internet.</li>
+</ul>
+<p>Un cop els fitxers de zona contenen tots els registres de recurs necessaris cal configurar el servidor de noms perquè utilitze aquests fitxers. Si bé la configuració dels fitxers de zona és estàndard (definida per l'especificació DNS), la configuració del servidor depèn del programa que s'utilitze.</p>
+<h3></h3>
+<pre></pre>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice em_iDevice_orientacionesfpd" id="id8">
+<div class="iDevice emphasis_orientacionesfpd" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">La base de dades en bind9 (Ubuntu Server)</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_153" class="block iDevice_content">
+<p>Els següents arxius són bàsics per a la configuració d'una zona per al domini <code>example.org</code>:</p>
+<div class="highlighted-code language-c line-numbers">
+<div>
+<pre><code><strong>;/etc/bind/named.conf.local</strong>
+zone "example.org" {
+	type master;
+	file "/etc/bind/db.example.org";
+};
+</code></pre>
+</div>
+</div>
+<p>En este cas <code>ns.example.org</code> serà el nostre servidor de noms autoritari:</p>
+<div class="highlighted-code language-c line-numbers">
+<div>
+<pre><code>; <strong>/etc/bind/db.example.org</strong><br />;
+; BIND data file for example.org
+;
+$TTL    604800
+@       IN      SOA     ns.example.org. hostmaster.example.org. (
+                             2         ; Serial
+                        604800         ; Refresh
+                         86400         ; Retry
+                       2419200         ; Expire
+                        604800 )       ; Negative Cache TTL
+       IN      A       192.168.1.10
+;
+@       IN      NS      ns.example.org.
+@       IN      A       192.168.1.10
+ns      IN      A       192.168.1.10</code></pre>
+</div>
+</div>
+<p>Aquesta seria la configuració mínima, ara caldria anar afegint entrades al registre.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="45_el_protocol_dns.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_registres_de_recurs.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

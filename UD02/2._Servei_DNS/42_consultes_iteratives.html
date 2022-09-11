@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ca" xml:lang="ca" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2. Consultes iteratives | Unitat 2. Servei DNS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="ca" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-54"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Omet navegació</a></p>
+<div id="header" ><div id="headerContent">Unitat 2. Servei DNS</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Servei DNS</a></li>
+   <li><a href="objectius.html" class="no-ch">Objectius</a></li>
+   <li><a href="continguts.html" class="no-ch">Continguts</a></li>
+   <li><a href="1_introducci.html" class="no-ch">1. Introducció</a></li>
+   <li><a href="2_sistemes_de_noms_plans_i_jerrquics.html" class="no-ch">2. Sistemes de noms plans i jeràrquics</a></li>
+   <li><a href="3_zones_primries_i_secundaries_transferncies_de_zona.html" class="daddy">3. Zones primàries i secundaries. Transferències de zona.</a>
+   <ul class="other-section">
+      <li><a href="prctica_1_installaci_i_configuraci_dun_servidor_dns_de_reenviament.html" class="no-ch">Pràctica 1: Instal·lació i configuració d'un servidor DNS de reenviament</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_resoluci_de_noms.html" class="current-page-parent daddy">4. Resolució de noms</a>
+   <ul>
+      <li><a href="41_consultes_recursives.html" class="no-ch">4.1. Consultes recursives</a></li>
+      <li id="active"><a href="42_consultes_iteratives.html" class="active no-ch">4.2. Consultes iteratives</a></li>
+      <li><a href="43_resoluci_inversa.html" class="no-ch">4.3. Resolució inversa</a></li>
+      <li><a href="44_servidors_arrel.html" class="no-ch">4.4. Servidors arrel</a></li>
+      <li><a href="45_el_protocol_dns.html" class="no-ch">4.5. El protocol DNS</a></li>
+   </ul>
+   </li>
+   <li><a href="5_tipus_de_registres.html" class="daddy">5. Tipus de registres</a>
+   <ul class="other-section">
+      <li><a href="51_registres_de_recurs.html" class="no-ch">5.1. Registres de recurs</a></li>
+      <li><a href="52_registre_soa.html" class="no-ch">5.2. Registre SOA</a></li>
+      <li><a href="53_registre_ns.html" class="no-ch">5.3. Registre NS</a></li>
+      <li><a href="54_registre_a_o_aaaa.html" class="no-ch">5.4. Registre A o AAAA</a></li>
+      <li><a href="55_registre_cname.html" class="no-ch">5.5. Registre CNAME</a></li>
+      <li><a href="56_altres_registres.html" class="no-ch">5.6. Altres registres</a></li>
+      <li><a href="57_exemple_de_zona_directa_i_inversa.html" class="no-ch">5.7. Exemple de zona directa i inversa</a></li>
+      <li><a href="prctica_2_domini_local.html" class="no-ch">Pràctica 2: Domini local</a></li>
+      <li><a href="prctica_3_implementaci_dun_domini_local.html" class="no-ch">Pràctica 3: Implementació d'un domini local</a></li>
+      <li><a href="prctica_4_zona_de_resoluci_inversa.html" class="no-ch">Pràctica 4: Zona de resolució inversa</a></li>
+      <li><a href="prctica_5_configuraci_dun_servidor_secundari.html" class="no-ch">Pràctica 5: Configuració d'un servidor secundari</a></li>
+   </ul>
+   </li>
+   <li><a href="6_evoluci_del_protocol_i_seguretat.html" class="no-ch">6. Evolució del protocol i seguretat</a></li>
+   <li><a href="activitats.html" class="no-ch">Activitats</a></li>
+   <li><a href="mapa_conceptual.html" class="no-ch">Mapa conceptual</a></li>
+   <li><a href="bibliografia.html" class="no-ch">Bibliografia</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="41_consultes_recursives.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_resoluci_inversa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.2. Consultes iteratives</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id84">
+<div class="iDevice emphasis0">
+<div id="ta84_154" class="block iDevice_content">
+<h2>Consultes Iteratives</h2>
+<p>En mode iteratiu, un servidor dóna la millor resposta possible basant-se en la pròpia informació (base de dades de zones locals i del <em>cache</em>). En cap cas consulta cap altre servidor. Si no disposa de la resposta, lliura una llista amb els servidors més propers al domini que es busca. La llista pot ser d'un o més servidors i és tasca del servidor que ha fet la consulta decidir a quin d'ells tornar a preguntar (en el cas recursiu).</p>
+<p>Les consultes iteratives són usualment de servidor a servidor, però no del <em>resolver</em> al servidor. Si el <em>resolver</em> fes una consulta iterativa a un servidor, significaria que quan la resposta fos una referència a un altre servidor, el <em>resolver</em> hauria de fer una altra consulta. Generalment els <em>resolver</em> no tenen aquesta capacitat, simplement fan una consulta recursiva al servidor que tenen configurat i és aquest el que ha de fer tota la feina per obtenir la resposta.</p>
+<div class="destacado">
+<p>El client <em>resolver</em>  fa una consulta recursiva al seu servidor DNS local. Si el servidor DNS disposa de la resposta, la torna . Pot ser de la seva zona i serà una resposta autoritativa o pot tenir-la en <em>cache</em> i serà no autoritativa.</p>
+<p>Si no disposa de la resposta, consulta iterativament altres servidors apropant-se al domini buscat. Cada servidor que consulta iterativament li pot proporcionar la resposta (autoritativa o no) si la coneix, o una llista de servidors DNS autoritatius per al domini indicat.</p>
+</div>
+<figure class="exe-figure exe-image position-center" style="width: 600px;">
+<div class="figcaption header"><strong>Búsqueda iterativa</strong></div>
+<img src="dns-iterativa.png" alt="Búsqueda iterativa" title="Búsqueda iterativa" width="600" height="332" />
+<figcaption class="figcaption"><a href="Búsqueda iterativa" target="_blank" class="title" rel="noopener noreferrer"><em>Búsqueda iterativa</em></a></figcaption>
+</figure>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice em_iDevice_activity" id="id50">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Activitat: Consulta iterativa</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta50_113_2" class="block iDevice_content">
+<p>Mitjançant l'eina de consulta DNS <code>dig</code> amb les opcions <code>@servidordns</code> i <code>+trace</code> realitza la consulta del domini <code>wikipedia.org</code> substituint <strong>servidordns</strong> per 3 servidors diferents (8.8.8.8, 1.1.1.1, Servidor DNS local).</p>
+<p>Determina la seqüència de les consultes realitzades en els tres casos i compara-les.</p>
+<p>Sempre consulta els mateixos servidors? Per què? Quina ha estat més ràpida? Justifica les respostes.</p>
+<p>Escrius els resultats en un document PDF.</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Llicenciat sota la </span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Llicència Creative Commons Reconeixement CompartirIgual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="41_consultes_recursives.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_resoluci_inversa.html" class="next"><span>Següent<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
